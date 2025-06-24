@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.web.WebView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.esprit.controllers.CheckoutController">
+    <center>
+        <WebView fx:id="webView" />
+    </center>
+</BorderPane>

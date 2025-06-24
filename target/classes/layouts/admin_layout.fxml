@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+
+<BorderPane prefHeight="800" prefWidth="1200"
+            stylesheets="styles/common.css,styles/admin_dashboard_fixed.css,styles/dashboard_cards.css,styles/animations.css,styles/modern_effects.css"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.esprit.controllers.AdminLayoutController">
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="70" spacing="20" styleClass="header">
+            <padding>
+                <Insets left="30" right="30"/>
+            </padding>
+            <Label styleClass="header-title" text="Admin Dashboard"/>
+            <HBox alignment="CENTER_RIGHT" spacing="15" HBox.hgrow="ALWAYS">
+                <Label fx:id="lblUsername" styleClass="header-username"/>
+                <StackPane>
+                    <Button fx:id="btnNotificationBell" styleClass="notification-bell" text="🔔"/>
+                    <Label fx:id="lblNotificationCount" styleClass="notification-count" text="0" StackPane.alignment="TOP_RIGHT"/>
+                </StackPane>
+            </HBox>
+        </HBox>
+    </top>
+    <left>
+        <VBox alignment="TOP_CENTER" spacing="20" styleClass="sidebar">
+            <padding>
+                <Insets top="30" bottom="20" left="20" right="20"/>
+            </padding>
+            <Label styleClass="sidebar-title" text="Menu"/>
+            <Circle fx:id="sidebarAvatar" radius="40" styleClass="sidebar-avatar"/>
+            <VBox prefWidth="220" spacing="10" VBox.vgrow="ALWAYS">
+                <Button fx:id="btnDashboard" onAction="#showDashboard" styleClass="sidebar-button, selected" text="🏠 Dashboard"/>
+                <Button fx:id="btnManageUsers" onAction="#showManageUsers" styleClass="sidebar-button" text="👥 Manage Users"/>
+                <Button fx:id="btnProducts" onAction="#showProducts" styleClass="sidebar-button" text="📦 Products"/>
+                <Button fx:id="btnEvents" onAction="#showEvents" styleClass="sidebar-button" text="🎉 Events"/>
+                <Button fx:id="btnBlog" onAction="#showBlog" styleClass="sidebar-button" text="📝 Blog"/>
+                <Button fx:id="btnBinTrucks" onAction="#showBinTrucks" styleClass="sidebar-button" text="🚛 Bin Trucks"/>
+                <Button fx:id="btnReports" onAction="#showReports" styleClass="sidebar-button" text="📊 Reports"/>
+                <Button fx:id="btnClaims" onAction="#showClaims" styleClass="sidebar-button" text="📢 Claims"/>
+                <Button fx:id="btnSettings" onAction="#showSettings" styleClass="sidebar-button" text="⚙️ Settings"/>
+                <Button fx:id="btnProfile" onAction="#showProfile" styleClass="sidebar-button" text="👤 Profile"/>
+            </VBox>
+            <Region VBox.vgrow="ALWAYS"/>
+            <Button fx:id="btnLogout" onAction="#handleLogout" styleClass="sidebar-button" text="🚪 Logout"/>
+        </VBox>
+    </left>
+    <center>
+        <StackPane fx:id="contentPane" />
+    </center>
+</BorderPane>

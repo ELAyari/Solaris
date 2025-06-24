@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.esprit.controllers.CommentItemController"
+      styleClass="comment-item"
+      spacing="5">
+    
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+    
+    <!-- Comment Header: Author and Date -->
+    <HBox spacing="10">
+        <Label fx:id="authorLabel" styleClass="comment-author"/>
+        <Label fx:id="dateLabel" styleClass="comment-date"/>
+    </HBox>
+    
+    <!-- Comment Content -->
+    <TextArea fx:id="contentArea" wrapText="true" prefRowCount="3" styleClass="comment-content" editable="false" focusTraversable="false"/>
+    
+    <!-- Comment Actions -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Button fx:id="replyButton" text="Reply" styleClass="btn-reply"/>
+        <Button fx:id="likeButton" text="Like" styleClass="btn-like"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button fx:id="editButton" text="Edit" styleClass="btn-edit" visible="false"/>
+        <Button fx:id="deleteButton" text="Delete" styleClass="btn-delete" visible="false"/>
+    </HBox>
+    
+    <!-- Reply Input Box (initially hidden) -->
+    <HBox fx:id="replyBox" spacing="10" alignment="CENTER_LEFT">
+        <TextField fx:id="replyField" promptText="Write a reply..." HBox.hgrow="ALWAYS"/>
+        <Button fx:id="submitReplyButton" text="Submit" styleClass="btn-submit"/>
+        <Button fx:id="gifReplyButton" text="GIF" styleClass="btn-reply"/>
+    </HBox>
+    <VBox fx:id="gifReplyPickerPane" visible="false" managed="false"
+          style="-fx-background-color: white; -fx-border-color: #ccc; -fx-padding: 15; -fx-background-radius: 8; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);"
+          minHeight="350" maxHeight="450" VBox.vgrow="NEVER">
+    </VBox>
+    
+    <!-- Replies Container -->
+    <VBox fx:id="repliesContainer" spacing="5" styleClass="replies-container">
+        <!-- Replies will be added here dynamically -->
+    </VBox>
+</VBox>

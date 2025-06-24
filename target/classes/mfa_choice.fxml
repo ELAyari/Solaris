@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600" prefWidth="900" styleClass="root" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.controllers.MFAChoiceController">
+   <stylesheets>
+      <URL value="@styles/energy.css" />
+   </stylesheets>
+
+   <GridPane AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+      <columnConstraints>
+         <ColumnConstraints percentWidth="60" />
+         <ColumnConstraints percentWidth="40" />
+      </columnConstraints>
+
+      <!-- Left Panel -->
+      <VBox alignment="CENTER" prefHeight="800.0" prefWidth="1200.0" spacing="30" styleClass="welcome-panel" GridPane.columnIndex="0">
+         <padding>
+            <Insets bottom="50" left="50" right="50" top="50" />
+         </padding>
+
+         <ImageView fitHeight="150" fitWidth="150" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@logo/logo.jpg" />
+            </image>
+         </ImageView>
+
+         <Text styleClass="app-title" text="Solaris App" />
+         <Text styleClass="welcome-text" text="Bienvenue dans votre espace énergie" />
+         <Text styleClass="slogan-text" text="Gérez votre énergie intelligemment" />
+      </VBox>
+
+      <!-- Right Panel - MFA Selection -->
+      <VBox alignment="CENTER" spacing="20" styleClass="login-panel" GridPane.columnIndex="1">
+         <padding>
+            <Insets bottom="50" left="40" right="40" top="50" />
+         </padding>
+
+         <!-- Title -->
+         <Text styleClass="login-title" text="MFA" />
+         <!-- Subtitle for clarity -->
+         <Text styleClass="subtitle-text" text="Choisissez votre méthode de vérification" />
+         <Button fx:id="btnEmail" onAction="#handleEmail" prefHeight="44.0" prefWidth="236.0" styleClass="login-button" text="✉️ Email" />
+
+         <!-- Buttons Container -->
+         <HBox alignment="CENTER" maxWidth="300" spacing="20">
+            <Button fx:id="btnSMS" onAction="#handleSMS" prefHeight="44.0" prefWidth="235.0" styleClass="login-button" text="📲 SMS" HBox.hgrow="ALWAYS" />
+         </HBox>
+      </VBox>
+      <rowConstraints>
+         <RowConstraints />
+      </rowConstraints>
+
+   </GridPane>
+</AnchorPane>

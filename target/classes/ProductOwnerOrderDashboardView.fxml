@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="com.esprit.controllers.ProductOwnerOrderDashboardController"
+            stylesheets="@/styles/product-owner-dashboard.css">
+    <top>
+        <VBox spacing="10">
+            <HBox styleClass="dashboard-header" alignment="CENTER_LEFT" spacing="20">
+                <padding><Insets top="20" right="30" bottom="20" left="30"/></padding>
+                <Label text="Product Owner Order Dashboard" styleClass="dashboard-title"/>
+                <Label fx:id="companyNameLabel" styleClass="company-name"/>
+            </HBox>
+            
+            <!-- Filter options -->
+            <HBox spacing="15" alignment="CENTER_LEFT" styleClass="filter-container">
+                <padding><Insets top="10" right="20" bottom="10" left="20"/></padding>
+                <Label text="Filter by:" styleClass="filter-label"/>
+                <DatePicker fx:id="startDatePicker" promptText="Start Date"/>
+                <Label text="to"/>
+                <DatePicker fx:id="endDatePicker" promptText="End Date"/>
+                <ComboBox fx:id="statusComboBox" promptText="Order Status"/>
+                <TextField fx:id="searchField" promptText="Search by Order ID or Customer" prefWidth="200"/>
+                <Button fx:id="searchButton" text="Search" styleClass="search-button"/>
+                <Button fx:id="clearButton" text="Clear Filters" styleClass="clear-button"/>
+            </HBox>
+        </VBox>
+    </top>
+    
+    <center>
+        <StackPane>
+            <BorderPane>
+                <center>
+                    <VBox spacing="20">
+                        <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+                        
+                        <!-- Orders summary -->
+                        <HBox spacing="20" styleClass="summary-container">
+                            <VBox styleClass="summary-card" HBox.hgrow="ALWAYS">
+                                <Label text="Pending Orders" styleClass="summary-title"/>
+                                <Label fx:id="pendingOrdersLabel" text="0" styleClass="summary-value"/>
+                            </VBox>
+                            <VBox styleClass="summary-card" HBox.hgrow="ALWAYS">
+                                <Label text="Processing Orders" styleClass="summary-title"/>
+                                <Label fx:id="processingOrdersLabel" text="0" styleClass="summary-value"/>
+                            </VBox>
+                            <VBox styleClass="summary-card" HBox.hgrow="ALWAYS">
+                                <Label text="Shipped Orders" styleClass="summary-title"/>
+                                <Label fx:id="shippedOrdersLabel" text="0" styleClass="summary-value"/>
+                            </VBox>
+                            <VBox styleClass="summary-card" HBox.hgrow="ALWAYS">
+                                <Label text="Delivered Orders" styleClass="summary-title"/>
+                                <Label fx:id="deliveredOrdersLabel" text="0" styleClass="summary-value"/>
+                            </VBox>
+                            <VBox styleClass="summary-card" HBox.hgrow="ALWAYS">
+                                <Label text="Total Revenue" styleClass="summary-title"/>
+                                <Label fx:id="totalRevenueLabel" text="0.00 DT" styleClass="summary-value"/>
+                            </VBox>
+                        </HBox>
+                        
+                        <!-- Orders table -->
+                        <VBox VBox.vgrow="ALWAYS" styleClass="table-container">
+                            <Label text="Your Orders" styleClass="section-title"/>
+                            <TableView fx:id="ordersTable" VBox.vgrow="ALWAYS">
+                                <columns>
+                                    <TableColumn fx:id="orderIdColumn" text="Order ID" prefWidth="80"/>
+                                    <TableColumn fx:id="dateColumn" text="Date" prefWidth="120"/>
+                                    <TableColumn fx:id="customerColumn" text="Customer" prefWidth="150"/>
+                                    <TableColumn fx:id="totalColumn" text="Total" prefWidth="100"/>
+                                    <TableColumn fx:id="yourItemsColumn" text="Your Items" prefWidth="100"/>
+                                    <TableColumn fx:id="statusColumn" text="Status" prefWidth="120"/>
+                                    <TableColumn fx:id="actionsColumn" text="Actions" prefWidth="150"/>
+                                </columns>
+                            </TableView>
+                            <Pagination fx:id="ordersPagination" maxPageIndicatorCount="5"/>
+                        </VBox>
+                        
+                        <!-- Order details section (shown when an order is selected) -->
+                        <VBox fx:id="orderDetailsContainer" visible="false" managed="false" styleClass="details-container" spacing="15">
+                            <Label text="Order Details" styleClass="section-title"/>
+                            
+                            <HBox spacing="20">
+                                <VBox spacing="10" HBox.hgrow="ALWAYS">
+                                    <Label text="Order Information" styleClass="subsection-title"/>
+                                    <HBox spacing="10">
+                                        <VBox spacing="5" HBox.hgrow="ALWAYS">
+                                            <Label text="Order ID:" styleClass="detail-label"/>
+                                            <Label fx:id="detailOrderIdLabel" styleClass="detail-value"/>
+                                        </VBox>
+                                        <VBox spacing="5" HBox.hgrow="ALWAYS">
+                                            <Label text="Date:" styleClass="detail-label"/>
+                                            <Label fx:id="detailDateLabel" styleClass="detail-value"/>
+                                        </VBox>
+                                        <VBox spacing="5" HBox.hgrow="ALWAYS">
+                                            <Label text="Status:" styleClass="detail-label"/>
+                                            <Label fx:id="detailStatusLabel" styleClass="detail-value"/>
+                                        </VBox>
+                                    </HBox>
+                                </VBox>
+                                
+                                <VBox spacing="10" HBox.hgrow="ALWAYS">
+                                    <Label text="Customer Information" styleClass="subsection-title"/>
+                                    <HBox spacing="10">
+                                        <VBox spacing="5" HBox.hgrow="ALWAYS">
+                                            <Label text="Name:" styleClass="detail-label"/>
+                                            <Label fx:id="detailCustomerNameLabel" styleClass="detail-value"/>
+                                        </VBox>
+                                        <VBox spacing="5" HBox.hgrow="ALWAYS">
+                                            <Label text="Email:" styleClass="detail-label"/>
+                                            <Label fx:id="detailCustomerEmailLabel" styleClass="detail-value"/>
+                                        </VBox>
+                                        <VBox spacing="5" HBox.hgrow="ALWAYS">
+                                            <Label text="Phone:" styleClass="detail-label"/>
+                                            <Label fx:id="detailCustomerPhoneLabel" styleClass="detail-value"/>
+                                        </VBox>
+                                    </HBox>
+                                </VBox>
+                            </HBox>
+                            
+                            <VBox spacing="10">
+                                <Label text="Shipping Address" styleClass="subsection-title"/>
+                                <Label fx:id="detailShippingAddressLabel" styleClass="detail-value" wrapText="true"/>
+                            </VBox>
+                            
+                            <VBox spacing="10" VBox.vgrow="ALWAYS">
+                                <Label text="Your Items in This Order" styleClass="subsection-title"/>
+                                <TableView fx:id="orderItemsTable" VBox.vgrow="ALWAYS">
+                                    <columns>
+                                        <TableColumn fx:id="itemProductIdColumn" text="Product ID" prefWidth="80"/>
+                                        <TableColumn fx:id="itemProductNameColumn" text="Product Name" prefWidth="200"/>
+                                        <TableColumn fx:id="itemQuantityColumn" text="Quantity" prefWidth="80"/>
+                                        <TableColumn fx:id="itemPriceColumn" text="Price" prefWidth="100"/>
+                                        <TableColumn fx:id="itemTotalColumn" text="Total" prefWidth="100"/>
+                                    </columns>
+                                </TableView>
+                            </VBox>
+                            
+                            <HBox spacing="10" alignment="CENTER_RIGHT">
+                                <Button fx:id="updateStatusButton" text="Update Status" styleClass="action-button"/>
+                                <Button fx:id="backToOrdersButton" text="Back to Orders" styleClass="secondary-button"/>
+                            </HBox>
+                        </VBox>
+                    </VBox>
+                </center>
+                
+                <right>
+                    <VBox spacing="20" prefWidth="300">
+                        <padding><Insets top="20" right="20" bottom="20" left="0"/></padding>
+                        
+                        <VBox styleClass="chart-card">
+                            <Label text="Order Status Distribution" styleClass="section-title"/>
+                            <PieChart fx:id="orderStatusChart" prefHeight="250" legendVisible="true"/>
+                        </VBox>
+                        
+                        <VBox styleClass="chart-card" VBox.vgrow="ALWAYS">
+                            <Label text="Top Selling Products" styleClass="section-title"/>
+                            <VBox fx:id="topProductsContainer" spacing="10" VBox.vgrow="ALWAYS"/>
+                        </VBox>
+                    </VBox>
+                </right>
+            </BorderPane>
+            
+            <!-- Loading overlay -->
+            <StackPane fx:id="loadingOverlay" visible="false" style="-fx-background-color: rgba(0,0,0,0.4);">
+                <Label fx:id="loadingLabel" text="Loading..." style="-fx-background-color: white; -fx-padding: 10 20; -fx-background-radius: 5;"/>
+            </StackPane>
+        </StackPane>
+    </center>
+</BorderPane>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.web.WebView?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<BorderPane prefHeight="800.0" prefWidth="1200.0"
+            xmlns="http://javafx.com/javafx/17.0.6"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.esprit.controllers.TruckFormController"
+            styleClass="dashboard-root">
+            
+    <!-- Link to styles -->
+    <stylesheets>
+        <URL value="@../styles/profile.css" />
+        <URL value="@../styles/styles.css" />
+        <URL value="@../styles/sidebar.css" />
+        <URL value="@../styles/header.css" />
+        <URL value="@../styles/content.css" />
+    </stylesheets>
+
+    <center>
+        <ScrollPane fitToWidth="true" fitToHeight="true" styleClass="content-area">
+            <content>
+                <HBox spacing="30" alignment="TOP_CENTER">
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20"/>
+                    </padding>
+
+                    <!-- Form Container -->
+                    <VBox spacing="20" styleClass="card" maxWidth="500" HBox.hgrow="SOMETIMES">
+                        <padding>
+                            <Insets top="20" right="20" bottom="20" left="20"/>
+                        </padding>
+                        <Label text="Truck Details" styleClass="section-title"/>
+                        
+                        <!-- Capacity -->
+                        <VBox spacing="10" styleClass="form-group">
+                            <Label text="Maximum Capacity (kg):" styleClass="form-label"/>
+                            <TextField fx:id="TC" styleClass="form-input" promptText="Enter maximum capacity"/>
+                        </VBox>
+
+                        <!-- Fill Level -->
+                        <VBox spacing="10" styleClass="form-group">
+                            <Label text="Current Fill Level (kg):" styleClass="form-label"/>
+                            <TextField fx:id="TST" styleClass="form-input" promptText="Enter current fill level"/>
+                        </VBox>
+
+
+                        <!-- Current Location -->
+                        <VBox spacing="5" styleClass="form-group">
+                            <Label text="Current Location:" styleClass="form-label"/>
+                            <HBox spacing="10" alignment="CENTER_LEFT">
+                                <TextField fx:id="currentLocationField" styleClass="classic-input" promptText="Enter starting location" HBox.hgrow="ALWAYS"/>
+                                <Button onAction="#handleSearchCurrentLocation" styleClass="classic-button" text="Search"/>
+                            </HBox>
+                        </VBox>
+
+                        <!-- Destination Location -->
+                        <VBox spacing="5" styleClass="form-group">
+                            <Label text="Destination Location:" styleClass="form-label"/>
+                            <HBox spacing="10" alignment="CENTER_LEFT">
+                                <TextField fx:id="destinationLocationField" styleClass="classic-input" promptText="Enter destination location" HBox.hgrow="ALWAYS"/>
+                                <Button onAction="#handleSearchDestinationLocation" styleClass="classic-button" text="Search"/>
+                            </HBox>
+                        </VBox>
+
+                        <!-- Hidden coordinate fields -->
+                        <VBox spacing="5" styleClass="form-group" visible="false" managed="false">
+                            <TextField fx:id="destLat1Field" styleClass="classic-input"/>
+                            <TextField fx:id="destLng1Field" styleClass="classic-input"/>
+                            <TextField fx:id="destLat2Field" styleClass="classic-input"/>
+                            <TextField fx:id="destLng2Field" styleClass="classic-input"/>
+                            <!-- Hidden section ComboBox that we need for the controller -->
+                            <ComboBox fx:id="TR" styleClass="classic-input" prefWidth="200" visible="false">
+                                <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                        <String fx:value="Zone Inconnue"/>
+                                    </FXCollections>
+                                </items>
+                            </ComboBox>
+                        </VBox>
+
+                        <!-- Truck Brand -->
+                        <VBox spacing="5" styleClass="form-group">
+                            <Label text="Truck Brand:" styleClass="form-label"/>
+                            <ComboBox fx:id="truckBrandComboBox" styleClass="classic-input" prefWidth="200">
+                                <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                        <String fx:value="Solaris"/>
+                                        <String fx:value="Volvo"/>
+                                        <String fx:value="Mercedes-Benz"/>
+                                        <String fx:value="Scania"/>
+                                        <String fx:value="MAN"/>
+                                        <String fx:value="Renault"/>
+                                    </FXCollections>
+                                </items>
+                            </ComboBox>
+                        </VBox>
+
+                        <!-- Bin Type -->
+                        <VBox spacing="5" styleClass="form-group">
+                            <Label text="Bin Type:" styleClass="form-label"/>
+                            <ComboBox fx:id="binTypeComboBox" styleClass="classic-input" prefWidth="200">
+                                <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                        <String fx:value="Organic"/>
+                                        <String fx:value="Plastic"/>
+                                        <String fx:value="Paper"/>
+                                        <String fx:value="Glass"/>
+                                        <String fx:value="Metal"/>
+                                        <String fx:value="Electronic"/>
+                                        <String fx:value="Mixed"/>
+                                    </FXCollections>
+                                </items>
+                            </ComboBox>
+                        </VBox>
+
+                        <!-- Status -->
+                        <VBox spacing="5" styleClass="form-group">
+                            <Label text="Status:" styleClass="form-label"/>
+                            <ComboBox fx:id="TS" styleClass="classic-input" prefWidth="200">
+                                <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                        <String fx:value="Available"/>
+                                        <String fx:value="On Mission"/>
+                                        <String fx:value="In Maintenance"/>
+                                        <String fx:value="Out of Service"/>
+                                    </FXCollections>
+                                </items>
+                            </ComboBox>
+                        </VBox>
+
+                        <!-- Action Buttons -->
+                        <HBox spacing="10" alignment="CENTER_RIGHT">
+                            <Button fx:id="addButton" text="Save" onAction="#handleAddButton" styleClass="classic-button save-button"/>
+                            <Button fx:id="backButton" text="Cancel" onAction="#handleBackButton" styleClass="classic-button cancel-button"/>
+                        </HBox>
+                    </VBox>
+
+                    <!-- Map Container -->
+                    <VBox spacing="10" styleClass="map-container" HBox.hgrow="ALWAYS">
+                        <Label text="Route Preview" styleClass="section-title"/>
+                        <WebView fx:id="mapView" prefHeight="400" prefWidth="500"/>
+                        <Label fx:id="mapStatusLabel" styleClass="status-label"/>
+                        
+                        <!-- Solar Bin Status Panel -->
+                        <VBox spacing="5" styleClass="solar-panel">
+                            <Label text="Nearby Solar Bins" styleClass="section-title"/>
+                            <HBox spacing="5" alignment="CENTER_LEFT">
+                                <Button fx:id="refreshBinsButton" text="Refresh" onAction="#handleRefreshSolarBins" styleClass="classic-button"/>
+                                <Label fx:id="solarBinStatusLabel" text="No solar bins found" styleClass="status-label"/>
+                            </HBox>
+                            <TableView fx:id="solarBinsTable" prefHeight="150" VBox.vgrow="ALWAYS">
+                                <columns>
+                                    <!-- Removed ID column to make more space -->
+                                    <TableColumn text="Location" prefWidth="140">
+                                        <cellValueFactory><PropertyValueFactory property="location"/></cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn text="Fill Level" prefWidth="90">
+                                        <cellValueFactory><PropertyValueFactory property="fillLevel"/></cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn text="Battery" prefWidth="80">
+                                        <cellValueFactory><PropertyValueFactory property="batteryLevel"/></cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn text="Energy Status" prefWidth="110">
+                                        <cellValueFactory><PropertyValueFactory property="energyStatus"/></cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn text="Distance" prefWidth="80">
+                                        <cellValueFactory><PropertyValueFactory property="distance"/></cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn text="Priority" prefWidth="80">
+                                        <cellValueFactory><PropertyValueFactory property="priorityStatus"/></cellValueFactory>
+                                    </TableColumn>
+                                </columns>
+                            </TableView>
+                        </VBox>
+                        
+                        <!-- Energy Efficiency Dashboard -->
+                        <VBox spacing="5" styleClass="energy-dashboard">
+                            <Label text="Energy Efficiency Dashboard" styleClass="section-title"/>
+                            <HBox spacing="5" alignment="CENTER_LEFT">
+                                <Button fx:id="calculateEfficiencyButton" text="Calculate Efficiency" onAction="#handleCalculateEfficiency" styleClass="classic-button"/>
+                                <Label fx:id="efficiencyStatusLabel" text="No data available" styleClass="status-label"/>
+                            </HBox>
+                            
+                            <!-- Efficiency Metrics Grid -->
+                            <GridPane hgap="10" vgap="5" styleClass="metrics-grid">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="100" prefWidth="150" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="100" prefWidth="150" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="100" prefWidth="150" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="30" prefHeight="30" />
+                                    <RowConstraints minHeight="30" prefHeight="30" />
+                                    <RowConstraints minHeight="30" prefHeight="30" />
+                                </rowConstraints>
+                                
+                                <!-- Row 1 -->
+                                <VBox spacing="2" styleClass="metric-card" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                                    <Label text="Energy Consumption" styleClass="metric-title"/>
+                                    <Label fx:id="energyConsumptionLabel" text="-- kWh" styleClass="metric-value"/>
+                                </VBox>
+                                
+                                <VBox spacing="2" styleClass="metric-card" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                                    <Label text="CO2 Emissions" styleClass="metric-title"/>
+                                    <Label fx:id="co2EmissionsLabel" text="-- kg" styleClass="metric-value"/>
+                                </VBox>
+                                
+                                <VBox spacing="2" styleClass="metric-card" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                                    <Label text="Efficiency Rating" styleClass="metric-title"/>
+                                    <Label fx:id="efficiencyRatingLabel" text="--" styleClass="metric-value"/>
+                                </VBox>
+                                
+                                <!-- Row 2 -->
+                                <VBox spacing="2" styleClass="metric-card" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                                    <Label text="Energy Savings" styleClass="metric-title"/>
+                                    <Label fx:id="energySavingsLabel" text="-- kWh" styleClass="metric-value"/>
+                                </VBox>
+                                
+                                <VBox spacing="2" styleClass="metric-card" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <Label text="CO2 Savings" styleClass="metric-title"/>
+                                    <Label fx:id="co2SavingsLabel" text="-- kg" styleClass="metric-value"/>
+                                </VBox>
+                                
+                                <VBox spacing="2" styleClass="metric-card" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                    <Label text="Waste Collected" styleClass="metric-title"/>
+                                    <Label fx:id="wasteCollectedLabel" text="-- kg" styleClass="metric-value"/>
+                                </VBox>
+                                
+                                <!-- Row 3 -->
+                                <VBox spacing="2" styleClass="metric-card" GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="3">
+                                    <Label text="Optimization Tip" styleClass="metric-title"/>
+                                    <Label fx:id="optimizationTipLabel" text="No optimization tips available yet" styleClass="metric-value"/>
+                                </VBox>
+                            </GridPane>
+                        </VBox>
+                    </VBox>
+                </HBox>
+            </content>
+        </ScrollPane>
+    </center>
+</BorderPane>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.esprit.controllers.BlogDashboardController"
+      spacing="15"
+      styleClass="dashboard-root"
+      stylesheets="@/styles/blog-dashboard.css"
+      prefWidth="1000"
+      prefHeight="700"
+      >
+
+    <!-- Header -->
+    <HBox alignment="CENTER_LEFT" spacing="10" styleClass="header">
+        <ImageView fitWidth="80" fitHeight="80">
+            <Image url="@/images/logo.png"/>
+        </ImageView>
+        <Label text="Solaris Blog Dashboard" styleClass="header-title"/>
+    </HBox>
+
+    <!-- Filter Toolbar -->
+    <HBox spacing="15" styleClass="toolbar">
+        <ComboBox fx:id="statusCombo" promptText="Filter by Status" styleClass="filter-combo"/>
+    </HBox>
+
+    <!-- Blog Table -->
+    <TableView fx:id="blogTable" styleClass="blog-table" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="titleColumn" text="Title" prefWidth="200" />
+            <TableColumn fx:id="summaryColumn" text="Summary" prefWidth="250" />
+            <TableColumn fx:id="statusColumn" text="Status" prefWidth="100" />
+            <TableColumn fx:id="dateColumn" text="Date" prefWidth="150" />
+            <TableColumn fx:id="authorColumn" text="Author" prefWidth="120" />
+            <TableColumn fx:id="commentCountColumn" text="Comments" prefWidth="80" />
+            <TableColumn fx:id="likesCountColumn" text="Likes" prefWidth="80" />
+            <TableColumn fx:id="viewColumn" text="Views" prefWidth="80" />
+            <TableColumn fx:id="imageColumn" text="Image" prefWidth="100" />
+        </columns>
+    </TableView>
+
+    <!-- Action Buttons -->
+    <HBox spacing="15" styleClass="action-bar">
+        <Button text="Add Blog" onAction="#handleAdd" styleClass="btn-add-product"/>
+        <Button fx:id="updateButton" text="Edit Blog" onAction="#handleUpdate" styleClass="btn-edit-product" disable="true"/>
+        <Button fx:id="deleteButton" text="Delete Blog" onAction="#handleDelete" styleClass="btn-delete-product" disable="true"/>
+        <Button fx:id="publishButton" text="Publish" onAction="#handlePublish" styleClass="btn-publish-blog" disable="true"/>
+        <Button text="View Comments" onAction="#handleViewComments" styleClass="btn-view-comments"/>
+    </HBox>
+</VBox>

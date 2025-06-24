@@ -1,0 +1,270 @@
+/* Animation Effects for PI_DEV_G5
+ * This file contains reusable animations for enhancing visual effects throughout the application
+ */
+
+/* Fade Transitions */
+.fade-in {
+    -fx-opacity: 0;
+    -fx-animation: fadeIn 0.3s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from { -fx-opacity: 0; }
+    to { -fx-opacity: 1; }
+}
+
+/* Slide Animations */
+.slide-in-left {
+    -fx-translate-x: -20px;
+    -fx-opacity: 0;
+    -fx-animation: slideInLeft 0.3s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+    from { 
+        -fx-translate-x: -20px;
+        -fx-opacity: 0;
+    }
+    to { 
+        -fx-translate-x: 0px;
+        -fx-opacity: 1;
+    }
+}
+
+.slide-in-right {
+    -fx-translate-x: 20px;
+    -fx-opacity: 0;
+    -fx-animation: slideInRight 0.3s ease-out forwards;
+}
+
+@keyframes slideInRight {
+    from { 
+        -fx-translate-x: 20px;
+        -fx-opacity: 0;
+    }
+    to { 
+        -fx-translate-x: 0px;
+        -fx-opacity: 1;
+    }
+}
+
+/* Hover Effects */
+.hover-lift {
+    -fx-transition: -fx-translate-y 0.2s ease, -fx-effect 0.2s ease;
+}
+
+.hover-lift:hover {
+    -fx-translate-y: -3px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 8, 0, 0, 4);
+}
+
+/* Scale Effects */
+.scale-on-hover {
+    -fx-transition: -fx-scale-x 0.15s ease, -fx-scale-y 0.15s ease;
+}
+
+.scale-on-hover:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* Pulse Animation */
+.pulse {
+    -fx-animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { -fx-scale-x: 1; -fx-scale-y: 1; }
+    50% { -fx-scale-x: 1.05; -fx-scale-y: 1.05; }
+    100% { -fx-scale-x: 1; -fx-scale-y: 1; }
+}
+
+/* Notification Bell Animation */
+.bell-shake {
+    -fx-animation: bellShake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes bellShake {
+    0% { -fx-rotate: 0; }
+    20% { -fx-rotate: 15deg; }
+    40% { -fx-rotate: -15deg; }
+    60% { -fx-rotate: 7deg; }
+    80% { -fx-rotate: -7deg; }
+    100% { -fx-rotate: 0; }
+}
+
+/* Button Press Effect */
+.button-press {
+    -fx-transition: -fx-scale-x 0.1s ease, -fx-scale-y 0.1s ease;
+}
+
+.button-press:pressed {
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+
+/* Fade In Staggered for Lists */
+.fade-in-item {
+    -fx-opacity: 0;
+}
+
+.fade-in-item-0 { -fx-animation: fadeIn 0.3s ease-in 0.0s forwards; }
+.fade-in-item-1 { -fx-animation: fadeIn 0.3s ease-in 0.05s forwards; }
+.fade-in-item-2 { -fx-animation: fadeIn 0.3s ease-in 0.1s forwards; }
+.fade-in-item-3 { -fx-animation: fadeIn 0.3s ease-in 0.15s forwards; }
+.fade-in-item-4 { -fx-animation: fadeIn 0.3s ease-in 0.2s forwards; }
+.fade-in-item-5 { -fx-animation: fadeIn 0.3s ease-in 0.25s forwards; }
+.fade-in-item-6 { -fx-animation: fadeIn 0.3s ease-in 0.3s forwards; }
+.fade-in-item-7 { -fx-animation: fadeIn 0.3s ease-in 0.35s forwards; }
+.fade-in-item-8 { -fx-animation: fadeIn 0.3s ease-in 0.4s forwards; }
+.fade-in-item-9 { -fx-animation: fadeIn 0.3s ease-in 0.45s forwards; }
+
+/* Progress Bar Animation */
+.animated-progress-bar .bar {
+    -fx-background-color: linear-gradient(to right, -primary-light, -primary-dark);
+    -fx-background-insets: 0;
+    -fx-background-radius: 5;
+    -fx-padding: 0.25em;
+}
+
+/* Card Hover Effect */
+.card-hover {
+    -fx-transition: -fx-effect 0.3s ease, -fx-background-color 0.3s ease;
+}
+
+.card-hover:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 15, 0, 0, 5);
+    -fx-background-color: derive(white, 2%);
+}
+
+/* Shimmer Effect for Loading State */
+.shimmer {
+    -fx-background-color: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+    -fx-background-size: 800px 100%;
+    -fx-animation: shimmer 2s infinite linear;
+}
+
+@keyframes shimmer {
+    0% { -fx-background-position: -468px 0; }
+    100% { -fx-background-position: 468px 0; }
+}
+
+/* Profile Page Specific Animations */
+.profile-card-enter {
+    -fx-opacity: 0;
+    -fx-translate-y: 20px;
+    -fx-animation: profileCardEnter 0.5s ease-out forwards;
+}
+
+@keyframes profileCardEnter {
+    from { 
+        -fx-opacity: 0;
+        -fx-translate-y: 20px;
+        -fx-scale-x: 0.95;
+        -fx-scale-y: 0.95;
+    }
+    to { 
+        -fx-opacity: 1;
+        -fx-translate-y: 0px;
+        -fx-scale-x: 1.0;
+        -fx-scale-y: 1.0;
+    }
+}
+
+.hero-banner-enter {
+    -fx-opacity: 0;
+    -fx-translate-y: -30px;
+    -fx-animation: heroBannerEnter 0.6s ease-out forwards;
+}
+
+@keyframes heroBannerEnter {
+    from { 
+        -fx-opacity: 0;
+        -fx-translate-y: -30px;
+    }
+    to { 
+        -fx-opacity: 1;
+        -fx-translate-y: 0px;
+    }
+}
+
+.avatar-pulse {
+    -fx-animation: avatarPulse 2s ease-in-out infinite;
+}
+
+@keyframes avatarPulse {
+    0% { 
+        -fx-effect: dropshadow(gaussian, rgba(39,174,96,0.4), 8, 0, 0, 3);
+        -fx-scale-x: 1.0;
+        -fx-scale-y: 1.0;
+    }
+    50% { 
+        -fx-effect: dropshadow(gaussian, rgba(39,174,96,0.7), 12, 0, 0, 5);
+        -fx-scale-x: 1.02;
+        -fx-scale-y: 1.02;
+    }
+    100% { 
+        -fx-effect: dropshadow(gaussian, rgba(39,174,96,0.4), 8, 0, 0, 3);
+        -fx-scale-x: 1.0;
+        -fx-scale-y: 1.0;
+    }
+}
+
+.button-bounce {
+    -fx-animation: buttonBounce 0.3s ease-out;
+}
+
+@keyframes buttonBounce {
+    0% { -fx-scale-x: 1.0; -fx-scale-y: 1.0; }
+    50% { -fx-scale-x: 1.05; -fx-scale-y: 1.05; }
+    100% { -fx-scale-x: 1.0; -fx-scale-y: 1.0; }
+}
+
+.field-focus-glow {
+    -fx-animation: fieldFocusGlow 0.3s ease-out;
+}
+
+@keyframes fieldFocusGlow {
+    from { 
+        -fx-effect: dropshadow(gaussian, rgba(52,152,219,0), 0, 0, 0, 0);
+    }
+    to { 
+        -fx-effect: dropshadow(gaussian, rgba(52,152,219,0.2), 8, 0, 0, 0);
+    }
+}
+
+/* Staggered card entrance animations */
+.card-stagger-1 {
+    -fx-animation-delay: 0.1s;
+}
+
+.card-stagger-2 {
+    -fx-animation-delay: 0.2s;
+}
+
+.card-stagger-3 {
+    -fx-animation-delay: 0.3s;
+}
+
+/* Save success animation */
+.save-success {
+    -fx-animation: saveSuccess 0.6s ease-out;
+}
+
+@keyframes saveSuccess {
+    0% { 
+        -fx-background-color: linear-gradient(45deg, #3498db, #2980b9);
+        -fx-scale-x: 1.0;
+        -fx-scale-y: 1.0;
+    }
+    50% { 
+        -fx-background-color: linear-gradient(45deg, #27ae60, #2ecc71);
+        -fx-scale-x: 1.1;
+        -fx-scale-y: 1.1;
+    }
+    100% { 
+        -fx-background-color: linear-gradient(45deg, #3498db, #2980b9);
+        -fx-scale-x: 1.0;
+        -fx-scale-y: 1.0;
+    }
+}

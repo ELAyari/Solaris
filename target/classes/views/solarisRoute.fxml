@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.esprit.controllers.SolarisRouteController"
+            stylesheets="@../styles/styles.css">
+    
+    <top>
+        <VBox spacing="10" styleClass="header">
+            <padding>
+                <Insets top="10" right="20" bottom="10" left="20"/>
+            </padding>
+            <Label text="Solaris Route Optimization" styleClass="header-title"/>
+            <HBox spacing="20" alignment="CENTER_LEFT">
+                <TextField fx:id="startLatField" promptText="Start Latitude" prefWidth="150"/>
+                <TextField fx:id="startLonField" promptText="Start Longitude" prefWidth="150"/>
+                <TextField fx:id="endLatField" promptText="End Latitude" prefWidth="150"/>
+                <TextField fx:id="endLonField" promptText="End Longitude" prefWidth="150"/>
+                <Button text="Optimize Route" onAction="#optimizeRoute" styleClass="primary-button"/>
+            </HBox>
+        </VBox>
+    </top>
+    
+    <center>
+        <SplitPane dividerPositions="0.7">
+            <items>
+                <WebView fx:id="mapView" prefWidth="800" prefHeight="600"/>
+                <VBox spacing="10" styleClass="stations-panel">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+                    <Label text="Charging Stations" styleClass="section-title"/>
+                    <TableView fx:id="stationsTable" VBox.vgrow="ALWAYS"/>
+                    <VBox spacing="5" styleClass="stats-panel">
+                        <Label fx:id="co2SavingsLabel" text="CO₂ Savings: 0 kg" styleClass="stat-value"/>
+                        <Label fx:id="energyOutputLabel" text="Total Energy Output: 0 kW" styleClass="stat-value"/>
+                        <ProgressBar fx:id="chargingProgress" prefWidth="Infinity"/>
+                    </VBox>
+                </VBox>
+            </items>
+        </SplitPane>
+    </center>
+    
+    <bottom>
+        <HBox spacing="10" alignment="CENTER" styleClass="footer">
+            <padding>
+                <Insets top="10" right="20" bottom="10" left="20"/>
+            </padding>
+            <Label text="Solaris Eco-Pilot System" styleClass="footer-text"/>
+            <Label text="v1.0" styleClass="version-text"/>
+        </HBox>
+    </bottom>
+    
+</BorderPane> 

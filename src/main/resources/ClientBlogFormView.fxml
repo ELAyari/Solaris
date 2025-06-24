@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.*?>
+<?import java.lang.String?>
+
+<ScrollPane fitToWidth="true" fitToHeight="true" styleClass="form-scroll-root blog-scrollpane"
+            xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.esprit.controllers.ClientBlogFormController"
+            prefWidth="900"
+            prefHeight="900"
+            stylesheets="@/styles/styles.css">
+    <content>
+        <VBox spacing="20" styleClass="form-root">
+            <!-- Create Blog Section at the Top -->
+            <VBox spacing="15" style="-fx-background-color: white; -fx-padding: 20; -fx-border-radius: 10; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+                <HBox spacing="15" alignment="CENTER_LEFT" style="-fx-background-color: linear-gradient(to right, #a8e063, #56ab2f); -fx-padding: 20; -fx-background-radius: 10;">
+                    <Label text="✏️ Create New Blog" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+                    <Pane HBox.hgrow="ALWAYS"/>
+                    <ProgressIndicator fx:id="saveProgressIndicator" visible="false" prefWidth="30" prefHeight="30"/>
+                    <Label fx:id="saveStatusLabel" text="" style="-fx-text-fill: white; -fx-font-size: 14px;"/>
+                </HBox>
+                <GridPane hgap="15" vgap="15">
+                    <!-- Title Field -->
+                    <Label text="Title:" GridPane.rowIndex="0" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+                    <VBox spacing="5" GridPane.rowIndex="0" GridPane.columnIndex="1" GridPane.columnSpan="2">
+                        <TextField fx:id="titleField" promptText="Enter your blog title..." HBox.hgrow="ALWAYS"/>
+                        <HBox spacing="10" alignment="CENTER_RIGHT">
+                            <Label fx:id="titleCharCount" text="0/100" style="-fx-text-fill: #7f8c8d; -fx-font-size: 12px;"/>
+                            <Label fx:id="titleValidationLabel" text="" style="-fx-text-fill: #e74c3c; -fx-font-size: 12px;"/>
+                        </HBox>
+                    </VBox>
+
+                    <!-- Summary Field -->
+                    <Label text="Summary:" GridPane.rowIndex="1" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+                    <VBox spacing="5" GridPane.rowIndex="1" GridPane.columnIndex="1" GridPane.columnSpan="2">
+                        <TextField fx:id="summaryField" promptText="Brief summary of your blog..." HBox.hgrow="ALWAYS"/>
+                        <HBox spacing="10" alignment="CENTER_RIGHT">
+                            <Label fx:id="summaryCharCount" text="0/200" style="-fx-text-fill: #7f8c8d; -fx-font-size: 12px;"/>
+                            <Label fx:id="summaryValidationLabel" text="" style="-fx-text-fill: #e74c3c; -fx-font-size: 12px;"/>
+                        </HBox>
+                    </VBox>
+
+                    <!-- Content Field -->
+                    <Label text="Content:" GridPane.rowIndex="2" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+                    <VBox spacing="5" GridPane.rowIndex="2" GridPane.columnIndex="1" GridPane.columnSpan="2">
+                        <TextArea fx:id="contentArea" promptText="Write your blog content here..." prefRowCount="12" wrapText="true" HBox.hgrow="ALWAYS"/>
+                        <HBox spacing="10" alignment="CENTER_RIGHT">
+                            <Label fx:id="contentCharCount" text="0/5000" style="-fx-text-fill: #7f8c8d; -fx-font-size: 12px;"/>
+                            <Label fx:id="contentValidationLabel" text="" style="-fx-text-fill: #e74c3c; -fx-font-size: 12px;"/>
+                        </HBox>
+                    </VBox>
+
+                    <!-- Image Section -->
+                    <Label text="Image:" GridPane.rowIndex="3" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+                    <VBox spacing="10" GridPane.rowIndex="3" GridPane.columnIndex="1" GridPane.columnSpan="2">
+                        <HBox spacing="10" alignment="CENTER_LEFT">
+                            <Button text="📁 Choose Image" onAction="#handleChooseImage" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-padding: 8 15; -fx-background-radius: 5;"/>
+                            <Button text="🎨 Generate AI Image" onAction="#handleGenerateImage" fx:id="generateImageButton" style="-fx-background-color: #9b59b6; -fx-text-fill: white; -fx-padding: 8 15; -fx-background-radius: 5;"/>
+                            <Button text="📝 Generate Text from Image" onAction="#handleGenerateTextFromImage" fx:id="generateTextFromImageButton" style="-fx-background-color: #f39c12; -fx-text-fill: white; -fx-padding: 8 15; -fx-background-radius: 5;"/>
+                            <Button text="🗑️ Delete Image" onAction="#handleDeleteImage" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-padding: 8 15; -fx-background-radius: 5;"/>
+                        </HBox>
+                        <!-- Removed duplicate AI Text Generation HBox here -->
+                        <!-- Image Preview -->
+                        <StackPane style="-fx-border-color: #e9ecef; -fx-border-radius: 5; -fx-padding: 10;">
+                            <ImageView fx:id="imagePreview" fitWidth="300" fitHeight="200" preserveRatio="true"/>
+                            <Label text="No image preview" fx:id="noImageLabel" style="-fx-text-fill: #7f8c8d; -fx-font-style: italic;" visible="true"/>
+                      </StackPane>
+                                      <Label fx:id="imageNameLabel" text="No image selected" style="-fx-text-fill: #7f8c8d; -fx-font-style: italic;"/>
+                    </VBox>
+                </GridPane>
+
+                <!-- Action Buttons -->
+                <HBox spacing="15" alignment="CENTER_RIGHT" style="-fx-padding: 20 0 0 0;">
+                    <Button text="👁️ Preview" onAction="#handlePreview" style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-padding: 10 20; -fx-background-radius: 5;" fx:id="previewButton"/>
+                    <Button text="💾 Save as Draft" onAction="#handleSaveDraft" style="-fx-background-color: #f39c12; -fx-text-fill: white; -fx-padding: 10 20; -fx-background-radius: 5;" fx:id="saveDraftButton"/>
+                    <Button text="🚀 Publish" onAction="#handlePublish" style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-padding: 10 20; -fx-background-radius: 5;" fx:id="publishButton"/>
+                    <Button text="💾 Save Changes" onAction="#handleSaveChanges" style="-fx-background-color: #2980b9; -fx-text-fill: white; -fx-padding: 10 20; -fx-background-radius: 5;" fx:id="saveChangesButton" visible="false"/>
+                    <Button text="🗑️ Delete Blog" onAction="#handleDeleteBlog" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-padding: 10 20; -fx-background-radius: 5;" fx:id="deleteBlogButton" visible="false"/>
+                    <Button text="⬅️ Back" onAction="#handleBack" style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-padding: 10 20; -fx-background-radius: 5;"/>
+                </HBox>
+            </VBox>
+            <!-- Previous Blogs Section below the form -->
+            <VBox spacing="10" style="-fx-background-color: #f8f9fa; -fx-padding: 15; -fx-border-radius: 8; -fx-background-radius: 8; -fx-border-color: #e9ecef;">
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="📚 Your Previous Blogs" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+                    <Button text="Refresh" onAction="#refreshPreviousBlogs" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-padding: 5 15; -fx-background-radius: 5;"/>
+                </HBox>
+                <Separator/>
+                <FlowPane fx:id="previousBlogsContainer"
+                          hgap="20" vgap="20"
+                          prefWrapLength="800"
+                          style="-fx-padding: 10;"/>
+                <Label fx:id="noPreviousBlogsLabel" text="No previous blogs found. Start creating your first blog!" visible="false"
+                       style="-fx-text-fill: #7f8c8d; -fx-font-style: italic;"/>
+            </VBox>
+        </VBox>
+    </content>
+</ScrollPane>

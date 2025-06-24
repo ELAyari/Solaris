@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text.*?>
+
+<!-- Root VBox to allow for potential top bar if needed later, and to apply global background -->
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.esprit.controllers.CheckoutValidationController"
+      spacing="20" alignment="TOP_CENTER"
+      stylesheets="@styles/styles.css, @../../styles/checkout.css"
+      style="-fx-padding: 20;">
+
+    <!-- Main content area for checkout -->
+    <GridPane fx:id="checkoutFormGrid" styleClass="checkout-grid-pane" hgap="15" vgap="15" alignment="TOP_CENTER" maxWidth="700">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="350.0"/>
+        </columnConstraints>
+        
+        <fx:define>
+            <ToggleGroup fx:id="addressToggleGroup"/>
+            <ToggleGroup fx:id="paperSizeToggleGroup"/>
+        </fx:define>
+
+        <!-- Shipping Address Section -->
+        <Label text="Shipping Address" styleClass="section-title" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
+        <VBox styleClass="checkout-section" spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="2">
+            <RadioButton fx:id="homeAddressRadio" text="Home Address:" toggleGroup="$addressToggleGroup" selected="true"/>
+            <Label fx:id="addressField" text="(User's home address)" styleClass="summary-text"/>
+            <RadioButton fx:id="workAddressRadio" text="New/Work Address" toggleGroup="$addressToggleGroup"/>
+            <VBox fx:id="workAddressFields" spacing="10" visible="false" managed="false" style="-fx-padding: 10 0 0 20;"> <!-- Indent new address fields -->
+                <TextField fx:id="streetField" promptText="Street Address"/>
+                <TextField fx:id="cityField" promptText="City"/>
+                <TextField fx:id="postalCodeField" promptText="Postal Code"/>
+            </VBox>
+        </VBox>
+
+        <!-- Commande Preview Section -->
+        <Label text="Order Preview" styleClass="section-title" GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="2"/>
+        <VBox fx:id="commandePreviewBox" styleClass="checkout-section" spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="2">
+            <ListView fx:id="panierItemsListView" prefHeight="150" styleClass="panier-items-preview"/>
+            <Label fx:id="shipmentAddressText" text="Shipment Address: (selected address)" styleClass="summary-text"/>
+            <Label fx:id="totalAmountText" text="Total Amount: 0.00 DT" styleClass="summary-text"/> <!-- Will be updated by controller -->
+        </VBox>
+
+        <!-- PDF Invoice Format Section -->
+        <Label text="PDF Invoice Format" styleClass="section-title" GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="2"/>
+        <VBox styleClass="checkout-section" spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="5" GridPane.columnSpan="2">
+            <RadioButton fx:id="a4Radio" text="A4 (Standard)" toggleGroup="$paperSizeToggleGroup" selected="true"/>
+            <RadioButton fx:id="a3Radio" text="A3 (Large Format)" toggleGroup="$paperSizeToggleGroup"/>
+        </VBox>
+
+        <!-- Buttons Section -->
+        <HBox spacing="15" alignment="CENTER_RIGHT" GridPane.columnIndex="0" GridPane.rowIndex="6" GridPane.columnSpan="2" style="-fx-padding: 15 0 0 0;">
+            <Button fx:id="backButton" text="Cancel / Back" onAction="#handleBack" styleClass="button-secondary"/>
+            <Button fx:id="paymentButton" text="Proceed to Payment" onAction="#handlePayment"/> <!-- Inherits .button style -->
+        </HBox>
+        
+        <padding>
+            <Insets top="10" right="10" bottom="10" left="10"/>
+        </padding>
+    </GridPane>
+</VBox>

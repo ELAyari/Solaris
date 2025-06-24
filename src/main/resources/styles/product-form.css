@@ -1,0 +1,523 @@
+/* Product Form Styles - Modern UI with animations and effects */
+
+/* Root container */
+.root {
+    -fx-background-color: linear-gradient(to bottom right, #f5fff5, #e8f5e9);
+    -fx-padding: 20;
+    -fx-alignment: center;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 15, 0, 0, 5);
+    padding: 20px;
+    background-color: linear-gradient(to bottom right, #f5fff5, #e8f5e9);
+}
+
+/* Form root container */
+.form-root {
+    -fx-padding: 20;
+    -fx-background-color: #f5fff5;
+    -fx-spacing: 15;
+    -fx-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    -fx-font-size: 14px;
+}
+
+/* Title styling */
+.title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2e7d32;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 3, 0, 0, 1);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Form header with gradient */
+.form-header {
+    -fx-background-color: linear-gradient(to right, #a8e063, #56ab2f);
+    -fx-padding: 20;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 8, 0, 0, 4);
+}
+
+.form-header-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 4, 0, 0, 1);
+}
+
+/* Form fields styling */
+.text-field, .combo-box, .text-area {
+    -fx-background-color: white;
+    -fx-background-radius: 8;
+    -fx-border-color: #a5d6a7;
+    -fx-border-radius: 8;
+    -fx-padding: 12;
+    -fx-font-size: 14px;
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.05), 5, 0, 0, 0);
+    -fx-transition: -fx-border-color 0.3s ease, -fx-effect 0.3s ease;
+    background-color: white;
+    border-color: #a5d6a7;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text-field:focused, .combo-box:focused, .text-area:focused {
+    -fx-border-color: #43a047;
+    -fx-effect: dropshadow(three-pass-box, rgba(76,175,80,0.4), 5, 0, 0, 0);
+    border-color: #43a047;
+}
+
+.text-field:hover, .combo-box:hover, .text-area:hover {
+    -fx-border-color: #66bb6a;
+    -fx-effect: dropshadow(three-pass-box, rgba(76,175,80,0.2), 3, 0, 0, 0);
+    border-color: #66bb6a;
+}
+
+/* TextArea specific styling */
+.text-area {
+    -fx-pref-row-count: 8;
+    -fx-wrap-text: true;
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.text-area .content {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/* Label styling */
+Label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2e7d32;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Character counter styling */
+.char-counter {
+    -fx-text-fill: #7f8c8d;
+    -fx-font-size: 12px;
+    -fx-font-style: italic;
+}
+
+.char-counter.warning {
+    -fx-text-fill: #f39c12;
+}
+
+.char-counter.error {
+    -fx-text-fill: #e74c3c;
+}
+
+/* Validation label styling */
+.validation-label {
+    -fx-text-fill: #e74c3c;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.validation-label.success {
+    -fx-text-fill: #27ae60;
+}
+
+/* CheckBox styling */
+.check-box {
+    -fx-font-size: 14px;
+    -fx-text-fill: #2e7d32;
+    font-size: 14px;
+}
+
+.check-box .box {
+    -fx-background-color: white;
+    -fx-border-color: #a5d6a7;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+    background-color: white;
+    border-color: #a5d6a7;
+    border-radius: 3px;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #43a047;
+    -fx-border-color: #43a047;
+    background-color: #43a047;
+    border-color: #43a047;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: white;
+    background-color: white;
+}
+
+.check-box:hover .box {
+    -fx-effect: dropshadow(three-pass-box, rgba(76,175,80,0.3), 3, 0, 0, 0);
+    -fx-border-color: #66bb6a;
+    border-color: #66bb6a;
+}
+
+/* Button styling */
+.btn-back, .btn-save-product, .btn-browse-image, .btn-delete-image {
+    -fx-background-radius: 20;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-padding: 12 24;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 2);
+    -fx-transition: -fx-scale-x 0.2s ease, -fx-scale-y 0.2s ease, -fx-effect 0.2s ease;
+    background-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 12px 24px;
+    font-size: 14px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-back {
+    -fx-background-color: linear-gradient(to right, #78909c, #90a4ae);
+    -fx-min-width: 150;
+    background-color: linear-gradient(to right, #78909c, #90a4ae);
+    min-width: 150px;
+}
+
+.btn-save-product {
+    -fx-background-color: linear-gradient(to right, #43a047, #66bb6a);
+    -fx-min-width: 150;
+    background-color: linear-gradient(to right, #43a047, #66bb6a);
+    min-width: 150px;
+}
+
+.btn-browse-image {
+    -fx-background-color: linear-gradient(to right, #1976d2, #42a5f5);
+    background-color: linear-gradient(to right, #1976d2, #42a5f5);
+}
+
+.btn-delete-image {
+    -fx-background-color: linear-gradient(to right, #e53935, #ef5350);
+    background-color: linear-gradient(to right, #e53935, #ef5350);
+}
+
+.btn-back:hover, .btn-save-product:hover, .btn-browse-image:hover, .btn-delete-image:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 8, 0, 0, 3);
+}
+
+.btn-back:pressed, .btn-save-product:pressed, .btn-browse-image:pressed, .btn-delete-image:pressed {
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 3, 0, 0, 1);
+}
+
+/* Progress indicator styling */
+.progress-indicator {
+    -fx-progress-color: #43a047;
+    -fx-scale-x: 0.8;
+    -fx-scale-y: 0.8;
+}
+
+/* Status label styling */
+.status-label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* Image container styling */
+.image-container {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #dee2e6;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 20;
+    -fx-alignment: center;
+    -fx-min-height: 200;
+    -fx-min-width: 200;
+}
+
+ImageView {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 2);
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-fit-width: 180;
+    -fx-fit-height: 180;
+    -fx-preserve-ratio: true;
+}
+
+.no-image-label {
+    -fx-text-fill: #6c757d;
+    -fx-font-size: 16px;
+    -fx-font-style: italic;
+}
+
+/* Form grid styling */
+GridPane {
+    -fx-hgap: 20;
+    -fx-vgap: 20;
+    -fx-padding: 20;
+}
+
+/* Button container styling */
+.button-container {
+    -fx-max-width: 100%;
+    -fx-padding: 20 0 0 0;
+    -fx-alignment: center;
+    -fx-spacing: 15;
+}
+
+/* Field container for validation */
+.field-container {
+    -fx-spacing: 5;
+}
+
+/* Animation for saving */
+@keyframes pulse {
+    0% { -fx-scale-x: 1; -fx-scale-y: 1; }
+    50% { -fx-scale-x: 1.05; -fx-scale-y: 1.05; }
+    100% { -fx-scale-x: 1; -fx-scale-y: 1; }
+}
+
+.save-animation {
+    -fx-animation: pulse 0.5s infinite;
+    animation: pulse 0.5s infinite;
+}
+
+/* Tooltip styling */
+.tooltip {
+    -fx-background-color: #43a047;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-padding: 8 12;
+    -fx-background-radius: 6;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 2);
+    background-color: #43a047;
+    color: white;
+    font-size: 12px;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+/* Validation styles */
+.field-error {
+    -fx-border-color: #e74c3c;
+    -fx-text-fill: #e74c3c;
+    border-color: #e74c3c;
+    color: #e74c3c;
+}
+
+.field-success {
+    -fx-border-color: #27ae60;
+    -fx-text-fill: #27ae60;
+    border-color: #27ae60;
+    color: #27ae60;
+}
+
+.field-warning {
+    -fx-border-color: #f39c12;
+    -fx-text-fill: #f39c12;
+    border-color: #f39c12;
+    color: #f39c12;
+}
+
+/* Scrollbar styling */
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+    background-color: transparent;
+}
+
+.scroll-bar:vertical,
+.scroll-bar:horizontal {
+    -fx-background-color: transparent;
+    background-color: transparent;
+}
+
+.scroll-bar:vertical .thumb,
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: #81c784;
+    -fx-background-radius: 5;
+    background-color: #81c784;
+    border-radius: 5px;
+}
+
+.scroll-bar:vertical .thumb:hover,
+.scroll-bar:horizontal .thumb:hover {
+    -fx-background-color: #4caf50;
+    background-color: #4caf50;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+/* Form section styling */
+.form-section {
+    -fx-background-color: white;
+    -fx-padding: 20;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .root {
+        -fx-padding: 10;
+        padding: 10px;
+    }
+    
+    .form-section {
+        -fx-padding: 15;
+    }
+    
+    .text-field, .combo-box, .text-area {
+        -fx-padding: 10;
+        -fx-font-size: 13px;
+        padding: 10px;
+        font-size: 13px;
+    }
+    
+    .btn-back, .btn-save-product, .btn-browse-image, .btn-delete-image {
+        -fx-padding: 10 20;
+        -fx-font-size: 13px;
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+    
+    .title {
+        -fx-font-size: 24px;
+        font-size: 24px;
+    }
+    
+    .form-header-title {
+        -fx-font-size: 20px;
+    }
+    
+    GridPane {
+        -fx-hgap: 15;
+        -fx-vgap: 15;
+        -fx-padding: 15;
+    }
+}
+
+@media (max-width: 480px) {
+    .root {
+        -fx-padding: 5;
+        padding: 5px;
+    }
+    
+    .form-section {
+        -fx-padding: 10;
+    }
+    
+    .text-field, .combo-box, .text-area {
+        -fx-padding: 8;
+        -fx-font-size: 12px;
+        padding: 8px;
+        font-size: 12px;
+    }
+    
+    .btn-back, .btn-save-product, .btn-browse-image, .btn-delete-image {
+        -fx-padding: 8 16;
+        -fx-font-size: 12px;
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+    
+    .title {
+        -fx-font-size: 20px;
+        font-size: 20px;
+    }
+    
+    .form-header-title {
+        -fx-font-size: 18px;
+    }
+    
+    GridPane {
+        -fx-hgap: 10;
+        -fx-vgap: 10;
+        -fx-padding: 10;
+    }
+    
+    .button-container {
+        -fx-spacing: 10;
+    }
+}
+
+/* Enhanced animations */
+@keyframes fadeIn {
+    from { -fx-opacity: 0; -fx-translate-y: 20; }
+    to { -fx-opacity: 1; -fx-translate-y: 0; }
+}
+
+@keyframes slideIn {
+    from { -fx-translate-x: -50; -fx-opacity: 0; }
+    to { -fx-translate-x: 0; -fx-opacity: 1; }
+}
+
+.fade-in {
+    -fx-animation: fadeIn 0.5s ease-out;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.slide-in {
+    -fx-animation: slideIn 0.3s ease-out;
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Loading states */
+.loading {
+    -fx-opacity: 0.6;
+    -fx-cursor: wait;
+}
+
+.loading .text-field, .loading .combo-box, .loading .text-area {
+    -fx-disabled: true;
+}
+
+/* Success animation */
+@keyframes successPulse {
+    0% { -fx-scale-x: 1; -fx-scale-y: 1; -fx-opacity: 1; }
+    50% { -fx-scale-x: 1.1; -fx-scale-y: 1.1; -fx-opacity: 0.8; }
+    100% { -fx-scale-x: 1; -fx-scale-y: 1; -fx-opacity: 1; }
+}
+
+.success-animation {
+    -fx-animation: successPulse 0.6s ease-in-out;
+    animation: successPulse 0.6s ease-in-out;
+}
+
+/* Error shake animation */
+@keyframes shake {
+    0%, 100% { -fx-translate-x: 0; }
+    10%, 30%, 50%, 70%, 90% { -fx-translate-x: -5; }
+    20%, 40%, 60%, 80% { -fx-translate-x: 5; }
+}
+
+.error-shake {
+    -fx-animation: shake 0.5s ease-in-out;
+    animation: shake 0.5s ease-in-out;
+}
+
+.btn-back-product {
+    -fx-background-color: #95a5a6;
+    background-color: #95a5a6;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20;
+    -fx-padding: 10 20;
+    -fx-font-size: 14px;
+    -fx-font-family: 'Segoe UI Emoji', 'Segoe UI Symbol', 'Segoe UI', Arial, sans-serif;
+}

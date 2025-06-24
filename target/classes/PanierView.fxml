@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.esprit.controllers.PanierController" style="-fx-background-color: #e6f2f0;" stylesheets="@styles/product-card.css">
+    <top>
+        <!-- Include the reusable navigation bar -->
+        <fx:include fx:id="navBar" source="NavBarView.fxml"/>
+    </top>
+    <center>
+        <VBox spacing="10" style="-fx-padding: 15;">
+            <Label text="Your Shopping Cart" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #343a40; -fx-padding: 0 0 10 0;"/>
+            <TableView fx:id="panierTable" prefHeight="400" prefWidth="700" style="-fx-background-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" styleClass="panier-table">
+                <columns>
+                    <TableColumn fx:id="productImageColumn" text="Image" prefWidth="100"/>
+                    <TableColumn fx:id="productNameColumn" text="Product Name" prefWidth="200"/>
+                    <TableColumn fx:id="quantityColumn" text="Quantity" prefWidth="100"/>
+                    <TableColumn fx:id="priceColumn" text="Price" prefWidth="100"/>
+                    <TableColumn fx:id="subtotalColumn" text="Subtotal" prefWidth="100"/>
+                    <TableColumn fx:id="removeColumn" text="Remove" prefWidth="100"/>
+                </columns>
+            </TableView>
+            <HBox spacing="10" alignment="CENTER_RIGHT">
+                <Label fx:id="totalLabel" text="Total: 0.00 DT" style="-fx-font-weight: bold; -fx-font-size: 16px;"/>
+                <Button fx:id="checkoutButton" text="Checkout" style="-fx-background-color: #2a9d8f; -fx-text-fill: white;"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

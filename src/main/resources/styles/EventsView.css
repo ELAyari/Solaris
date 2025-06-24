@@ -1,0 +1,270 @@
+/* Base Styles */
+.events-root {
+    -fx-background-color: #ffffff;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* Header */
+.app-header {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 0);
+    -fx-padding: 0 20px;
+}
+
+.app-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #27ae60;
+    -fx-padding: 0 0 0 10;
+}
+
+.header-icon {
+    -fx-fill: #27ae60;
+    -fx-scale-x: 1.5;
+    -fx-scale-y: 1.5;
+}
+
+.add-event-button {
+    -fx-background-color: #27ae60;
+    -fx-background-radius: 30px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+}
+
+.add-event-button:hover {
+    -fx-background-color: #219a52;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 0);
+}
+
+.button-icon {
+    -fx-fill: white;
+}
+
+.button-text {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+/* Hero Section */
+.hero-section {
+    -fx-background-color: linear-gradient(to right, #27ae60, #2ecc71);
+    -fx-padding: 40px;
+    -fx-spacing: 15;
+}
+
+.hero-title {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.hero-subtitle {
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+    -fx-opacity: 0.9;
+    -fx-padding: 0 0 20 0;
+}
+
+/* Search Bar */
+.search-container {
+    -fx-background-color: white;
+    -fx-background-radius: 30px;
+    -fx-padding: 5px 15px;
+    -fx-spacing: 10;
+    -fx-max-width: 600px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 0);
+}
+
+.search-icon {
+    -fx-fill: #95a5a6;
+}
+
+.search-field {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: #95a5a6;
+}
+
+.search-field:focused {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.clear-search-button {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+.clear-icon {
+    -fx-fill: #95a5a6;
+}
+
+.clear-search-button:hover .clear-icon {
+    -fx-fill: #7f8c8d;
+}
+
+/* Main scrollable area */
+.main-scroll-pane {
+    -fx-background: white;
+    -fx-background-color: white;
+}
+
+.main-scroll-pane > .viewport {
+    -fx-background-color: white;
+}
+
+.main-scroll-pane .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+}
+
+.main-scroll-pane .scroll-bar:vertical .thumb {
+    -fx-background-color: #e0e0e0;
+    -fx-background-radius: 10px;
+}
+
+/* Main Content */
+.main-content {
+    -fx-background-color: white;
+    -fx-padding: 30px;
+}
+
+/* Filter Section */
+.filter-section {
+    -fx-padding: 0 0 10 0;
+}
+
+.section-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-padding: 0 0 10 0;
+}
+
+/* Day Filter Pills - No icons */
+.day-bar {
+    -fx-padding: 5px 0;
+}
+
+.day-button {
+    -fx-background-color: white;
+    -fx-text-fill: #2c3e50;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 20px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 2, 0, 0, 0);
+}
+
+.day-button:hover {
+    -fx-background-color: #ecf0f1;
+}
+
+.day-button.active {
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+}
+
+/* Events Section */
+.events-section {
+    -fx-padding: 20px 0;
+    -fx-background-color: white;
+}
+
+.grid-container {
+    -fx-background-color: white;
+    -fx-padding: 20px 0;
+}
+
+/* Event Card - Enhanced shadow */
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 8, 0, 0, 2);
+    -fx-padding: 0;
+    -fx-pref-width: 260px;
+    -fx-cursor: hand;
+    -fx-transition: -fx-effect 0.3s, -fx-translate-y 0.3s;
+}
+
+.card:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 12, 0, 0, 3);
+    -fx-translate-y: -3px;
+    -fx-background-color: white;
+}
+
+.card .content {
+    -fx-padding: 15px;
+    -fx-spacing: 8px;
+}
+
+.card .title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.card .date {
+    -fx-text-fill: #7f8c8d;
+    -fx-font-size: 13px;
+    -fx-graphic-text-gap: 5;
+}
+
+.card .price {
+    -fx-text-fill: #27ae60;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-graphic-text-gap: 5;
+}
+
+.card .badge {
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 4px;
+    -fx-padding: 5px 8px;
+    -fx-text-fill: #7f8c8d;
+    -fx-font-size: 12px;
+    -fx-graphic-text-gap: 5;
+}
+
+.card .badge-available {
+    -fx-text-fill: #27ae60;
+}
+
+.card .badge-almost-full {
+    -fx-text-fill: #f39c12;
+}
+
+.card .badge-full {
+    -fx-text-fill: #e74c3c;
+}
+
+.floating-button-wrapper {
+    -fx-min-height: 0;
+    -fx-pref-height: 0;
+    -fx-background-color: transparent;
+}
+
+.floating-action-button {
+    -fx-background-color: #27ae60;
+    -fx-background-radius: 30px;
+    -fx-min-width: 60px;
+    -fx-min-height: 60px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 2, 2);
+    -fx-cursor: hand;
+    -fx-alignment: center;
+    -fx-padding: 0;
+}
+
+.floating-action-button:hover {
+    -fx-background-color: #219a52;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 15, 0, 3, 3);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.floating-button-icon {
+    -fx-fill: white;
+    -fx-scale-x: 1.5;
+    -fx-scale-y: 1.5;
+}

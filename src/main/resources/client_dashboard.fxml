@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import java.net.URL?>
+
+<BorderPane prefHeight="800" prefWidth="1200"
+            stylesheets="styles/common.css,styles/admin_dashboard_fixed.css,styles/dashboard_cards.css,styles/animations.css,styles/modern_effects.css"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.esprit.controllers.ClientDashboardController">
+
+    <!-- TOP HEADER + NAVIGATION BAR -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="20" styleClass="topbar">
+            <padding>
+                <Insets left="30" right="30" top="10" bottom="10"/>
+            </padding>
+            <!-- Clickable Profile Section -->
+            <HBox fx:id="profileSection" onMouseClicked="#handleProfile" styleClass="profile-section" alignment="CENTER_LEFT" spacing="12">
+                <Circle fx:id="sidebarAvatar" radius="25" styleClass="sidebar-avatar"/>
+                <Label fx:id="lblUsername" styleClass="header-username"/>
+            </HBox>
+            <!-- Navigation Buttons -->
+            <HBox spacing="10" styleClass="nav-buttons">
+                <Button fx:id="btnDashboard"
+                        onAction="#handleDashboard"
+                        styleClass="topbar-button"
+                        text="🏠 Dashboard"/>
+                <Button fx:id="btnEvents"
+                        onAction="#handleEvents"
+                        styleClass="topbar-button"
+                        text="🎉 Events"/>
+                <Button fx:id="btnProducts"
+                        onAction="#handleProducts"
+                        styleClass="topbar-button"
+                        text="🛒 Products"/>
+                <Button fx:id="btnBlog"
+                        onAction="#handleBlog"
+                        styleClass="topbar-button"
+                        text="📝 Blog"/>
+                <Button fx:id="btnProfile"
+                        onAction="#handleProfile"
+                        styleClass="topbar-button"
+                        text="👤 Profile"/>
+            </HBox>
+            <Region HBox.hgrow="ALWAYS"/>
+            <!-- Notification and Logout -->
+            <StackPane>
+                <Button fx:id="btnNotificationBell"
+                        styleClass="notification-bell"
+                        onAction="#handleNotificationBellClick"
+                        text="🔔"/>
+                <Label fx:id="lblNotificationCount"
+                       styleClass="notification-count"
+                       text="0"
+                       StackPane.alignment="TOP_RIGHT"/>
+            </StackPane>
+            <Button fx:id="btnLogout"
+                    onAction="#handleLogout"
+                    styleClass="topbar-button"
+                    text="🚪 Logout"/>
+        </HBox>
+    </top>
+
+    <!-- CENTER CONTENT -->
+    <center>
+        <StackPane fx:id="contentPane">
+            <!-- initial dashboard content -->
+            <ScrollPane fx:id="dashboardHomeScroll" fitToWidth="true" styleClass="main-content-scroll">
+                <VBox spacing="30" styleClass="main-content">
+                    <padding>
+                        <Insets top="30" bottom="30" left="40" right="40"/>
+                    </padding>
+                    <!-- Welcome Section -->
+                    <VBox spacing="15" styleClass="welcome-section">
+                        <Label fx:id="lblWelcome" styleClass="welcome-title" text="Welcome to Solaris!"/>
+                        <Label styleClass="welcome-subtitle" text="Discover and join amazing events happening around you"/>
+                    </VBox>
+                    <!-- Quick Stats Cards -->
+                    <HBox spacing="20">
+                        <VBox styleClass="dashboard-card, events-card" HBox.hgrow="ALWAYS">
+                            <Label styleClass="card-title" text="Available Events"/>
+                            <Label fx:id="lblAvailableEvents" styleClass="card-value" text="0"/>
+                            <Label styleClass="card-subtitle" text="Events you can join"/>
+                        </VBox>
+                        <VBox styleClass="dashboard-card, reservations-card" HBox.hgrow="ALWAYS">
+                            <Label styleClass="card-title" text="My Reservations"/>
+                            <Label fx:id="lblMyReservations" styleClass="card-value" text="0"/>
+                            <Label styleClass="card-subtitle" text="Events you've joined"/>
+                        </VBox>
+                        <VBox styleClass="dashboard-card, upcoming-card" HBox.hgrow="ALWAYS">
+                            <Label styleClass="card-title" text="Upcoming Events"/>
+                            <Label fx:id="lblUpcomingEvents" styleClass="card-value" text="0"/>
+                            <Label styleClass="card-subtitle" text="Events this week"/>
+                        </VBox>
+                    </HBox>
+                    <!-- Insights Section -->
+                    <HBox spacing="20">
+                        <VBox styleClass="dashboard-card" HBox.hgrow="ALWAYS">
+                            <Label styleClass="card-title" text="Top Event" />
+                            <Label fx:id="lblTopEvent" styleClass="card-value" text="-" />
+                        </VBox>
+                        <VBox styleClass="dashboard-card" HBox.hgrow="ALWAYS">
+                            <Label styleClass="card-title" text="Reservations This Month" />
+                            <Label fx:id="lblReservationsMonth" styleClass="card-value" text="0" />
+                        </VBox>
+                    </HBox>
+                    <!-- Latest Events Section -->
+                    <VBox spacing="20" styleClass="events-section">
+                        <HBox alignment="CENTER_LEFT" spacing="10">
+                            <Label styleClass="section-title" text="🎉 Latest Events"/>
+                            <Region HBox.hgrow="ALWAYS"/>
+                            <Button fx:id="btnViewAllEvents" 
+                                    onAction="#handleViewAllEvents"
+                                    styleClass="view-all-button" 
+                                    text="View All"/>
+                        </HBox>
+                        <!-- Events List -->
+                        <VBox fx:id="eventsContainer" spacing="15" styleClass="events-list">
+                            <!-- Events will be dynamically loaded here -->
+                        </VBox>
+                        <!-- No events message -->
+                        <VBox fx:id="noEventsContainer" spacing="10" alignment="CENTER" 
+                              styleClass="no-events-container" visible="false" managed="false">
+                            <Label styleClass="no-events-title" text="No Events Available"/>
+                            <Label styleClass="no-events-subtitle" text="Check back later for exciting new events!"/>
+                        </VBox>
+                    </VBox>
+                    <!-- Recent Activity Section -->
+                    <VBox spacing="20" styleClass="activity-section">
+                        <Label styleClass="section-title" text="📈 Recent Activity"/>
+                        <VBox fx:id="recentActivityContainer" spacing="10" styleClass="activity-list">
+                            <!-- Recent activity will be dynamically loaded here -->
+                        </VBox>
+                    </VBox>
+                </VBox>
+            </ScrollPane>
+        </StackPane>
+    </center>
+
+</BorderPane>

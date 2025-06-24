@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.String?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fitToWidth="true" fitToHeight="true" styleClass="scroll-pane" stylesheets="@styles/product-form.css"
+            minWidth="400" minHeight="600" fx:controller="com.esprit.controllers.ProductFormController">
+    <content>
+        <VBox fx:id="rootVBox" spacing="20" styleClass="root" stylesheets="@styles/product-form.css">
+            <HBox alignment="CENTER" spacing="15" style="-fx-padding: 0 0 15 0;">
+                <ImageView fitWidth="48" fitHeight="48" preserveRatio="true" styleClass="title-icon">
+                    <image>
+                        <Image url="@../images/eco-icon.png"/>
+                    </image>
+                </ImageView>
+                <Label text="Renewable Energy Product" styleClass="title"/>
+            </HBox>
+
+            <GridPane styleClass="form-grid" VBox.vgrow="ALWAYS" maxWidth="Infinity" maxHeight="Infinity">
+                <Label text="Product Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.halignment="RIGHT"/>
+                <TextField fx:id="nameField" GridPane.columnIndex="1" GridPane.rowIndex="0" styleClass="text-field"/>
+
+                <Label text="Description:" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.halignment="RIGHT"/>
+                <TextField fx:id="descriptionField" GridPane.columnIndex="1" GridPane.rowIndex="1" styleClass="text-field"/>
+
+                <Label text="Price:" GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.halignment="RIGHT"/>
+                <TextField fx:id="priceField" GridPane.columnIndex="1" GridPane.rowIndex="2" styleClass="text-field"/>
+
+                <Label text="Stock:" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.halignment="RIGHT"/>
+                <TextField fx:id="stockField" GridPane.columnIndex="1" GridPane.rowIndex="3" styleClass="text-field"/>
+
+                <Label text="Eco-Friendly:" GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.halignment="RIGHT"/>
+                <CheckBox fx:id="recyclableCheck" GridPane.columnIndex="1" GridPane.rowIndex="4" styleClass="check-box"/>
+
+                <Label text="Category:" GridPane.columnIndex="0" GridPane.rowIndex="5" GridPane.halignment="RIGHT"/>
+                <ComboBox fx:id="categoryCombo" GridPane.columnIndex="1" GridPane.rowIndex="5" prefWidth="200" promptText="Select Category" styleClass="combo-box"/>
+
+                <Label text="Company Name:" GridPane.columnIndex="0" GridPane.rowIndex="6" GridPane.halignment="RIGHT"/>
+                <TextField fx:id="companyNameField" GridPane.columnIndex="1" GridPane.rowIndex="6" styleClass="text-field" promptText="Your company name"/>
+
+                <Label text="Company Logo:" GridPane.columnIndex="0" GridPane.rowIndex="7" GridPane.halignment="RIGHT"/>
+                <HBox GridPane.columnIndex="1" GridPane.rowIndex="7" spacing="10" alignment="CENTER_LEFT">
+                    <ImageView fx:id="companyLogoImage" fitWidth="100" fitHeight="100" preserveRatio="true" styleClass="company-logo"/>
+                    <Button text="Browse Logo" onAction="#handleBrowseCompanyLogo" styleClass="btn-browse-image">
+                        <graphic>
+                            <ImageView fitWidth="16" fitHeight="16" preserveRatio="true">
+                                <image>
+                                    <Image url="@images/add-icon.png"/>
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <Button text="Delete Logo" onAction="#handleDeleteCompanyLogo" styleClass="btn-delete-image">
+                        <graphic>
+                            <ImageView fitWidth="16" fitHeight="16" preserveRatio="true">
+                                <image>
+                                    <Image url="@images/delete-icon.png"/>
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                </HBox>
+
+                <Label text="Product Image:" GridPane.columnIndex="0" GridPane.rowIndex="8" GridPane.halignment="RIGHT"/>
+                <HBox GridPane.columnIndex="1" GridPane.rowIndex="8" spacing="10" alignment="CENTER_LEFT">
+                    <ImageView fx:id="productImage" fitWidth="150" fitHeight="150" preserveRatio="true" styleClass="product-image"/>
+                    <Button text="Browse Image" onAction="#handleBrowseImage" styleClass="btn-browse-image">
+                        <graphic>
+                            <ImageView fitWidth="16" fitHeight="16" preserveRatio="true">
+                                <image>
+                                    <Image url="@images/add-icon.png"/>
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <Button text="Delete Image" onAction="#handleDeleteImage" styleClass="btn-delete-image">
+                        <graphic>
+                            <ImageView fitWidth="16" fitHeight="16" preserveRatio="true">
+                                <image>
+                                    <Image url="@images/delete-icon.png"/>
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                </HBox>
+            </GridPane>
+
+            <HBox spacing="20" alignment="CENTER" styleClass="button-container" VBox.vgrow="ALWAYS" maxWidth="Infinity">
+                <Button text="⬅️ Back" onAction="#handleBack" prefWidth="120" prefHeight="40" styleClass="btn-back">
+                    <tooltip>
+                        <Tooltip text="Return to products list"/>
+                    </tooltip>
+                </Button>
+                <Button fx:id="saveButton" text="Save Product" onAction="#handleSave" styleClass="btn-save-product">
+                    <graphic>
+                        <ImageView fitWidth="16" fitHeight="16" preserveRatio="true">
+                            <image>
+                                <Image url="@images/export-icon.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+        
+            </HBox>
+        </VBox>
+    </content>
+</ScrollPane>

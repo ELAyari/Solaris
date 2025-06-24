@@ -1,0 +1,454 @@
+/* Root and Background */
+.dashboard-root {
+    -fx-padding: 20;
+    -fx-background-color: linear-gradient(to bottom right, #f5fff5, #e8f5e9);
+    -fx-spacing: 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);
+    -fx-background-radius: 10;
+    padding: 20px;
+    background-color: linear-gradient(to bottom right, #f5fff5, #e8f5e9);
+}
+
+/* Header Styles */
+.header {
+    -fx-padding: 15 25;
+    -fx-alignment: center-left;
+    -fx-background-color: linear-gradient(to right, #2e7d32, #43a047);
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 8, 0, 0, 4);
+    padding: 15px 25px;
+    background-color: linear-gradient(to right, #2e7d32, #43a047);
+}
+
+.header-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 4, 0, 0, 1);
+}
+
+/* Table Styles */
+.product-table {
+    -fx-background-color: white;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 10, 0, 0, 2);
+    -fx-padding: 5;
+    background-color: white;
+    border-color: transparent;
+    border-width: 0;
+    padding: 5px;
+}
+
+.product-table .column-header {
+    -fx-background-color: linear-gradient(to right, #43a047, #66bb6a);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 12 8;
+    background-color: linear-gradient(to right, #43a047, #66bb6a);
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 12px 8px;
+}
+
+.product-table .column-header-background {
+    -fx-background-color: transparent;
+    -fx-background-radius: 8 8 0 0;
+}
+
+.product-table .table-row-cell {
+    -fx-background-color: white;
+    -fx-cell-size: 50px;
+    -fx-border-color: transparent transparent #f0f0f0 transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-transition: -fx-background-color 0.3s ease;
+}
+
+.product-table .table-row-cell:odd {
+    -fx-background-color: #f9fcf9;
+}
+
+.product-table .table-row-cell:hover {
+    -fx-background-color: #f1f8e9;
+    -fx-scale-x: 1.01;
+    -fx-scale-y: 1.01;
+    -fx-transition: -fx-scale-x 0.2s ease, -fx-scale-y 0.2s ease, -fx-background-color 0.3s ease;
+}
+
+.product-table .table-row-cell:selected {
+    -fx-background-color: #e8f5e9;
+    -fx-border-color: #81c784;
+    -fx-border-width: 0 0 1 0;
+}
+
+.product-table .table-cell {
+    -fx-alignment: center;
+    -fx-padding: 10 12;
+    -fx-border-color: transparent;
+    -fx-font-size: 13px;
+}
+
+/* Special Elements */
+.recyclable-badge {
+    -fx-background-color: linear-gradient(to right, #43a047, #66bb6a);
+    -fx-text-fill: white;
+    -fx-padding: 5 12;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 3, 0, 0, 1);
+    -fx-font-weight: bold;
+}
+
+.category-combo {
+    -fx-pref-width: 220;
+    -fx-background-color: white;
+    -fx-border-color: #81c784;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 5;
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.05), 5, 0, 0, 0);
+    -fx-font-size: 13px;
+}
+
+.category-combo:hover {
+    -fx-border-color: #81c784;
+    -fx-effect: dropshadow(three-pass-box, rgba(129,200,132,0.3), 5, 0, 0, 0);
+    -fx-transition: -fx-border-color 0.3s ease, -fx-effect 0.3s ease;
+}
+
+/* Layout Spacing */
+.toolbar, .action-bar {
+    -fx-spacing: 15;
+    -fx-padding: 15 5;
+    -fx-background-color: rgba(255,255,255,0.7);
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+/* Make product action buttons equal size and oval shaped */
+.btn-add-product, .btn-edit-product, .btn-delete-product, .btn-add-category, .btn-delete-category, .btn-prev-product {
+    -fx-pref-width: 150px;
+    -fx-pref-height: 42px;
+    -fx-background-radius: 21px; /* Oval shape */
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-border-width: 0;
+    -fx-padding: 0 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 2);
+    -fx-font-size: 14px;
+}
+
+.btn-add-product:hover, .btn-edit-product:hover, .btn-delete-product:hover, 
+.btn-add-category:hover, .btn-delete-category:hover, .btn-prev-product:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 8, 0, 0, 3);
+    -fx-transition: -fx-scale-x 0.2s ease, -fx-scale-y 0.2s ease, -fx-effect 0.2s ease;
+}
+
+.btn-add-product:pressed, .btn-edit-product:pressed, .btn-delete-product:pressed, 
+.btn-add-category:pressed, .btn-delete-category:pressed, .btn-prev-product:pressed {
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 3, 0, 0, 1);
+}
+
+/* Specific background colors for each button */
+.btn-add-product {
+    -fx-background-color: linear-gradient(to right, #43a047, #66bb6a);
+    background-color: linear-gradient(to right, #43a047, #66bb6a);
+}
+
+.btn-edit-product {
+    -fx-background-color: linear-gradient(to right, #2196F3, #1976d2);
+    background-color: linear-gradient(to right, #2196F3, #1976d2);
+}
+
+.btn-delete-product {
+    -fx-background-color: linear-gradient(to right, #d32f2f, #ef5350);
+    background-color: linear-gradient(to right, #d32f2f, #ef5350);
+}
+
+.btn-add-category {
+    -fx-background-color: linear-gradient(to right, #558b2f, #8bc34a);
+    background-color: linear-gradient(to right, #558b2f, #8bc34a);
+}
+
+.btn-delete-category {
+    -fx-background-color: linear-gradient(to right, #b42310, #f86e56); /* Orange */
+}
+
+.btn-prev-product {
+    -fx-background-color: linear-gradient(to right, #43a047, #66bb6a);
+    background-color: linear-gradient(to right, #43a047, #66bb6a);
+}
+
+/* Product image styling */
+.product-image {
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 2);
+    -fx-border-radius: 5;
+}
+
+/* Scrollbar styling */
+.product-table .scroll-bar:vertical,
+.product-table .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+.product-table .scroll-bar:vertical .thumb,
+.product-table .scroll-bar:horizontal .thumb {
+    -fx-background-color: #81c784;
+    -fx-background-radius: 5;
+    background-color: #81c784;
+    border-radius: 5px;
+}
+
+.product-table .scroll-bar:vertical .thumb:hover,
+.product-table .scroll-bar:horizontal .thumb:hover {
+    -fx-background-color: #4caf50;
+    background-color: #4caf50;
+}
+
+.product-table .increment-button,
+.product-table .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/* Status indicators */
+.status-indicator {
+    -fx-background-radius: 50%;
+    -fx-min-width: 12px;
+    -fx-min-height: 12px;
+    -fx-max-width: 12px;
+    -fx-max-height: 12px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 3, 0, 0, 1);
+}
+
+.status-in-stock {
+    -fx-background-color: #5b7b9e; /* Blue-Gray */
+}
+
+.status-low-stock {
+    -fx-background-color: #ff9800; /* Orange */
+}
+
+.status-out-of-stock {
+    -fx-background-color: #f44336; /* Red */
+}
+
+.btn-prev-product{
+    -fx-background-color: #454545;
+}
+
+/* Order Table Styles */
+.order-table {
+    -fx-background-color: white;
+    -fx-border-color: #aed581;
+    -fx-border-width: 2px;
+    -fx-min-height: 400px;
+}
+
+.order-table .column-header {
+    -fx-background-color: #33691e;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.order-table .table-row-cell {
+    -fx-background-color: white;
+}
+
+.order-table .table-row-cell:odd {
+    -fx-background-color: #f9fbe7;
+}
+
+.order-table .table-row-cell:hover {
+    -fx-background-color: #dce775;
+}
+
+.order-table .table-row-cell:selected {
+    -fx-background-color: #c5e1a5;
+}
+
+.order-table .table-cell {
+    -fx-min-height: 50px;
+    -fx-alignment: center;
+    -fx-padding: 8px;
+    -fx-border-color: transparent;
+}
+
+/* ComboBoxes */
+.client-combo, .status-combo {
+    -fx-pref-width: 200;
+    -fx-background-color: white;
+    -fx-border-color: #aed581;
+}
+
+/* Buttons */
+.btn-prev-order, .btn-delete-order {
+    -fx-pref-width: 140px;
+    -fx-pref-height: 40px;
+    -fx-background-radius: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-border-width: 0;
+    -fx-padding: 0 20px;
+}
+
+.btn-prev-order {
+    -fx-background-color: #455a64; /* Dark Gray-Blue */
+}
+
+.btn-prev-order:hover {
+    -fx-background-color: #263238;
+}
+
+.btn-delete-order {
+    -fx-background-color: #e53935; /* Red */
+}
+
+.btn-delete-order:hover {
+    -fx-background-color: #b71c1c;
+}
+
+.product-flow-pane {
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+    -fx-padding: 10;
+}
+
+/* ===== OVERRIDE GLOBAL TABLE STYLES FROM admin_dashboard_fixed.css ===== */
+/* These styles override the global table styles to prevent conflicts */
+
+/* Override global table-view styles for product tables */
+.product-table {
+    -fx-background-color: white !important;
+    -fx-border-color: transparent !important;
+    -fx-border-width: 0 !important;
+    -fx-background-radius: 8 !important;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 10, 0, 0, 2) !important;
+    -fx-padding: 5 !important;
+    -fx-min-height: auto !important;
+    -fx-pref-height: auto !important;
+}
+
+/* Override global column header styles for product tables */
+.product-table .column-header-background {
+    -fx-background-color: transparent !important;
+    -fx-background-radius: 8 8 0 0 !important;
+    -fx-background-insets: 0 !important;
+    -fx-padding: 0 0 0 0 !important;
+}
+
+.product-table .column-header, 
+.product-table .filler {
+    -fx-background-color: linear-gradient(to right, #43a047, #66bb6a) !important;
+    -fx-size: auto !important;
+    -fx-border-width: 0 !important;
+    -fx-text-fill: white !important;
+    -fx-font-weight: bold !important;
+    -fx-font-size: 14px !important;
+    -fx-padding: 12 8 !important;
+}
+
+.product-table .column-header .label {
+    -fx-text-fill: white !important;
+    -fx-font-weight: bold !important;
+    -fx-padding: 12 8 !important;
+    -fx-font-size: 14px !important;
+}
+
+/* Override global table cell styles for product tables */
+.product-table .table-cell {
+    -fx-alignment: center !important;
+    -fx-padding: 10 12 !important;
+    -fx-border-color: transparent !important;
+    -fx-font-size: 13px !important;
+    -fx-text-fill: #333 !important;
+}
+
+/* Override global table row styles for product tables */
+.product-table .table-row-cell {
+    -fx-background-color: white !important;
+    -fx-background-insets: 0 !important;
+    -fx-border-color: transparent transparent #f0f0f0 transparent !important;
+    -fx-table-cell-border-color: transparent !important;
+    -fx-padding: 0 !important;
+    -fx-cell-size: 50px !important;
+    -fx-transition: -fx-background-color 0.3s ease !important;
+}
+
+.product-table .table-row-cell:odd {
+    -fx-background-color: #f9fcf9 !important;
+}
+
+.product-table .table-row-cell:selected {
+    -fx-background-color: #e8f5e9 !important;
+    -fx-border-color: #81c784 !important;
+    -fx-border-width: 0 0 1 0 !important;
+    -fx-text-background-color: #2c3e50 !important;
+}
+
+.product-table .table-row-cell:hover {
+    -fx-background-color: #f1f8e9 !important;
+    -fx-scale-x: 1.01 !important;
+    -fx-scale-y: 1.01 !important;
+    -fx-transition: -fx-scale-x 0.2s ease, -fx-scale-y 0.2s ease, -fx-background-color 0.3s ease !important;
+}
+
+/* Override global table-view styles for order tables */
+.order-table {
+    -fx-background-color: white !important;
+    -fx-border-color: transparent !important;
+    -fx-border-width: 0 !important;
+    -fx-background-radius: 8 !important;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 10, 0, 0, 2) !important;
+    -fx-padding: 5 !important;
+    -fx-min-height: auto !important;
+    -fx-pref-height: auto !important;
+}
+
+.order-table .column-header {
+    -fx-background-color: linear-gradient(to right, #43a047, #66bb6a) !important;
+    -fx-text-fill: white !important;
+    -fx-font-weight: bold !important;
+    -fx-font-size: 14px !important;
+    -fx-padding: 12 8 !important;
+}
+
+.order-table .table-row-cell {
+    -fx-background-color: white !important;
+    -fx-background-insets: 0 !important;
+    -fx-border-color: transparent transparent #f0f0f0 transparent !important;
+    -fx-table-cell-border-color: transparent !important;
+    -fx-padding: 0 !important;
+    -fx-cell-size: 50px !important;
+}
+
+.order-table .table-row-cell:odd {
+    -fx-background-color: #f9fcf9 !important;
+}
+
+.order-table .table-row-cell:hover {
+    -fx-background-color: #f1f8e9 !important;
+}
+
+.order-table .table-row-cell:selected {
+    -fx-background-color: #e8f5e9 !important;
+    -fx-text-background-color: #2c3e50 !important;
+}
+
+.order-table .table-cell {
+    -fx-alignment: center !important;
+    -fx-padding: 10 12 !important;
+    -fx-border-color: transparent !important;
+    -fx-font-size: 13px !important;
+    -fx-text-fill: #333 !important;
+}

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Rectangle?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="com.esprit.controllers.ProductOwnerOrdersController"
+            stylesheets="@/styles/product-owner-dashboard.css">
+    <top>
+        <VBox spacing="10">
+            <HBox styleClass="dashboard-header" alignment="CENTER_LEFT" spacing="20">
+                <padding><Insets top="20" right="30" bottom="20" left="30"/></padding>
+                <Label text="Product Owner Order Dashboard" styleClass="dashboard-title"/>
+                <Label fx:id="companyNameLabel" styleClass="company-name"/>
+            </HBox>
+            
+            <!-- Filter options -->
+            <HBox spacing="15" alignment="CENTER_LEFT" styleClass="filter-container">
+                <padding><Insets top="10" right="20" bottom="10" left="20"/></padding>
+                <Label text="Filter by:" styleClass="filter-label"/>
+                <DatePicker fx:id="startDatePicker" promptText="Start Date"/>
+                <Label text="to"/>
+                <DatePicker fx:id="endDatePicker" promptText="End Date"/>
+                <ComboBox fx:id="statusComboBox" promptText="Order Status"/>
+                <TextField fx:id="searchField" promptText="Search by Order ID or Customer" prefWidth="200"/>
+                <Button fx:id="searchButton" text="Search" styleClass="search-button"/>
+                <Button fx:id="clearButton" text="Clear Filters" styleClass="clear-button"/>
+            </HBox>
+        </VBox>
+    </top>
+    
+    <center>
+        <StackPane>
+            <BorderPane>
+                <center>
+                    <VBox spacing="20">
+                        <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+                        
+                        <!-- Orders summary -->
+                        <HBox spacing="20" styleClass="summary-container">
+                            <VBox styleClass="summary-card" HBox.hgrow="ALWAYS">
+                                <Label text="Pending Orders" styleClass="summary-title"/>
+                                <Label fx:id="pendingOrdersLabel" text="0" styleClass="summary-value"/>
+                            </VBox>
+                            <VBox styleClass="summary-card" HBox.hgrow="ALWAYS">
+                                <Label text="Processing Orders" styleClass="summary-title"/>
+                                <Label fx:id="processingOrdersLabel" text="0" styleClass="summary-value"/>
+                            </VBox>
+                            <VBox styleClass="summary-card" HBox.hgrow="ALWAYS">
+                                <Label text="Shipped Orders" styleClass="summary-title"/>
+                                <Label fx:id="shippedOrdersLabel" text="0" styleClass="summary-value"/>
+                            </VBox>
+                            <VBox styleClass="summary-card" HBox.hgrow="ALWAYS">
+                                <Label text="Delivered Orders" styleClass="summary-title"/>
+                                <Label fx:id="deliveredOrdersLabel" text="0" styleClass="summary-value"/>
+                            </VBox>
+                            <VBox styleClass="summary-card" HBox.hgrow="ALWAYS">
+                                <Label text="Total Revenue" styleClass="summary-title"/>
+                                <Label fx:id="totalRevenueLabel" text="0.00 DT" styleClass="summary-value"/>
+                            </VBox>
+                        </HBox>
+                        
+                        <!-- Orders table -->
+                        <VBox VBox.vgrow="ALWAYS" styleClass="table-container">
+                            <Label text="Your Orders" styleClass="section-title"/>
+                            <TableView fx:id="ordersTable" VBox.vgrow="ALWAYS">
+                                <columns>
+                                    <TableColumn fx:id="orderIdColumn" text="Order ID" prefWidth="80"/>
+                                    <TableColumn fx:id="dateColumn" text="Date" prefWidth="120"/>
+                                    <TableColumn fx:id="customerColumn" text="Customer" prefWidth="150"/>
+                                    <TableColumn fx:id="totalColumn" text="Total" prefWidth="100"/>
+                                    <TableColumn fx:id="yourItemsColumn" text="Your Items" prefWidth="100"/>
+                                    <TableColumn fx:id="statusColumn" text="Status" prefWidth="120"/>
+                                </columns>
+                            </TableView>
+                            <Pagination fx:id="ordersPagination" maxPageIndicatorCount="5"/>
+                        </VBox>
+                        
+                        <!-- Order details section (shown when an order is selected) -->
+                        <VBox fx:id="orderDetailsContainer" visible="false" managed="false" styleClass="details-container" spacing="15">
+                            <Label text="Order Details" styleClass="section-title"/>
+                        </VBox>
+                    </VBox>
+                </center>
+                
+                <right>
+                    <VBox spacing="20" prefWidth="300">
+                        <padding><Insets top="20" right="20" bottom="20" left="0"/></padding>
+                        
+                        <VBox styleClass="chart-card" spacing="10">
+                            <Label text="Order Status Distribution" styleClass="section-title"/>
+                            <PieChart fx:id="orderStatusChart" prefHeight="250" legendVisible="true"/>
+                            
+                            <!-- Status Legend with Color Indicators -->
+                            <VBox spacing="5" styleClass="status-legend">
+                                <HBox spacing="10" alignment="CENTER_LEFT">
+                                    <StackPane styleClass="color-indicator" style="-fx-background-color: #FFA500;">
+                                        <Rectangle width="15" height="15" styleClass="color-box"/>
+                                    </StackPane>
+                                    <Label text="En attente - Orders awaiting processing" styleClass="legend-label"/>
+                                </HBox>
+                                <HBox spacing="10" alignment="CENTER_LEFT">
+                                    <StackPane styleClass="color-indicator" style="-fx-background-color: #1E90FF;">
+                                        <Rectangle width="15" height="15" styleClass="color-box"/>
+                                    </StackPane>
+                                    <Label text="En cours - Orders being processed" styleClass="legend-label"/>
+                                </HBox>
+                                <HBox spacing="10" alignment="CENTER_LEFT">
+                                    <StackPane styleClass="color-indicator" style="-fx-background-color: #9370DB;">
+                                        <Rectangle width="15" height="15" styleClass="color-box"/>
+                                    </StackPane>
+                                    <Label text="Expédiée - Orders shipped to customers" styleClass="legend-label"/>
+                                </HBox>
+                                <HBox spacing="10" alignment="CENTER_LEFT">
+                                    <StackPane styleClass="color-indicator" style="-fx-background-color: #32CD32;">
+                                        <Rectangle width="15" height="15" styleClass="color-box"/>
+                                    </StackPane>
+                                    <Label text="Livrée - Orders delivered to customers" styleClass="legend-label"/>
+                                </HBox>
+                                <HBox spacing="10" alignment="CENTER_LEFT">
+                                    <StackPane styleClass="color-indicator" style="-fx-background-color: #DC143C;">
+                                        <Rectangle width="15" height="15" styleClass="color-box"/>
+                                    </StackPane>
+                                    <Label text="Annulée - Cancelled orders" styleClass="legend-label"/>
+                                </HBox>
+                            </VBox>
+                            
+                            <!-- Chart Instructions -->
+                            <VBox styleClass="chart-instructions" spacing="5">
+                                <Label text="Chart Interactions:" styleClass="subsection-title"/>
+                                <Label text="• Hover over a slice to see detailed information" wrapText="true"/>
+                                <Label text="• Click on a slice to filter orders by that status" wrapText="true"/>
+                                <Label text="• Use the legend to identify order statuses" wrapText="true"/>
+                            </VBox>
+                        </VBox>
+                    </VBox>
+                </right>
+            </BorderPane>
+            
+            <!-- Loading overlay -->
+            <StackPane fx:id="loadingOverlay" visible="false" style="-fx-background-color: rgba(0,0,0,0.4);">
+                <Label text="Loading..." style="-fx-background-color: white; -fx-padding: 10 20; -fx-background-radius: 5;"/>
+            </StackPane>
+        </StackPane>
+    </center>
+</BorderPane>

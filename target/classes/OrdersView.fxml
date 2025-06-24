@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.esprit.controllers.OrdersController" spacing="10" stylesheets="@/styles/orders-view.css" styleClass="orders-root" >
+
+    <Label text="My Orders" styleClass="orders-label"/>
+
+    <ListView fx:id="ordersListView" prefWidth="800" prefHeight="500" styleClass="orders-list-view"/>
+
+    <Button text="View Details" fx:id="viewDetailsButton" maxWidth="150" alignment="CENTER" styleClass="view-details-button"/>
+
+</VBox>

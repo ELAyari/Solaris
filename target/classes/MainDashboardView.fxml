@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane xmlns="http://javafx.com/javafx/17"
+         xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="com.esprit.controllers.MainDashboardController"
+         tabClosingPolicy="UNAVAILABLE"
+         prefHeight="600" prefWidth="900">
+
+    <Tab text="Products">
+        <StackPane fx:id="productsTabContent" prefHeight="600" prefWidth="900"/>
+    </Tab>
+
+    <Tab text="Order Dashboard">
+        <StackPane fx:id="orderDashboardTabContent" prefHeight="600" prefWidth="900"/>
+    </Tab>
+
+    <Tab text="Analytics">
+        <fx:include source="AnalyticsView.fxml"/>
+    </Tab>
+    
+
+</TabPane>

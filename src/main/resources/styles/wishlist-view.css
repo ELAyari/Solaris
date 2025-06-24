@@ -1,0 +1,89 @@
+/* Wishlist View Specific Styles */
+
+/* The .root style from styles.css will handle the main background and font. */
+/* #titleLabel is part of the new HBox in FXML, styled there or inherits. */
+/* #backButton is part of NavBarView.fxml and styled in product-card.css */
+
+/* Ensure "Add All to Panier" button uses the primary button style from styles.css */
+#addAllToPanierButton {
+    /* This will inherit .button styles from styles.css if not overridden by a more specific ID selector in FXML.
+       If it needs to be different, define here. For now, assume it inherits .button.
+       If it was given a styleClass="btn-primary" in FXML, that would be better.
+       Let's assume it uses the default .button style.
+    */
+}
+
+#wishlistFlowPane {
+    -fx-background-color: transparent; /* Let the VBox background show through */
+    -fx-padding: 15px; /* Consistent padding */
+    -fx-hgap: 15px;
+    -fx-vgap: 15px;
+}
+
+/* Styling for individual wishlist item cards (created in WishlistController) */
+.wishlist-item-card {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dee2e6; /* Subtle border */
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 5, 0, 0, 1); /* Softer shadow */
+    -fx-pref-width: 750px; /* Adjust as needed based on FlowPane width */
+    -fx-transition: all 0.2s ease-in-out;
+}
+
+.wishlist-item-card:hover {
+    -fx-border-color: #27ae60; /* Primary green accent on hover */
+    -fx-effect: dropshadow(gaussian, rgba(39,174,96,0.15), 8, 0, 0, 2);
+}
+
+.wishlist-item-card .label { /* General labels within the card */
+    -fx-text-fill: #343a40;
+}
+
+.wishlist-item-card .product-name-wl { /* Specific style for product name in wishlist card */
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.wishlist-item-card .product-description-wl {
+    -fx-font-size: 13px;
+    -fx-text-fill: #6c757d;
+    -fx-wrap-text: true;
+    -fx-max-width: 380px; /* Adjust based on layout */
+}
+
+.wishlist-item-card .product-price-wl {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #27ae60; /* Primary green for price */
+}
+
+/* Buttons within the wishlist item card */
+.wishlist-item-card .button { /* General buttons on card, e.g., Add to Panier, Remove */
+    -fx-font-size: 13px;
+    -fx-padding: 6px 12px;
+    -fx-background-radius: 20px; /* Rounded buttons */
+}
+
+.wishlist-item-card .btn-add-to-panier-wl {
+    -fx-background-color: #27ae60; /* Primary green */
+    -fx-text-fill: white;
+}
+.wishlist-item-card .btn-add-to-panier-wl:hover {
+    -fx-background-color: #229954;
+}
+
+.wishlist-item-card .btn-remove-wl {
+    -fx-background-color: #e74c3c; /* Red for remove */
+    -fx-text-fill: white;
+}
+.wishlist-item-card .btn-remove-wl:hover {
+    -fx-background-color: #c0392b;
+}
+
+.wishlist-item-card .btn-add-to-panier-wl:disabled {
+    -fx-background-color: #bdc3c7;
+    -fx-opacity: 0.7;
+}

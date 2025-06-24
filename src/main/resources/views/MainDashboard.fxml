@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.web.WebView?>
+<?import java.net.URL?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<BorderPane prefHeight="800.0" prefWidth="1200.0"
+            xmlns="http://javafx.com/javafx/17.0.6"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.esprit.controllers.DashboardController"
+            styleClass="dashboard-root">
+
+    <!-- Link to styles -->
+    <stylesheets>
+        <URL value="@../styles/profile.css" />
+        <URL value="@../styles/styles.css" />
+        <URL value="@../styles/sidebar.css" />
+        <URL value="@../styles/header.css" />
+        <URL value="@../styles/content.css" />
+    </stylesheets>
+
+    <center>
+        <ScrollPane fitToWidth="true" fitToHeight="true" styleClass="content-area">
+            <content>
+                <VBox spacing="20">
+                    <padding>
+                        <Insets top="20" right="30" bottom="20" left="30"/>
+                    </padding>
+                    
+                    <!-- Page Title -->
+                    <Label text="Dashboard Overview" styleClass="page-title"/>
+                    
+                    <!-- Statistics Cards -->
+                    <HBox spacing="20" alignment="CENTER_LEFT">
+                        <VBox styleClass="stat-card">
+                            <Label text="Total Bins" styleClass="stat-title"/>
+                            <Label fx:id="lblTotalBins" text="0" styleClass="stat-value"/>
+                            <Label text="Waste Collection Points" styleClass="stat-title"/>
+                        </VBox>
+                        <VBox styleClass="stat-card">
+                            <Label text="Solar Bins" styleClass="stat-title"/>
+                            <Label fx:id="lblTotalSolarBins" text="0" styleClass="stat-value" style="-fx-text-fill: #10b981;"/>
+                            <Label text="Clean Energy Collection" styleClass="stat-title"/>
+                        </VBox>
+                        <VBox styleClass="stat-card">
+                            <Label text="Total Trucks" styleClass="stat-title"/>
+                            <Label fx:id="lblTotalTrucks" text="0" styleClass="stat-value"/>
+                            <Label text="Fleet Vehicles" styleClass="stat-title"/>
+                        </VBox>
+                        <VBox styleClass="stat-card">
+                            <Label text="Active Trucks" styleClass="stat-title"/>
+                            <Label fx:id="lblActiveTrucks" text="0" styleClass="stat-value" style="-fx-text-fill: #3b82f6;"/>
+                            <Label text="Currently in Service" styleClass="stat-title"/>
+                        </VBox>
+                    </HBox>
+                    
+                    <!-- Main Content Cards -->
+                    <HBox spacing="20" VBox.vgrow="ALWAYS">
+                        <!-- Map Container -->
+                        <VBox styleClass="card" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS" maxWidth="Infinity">
+                            <Label text="Live Fleet Tracking" styleClass="section-title"/>
+                            <WebView fx:id="mapView" VBox.vgrow="ALWAYS" minHeight="400"/>
+                        </VBox>
+                        
+                        <!-- Quick Actions -->
+                        <VBox styleClass="card" minWidth="300" spacing="15">
+                            <Label text="Quick Actions" styleClass="section-title"/>
+                            
+                            <Button text="🗑️ Manage Bins" styleClass="primary-button" maxWidth="Infinity" onAction="#showBinsView"/>
+                            <Button text="☀️ Solar Bin Management" styleClass="success-button" maxWidth="Infinity" onAction="#showSolarBinManagerView"/>
+                            <Button text="🚚 Manage Trucks" styleClass="secondary-button" maxWidth="Infinity" onAction="#showTrucksView"/>
+                            
+                            <Separator/>
+                            
+                            <Button text="📊 Generate Reports" styleClass="secondary-button" maxWidth="Infinity"/>
+                            <Button text="⚙️ System Settings" styleClass="secondary-button" maxWidth="Infinity"/>
+                        </VBox>
+                    </HBox>
+                    
+                    <!-- Bin and Truck Lists -->
+                    <HBox spacing="20" VBox.vgrow="ALWAYS">
+                        <!-- Bins List -->
+                        <VBox styleClass="card" HBox.hgrow="ALWAYS" spacing="10">
+                            <Label text="Total Bins" styleClass="section-title"/>
+                            <TableView fx:id="binsTable" styleClass="data-table" prefHeight="300" VBox.vgrow="ALWAYS">
+                                <columns>
+                                    <TableColumn text="ID" prefWidth="50">
+                                        <cellValueFactory><PropertyValueFactory property="id"/></cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn text="Location" prefWidth="200">
+                                        <cellValueFactory><PropertyValueFactory property="location"/></cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn text="Waste Type" prefWidth="100">
+                                        <cellValueFactory><PropertyValueFactory property="typeDechet"/></cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn text="Fill Level" prefWidth="80">
+                                        <cellValueFactory><PropertyValueFactory property="niveauRemplissage"/></cellValueFactory>
+                                    </TableColumn>
+                                </columns>
+                            </TableView>
+                        </VBox>
+                        
+                        <!-- Trucks List -->
+                        <VBox styleClass="card" HBox.hgrow="ALWAYS" spacing="10">
+                            <Label text="Total Trucks" styleClass="section-title"/>
+                            <TableView fx:id="trucksTable" styleClass="data-table" prefHeight="300" VBox.vgrow="ALWAYS">
+                                <columns>
+                                    <TableColumn text="ID" prefWidth="50">
+                                        <cellValueFactory><PropertyValueFactory property="id"/></cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn text="Current Location" prefWidth="200">
+                                        <cellValueFactory><PropertyValueFactory property="currentLocation"/></cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn text="Status" prefWidth="100">
+                                        <cellValueFactory><PropertyValueFactory property="statut"/></cellValueFactory>
+                                    </TableColumn>
+                                </columns>
+                            </TableView>
+                        </VBox>
+                    </HBox>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+
+</BorderPane>

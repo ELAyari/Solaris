@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+
+<!--
+    This FXML is meant to be loaded as a “fragment” (just the center content),
+    not a full window. Its root is a VBox that can be inserted into a parent pane.
+-->
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.esprit.controllers.AdminDashboardController"
+      stylesheets="@../styles/adminDashboard.css"
+      alignment="CENTER" spacing="10">
+
+    <Label text="Admin Dashboard" style="-fx-font-size: 24px;"/>
+    <Label text="Welcome to the Smart Waste Management System" style="-fx-font-size: 16px;"/>
+
+    <HBox spacing="20">
+        <VBox>
+            <Label text="Bin Statistics" style="-fx-font-size: 18px;"/>
+            <BarChart fx:id="binChart" title="Bin Fill Levels">
+                <xAxis>
+                    <CategoryAxis label="Bin ID"/>
+                </xAxis>
+                <yAxis>
+                    <NumberAxis label="Fill Level (%)"/>
+                </yAxis>
+            </BarChart>
+        </VBox>
+        <VBox>
+            <Label text="Delivery Statistics" style="-fx-font-size: 18px;"/>
+            <PieChart fx:id="deliveryChart" title="Delivery Status"/>
+        </VBox>
+    </HBox>
+
+</VBox>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.esprit.controllers.BlogCardController"
+      style="-fx-background-color: white; -fx-background-radius: 18; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 12, 0, 0, 3); -fx-cursor: hand;"
+      onMouseClicked="#handleClick" spacing="10" prefWidth="200" maxWidth="200">
+    
+    <!-- Blog Image -->
+    <StackPane style="-fx-padding: 10 10 0 10;">
+        <ImageView fx:id="blogImage" fitWidth="180" fitHeight="110" preserveRatio="false" smooth="true"
+                   style="-fx-background-radius: 14 14 0 0; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.10), 6, 0, 0, 1); -fx-clip: true;" />
+    </StackPane>
+    
+    <!-- Content Section -->
+    <VBox spacing="10" style="-fx-padding: 12;">
+        <!-- Title -->
+        <Label fx:id="titleLabel" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" 
+               wrapText="true" />
+        
+        <!-- Author and Date -->
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label fx:id="authorLabel" style="-fx-text-fill: #7f8c8d; -fx-font-size: 12px;" />
+            <Label text="•" style="-fx-text-fill: #7f8c8d;" />
+            <Label fx:id="dateLabel" style="-fx-text-fill: #7f8c8d; -fx-font-size: 12px;" />
+        </HBox>
+        
+        <!-- Summary/Resume -->
+        <Label fx:id="summaryLabel" wrapText="true" maxHeight="48" style="-fx-font-size: 13px; -fx-text-fill: #495057; -fx-padding: 0 0 0 0;" />
+        
+        <!-- Stats and Actions -->
+        <HBox spacing="12" alignment="CENTER_LEFT" style="-fx-padding: 8 0 0 0;">
+            <HBox spacing="5" alignment="CENTER_LEFT">
+                <Label text="❤" style="-fx-text-fill: #e74c3c;" />
+                <Label fx:id="likesLabel" style="-fx-text-fill: #7f8c8d; -fx-font-size: 12px;" />
+            </HBox>
+            <HBox spacing="5" alignment="CENTER_LEFT">
+                <Label text="💬" style="-fx-text-fill: #3498db;" />
+                <Label fx:id="commentsLabel" style="-fx-text-fill: #7f8c8d; -fx-font-size: 12px;" />
+            </HBox>
+        </HBox>
+    </VBox>
+</VBox>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane fx:id="mainContainer" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.esprit.controllers.AjoutEvent"
+            stylesheets="@/styles/AjoutEvent.css">
+
+    <!-- Header Bar with only the back button -->
+    <top>
+        <HBox styleClass="page-header" alignment="CENTER_LEFT">
+            <Button fx:id="backButton" styleClass="back-button">
+                <graphic>
+                    <HBox spacing="8" alignment="CENTER">
+                        <SVGPath content="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"
+                                 styleClass="back-icon-path"/>
+                        <Label text="Back" styleClass="back-text"/>
+                    </HBox>
+                </graphic>
+            </Button>
+            <Label text="Create Event" styleClass="header-title"/>
+            <padding>
+                <Insets top="15" right="30" bottom="15" left="30"/>
+            </padding>
+        </HBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" styleClass="form-scroll-pane">
+            <VBox spacing="30" alignment="CENTER" styleClass="form-container">
+
+                <!-- Hero banner moved into scrollable content -->
+                <HBox styleClass="form-header-banner" alignment="CENTER_LEFT">
+                    <VBox>
+                        <Label text="Tell us about your event" styleClass="form-header-title"/>
+                        <Label text="Fill out the details below to create a great event" styleClass="form-header-subtitle"/>
+                    </VBox>
+                    <padding>
+                        <Insets top="30" right="40" bottom="30" left="40"/>
+                    </padding>
+                </HBox>
+
+                <!-- Event Details Section -->
+                <VBox spacing="20" styleClass="form-section">
+                    <Label text="Event Details" styleClass="section-title"/>
+
+                    <!-- Title Field -->
+                    <VBox spacing="5" styleClass="form-field-container">
+                        <Label text="Event Title" styleClass="field-label"/>
+                        <HBox styleClass="input-container" alignment="CENTER_LEFT">
+                            <SVGPath content="M4,5H20V7H4V5M4,9H20V11H4V9M4,13H20V15H4V13M4,17H14V19H4V17Z" styleClass="field-icon"/>
+                            <TextField fx:id="titreField" promptText="Enter an eye-catching title"
+                                       styleClass="text-input" HBox.hgrow="ALWAYS"/>
+                        </HBox>
+                    </VBox>
+
+                    <!-- Description Field -->
+                    <VBox spacing="5" styleClass="form-field-container">
+                        <Label text="Description" styleClass="field-label"/>
+                        <HBox styleClass="input-container" alignment="CENTER_LEFT">
+                            <SVGPath content="M20,20H4A2,2 0 0,1 2,18V6A2,2 0 0,1 4,4H20A2,2 0 0,1 22,6V18A2,2 0 0,1 20,20M4,6V18H20V6H4M6,9H18V11H6V9M6,13H16V15H6V13Z" styleClass="field-icon"/>
+                            <TextArea fx:id="descriptionField" promptText="Describe your event in detail"
+                                      styleClass="text-input" wrapText="true" prefRowCount="4" HBox.hgrow="ALWAYS"/>
+                        </HBox>
+                    </VBox>
+                </VBox>
+
+                <!-- Time & Location Section -->
+                <VBox spacing="20" styleClass="form-section">
+                    <Label text="Time and Location" styleClass="section-title"/>
+
+                    <!-- Date Field -->
+                    <HBox spacing="20">
+                        <!-- Date Field with limited width -->
+                        <VBox spacing="5" styleClass="form-field-container" HBox.hgrow="ALWAYS" maxWidth="300">
+                            <Label text="Date" styleClass="field-label"/>
+                            <HBox styleClass="input-container" alignment="CENTER_LEFT">
+                                <SVGPath content="M19,19H5V8H19M16,1V3H8V1H6V3H5C3.89,3,3,3.89,3,5V19A2,2,0,0,0,5,21H19A2,2,0,0,0,21,19V5C21,3.89,20.1,3,19,3H18V1M17,12H12V17H17V12Z"
+                                         styleClass="field-icon"/>
+                                <DatePicker fx:id="datePicker" promptText="Select date"
+                                            styleClass="date-picker" HBox.hgrow="ALWAYS"/>
+                            </HBox>
+                        </VBox>
+
+                        <!-- Time Field with clock picker UI -->
+                        <VBox spacing="5" styleClass="form-field-container" HBox.hgrow="ALWAYS" maxWidth="250">
+                            <Label text="Time" styleClass="field-label"/>
+                            <HBox styleClass="input-container" alignment="CENTER_LEFT">
+                                <SVGPath content="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"
+                                         styleClass="field-icon"/>
+                                <TextField fx:id="heureField" promptText="HH:MM"
+                                           styleClass="time-input"/>
+                                <Button fx:id="timePickerButton" styleClass="time-picker-button">
+                                    <graphic>
+                                        <SVGPath content="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"
+                                                 styleClass="time-picker-icon"/>
+                                    </graphic>
+                                </Button>
+                            </HBox>
+                        </VBox>
+                    </HBox>
+
+                    <!-- Location Field -->
+                    <VBox spacing="5" styleClass="form-field-container">
+                        <Label text="Location" styleClass="field-label"/>
+                        <HBox styleClass="input-container" alignment="CENTER_LEFT">
+                            <SVGPath content="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"
+                                     styleClass="field-icon"/>
+                            <TextField fx:id="adresseField" promptText="Enter venue address"
+                                       styleClass="text-input" HBox.hgrow="ALWAYS"/>
+                        </HBox>
+                    </VBox>
+                </VBox>
+
+                <!-- Event Options Section -->
+                <VBox spacing="20" styleClass="form-section">
+                    <Label text="Event Options" styleClass="section-title"/>
+
+                    <HBox spacing="20">
+                        <!-- Price Field with limited width -->
+                        <VBox spacing="5" styleClass="form-field-container" HBox.hgrow="ALWAYS" maxWidth="220">
+                            <Label text="Price (TND)" styleClass="field-label"/>
+                            <HBox styleClass="input-container" alignment="CENTER_LEFT">
+                                <SVGPath content="M11.8,10.9C9.53,10.31 8.8,9.7 8.8,8.75C8.8,7.66 9.81,6.9 11.5,6.9C13.28,6.9 13.94,7.75 14,9H16.21C16.14,7.28 15.09,5.7 13,5.19V3H10V5.16C8.06,5.58 6.5,6.84 6.5,8.77C6.5,11.08 8.41,12.23 11.2,12.9C13.7,13.5 14.2,14.38 14.2,15.31C14.2,16 13.71,17.1 11.5,17.1C9.44,17.1 8.63,16.18 8.5,15H6.32C6.44,17.19 8.08,18.42 10,18.83V21H13V18.85C14.95,18.5 16.5,17.35 16.5,15.3C16.5,12.46 14.07,11.5 11.8,10.9Z"
+                                         styleClass="field-icon"/>
+                                <Spinner fx:id="priceSpinner" editable="true" styleClass="spinner-input"/>
+                            </HBox>
+                        </VBox>
+
+                        <!-- Capacity Field with limited width -->
+                        <VBox spacing="5" styleClass="form-field-container" HBox.hgrow="ALWAYS" maxWidth="220">
+                            <Label text="Capacity" styleClass="field-label"/>
+                            <HBox styleClass="input-container" alignment="CENTER_LEFT">
+                                <SVGPath content="M16,13C15.71,13 15.38,13 15.03,13.05C16.19,13.89 17,15 17,16.5V19H23V16.5C23,14.17 18.33,13 16,13M8,13C5.67,13 1,14.17 1,16.5V19H15V16.5C15,14.17 10.33,13 8,13M8,11A3,3 0 0,0 11,8A3,3 0 0,0 8,5A3,3 0 0,0 5,8A3,3 0 0,0 8,11M16,11A3,3 0 0,0 19,8A3,3 0 0,0 16,5A3,3 0 0,0 13,8A3,3 0 0,0 16,11Z"
+                                         styleClass="field-icon"/>
+                                <Spinner fx:id="reservationLimitSpinner" editable="true" styleClass="spinner-input"/>
+                            </HBox>
+                        </VBox>
+                    </HBox>
+                </VBox>
+
+                <!-- Image Upload Section -->
+                <VBox spacing="20" styleClass="form-section">
+                    <Label text="Event Image" styleClass="section-title"/>
+
+                    <VBox spacing="5" styleClass="form-field-container">
+                        <Label text="Poster Image" styleClass="field-label"/>
+                        <HBox styleClass="input-container" alignment="CENTER_LEFT">
+                            <SVGPath content="M19,19H5V5H19M19,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M13.96,12.29L11.21,15.83L9.25,13.47L6.5,17H17.5L13.96,12.29Z"
+                                     styleClass="field-icon"/>
+                            <TextField fx:id="posterImageUrlField" promptText="Image URL or select a file"
+                                       styleClass="text-input" HBox.hgrow="ALWAYS"/>
+                            <Button fx:id="browseButton" text="Browse" styleClass="browse-button"/>
+                        </HBox>
+
+                        <!-- AI Generate button -->
+                        <HBox styleClass="ai-container" alignment="CENTER_RIGHT">
+                            <Button fx:id="aiGenerateButton" styleClass="ai-button">
+                                <graphic>
+                                    <HBox spacing="8" alignment="CENTER">
+                                        <SVGPath content="M21,3L3,10.53V11.5L9.84,14.16L12.5,21H13.46L21,3Z" styleClass="ai-icon"/>
+                                        <Label text="AI Generate" styleClass="ai-text"/>
+                                    </HBox>
+                                </graphic>
+                            </Button>
+                        </HBox>
+
+                        <!-- Image Preview -->
+                        <StackPane styleClass="image-preview-container">
+                            <ImageView fx:id="posterPreview" styleClass="preview-image"
+                                       fitWidth="300" fitHeight="180" preserveRatio="true"/>
+                            <ProgressIndicator fx:id="previewSpinner" visible="false"
+                                               maxWidth="50" maxHeight="50"/>
+                        </StackPane>
+                    </VBox>
+                </VBox>
+
+                <!-- Submit Button -->
+                <HBox alignment="CENTER" styleClass="submit-container">
+                    <Button fx:id="validerButton" styleClass="submit-button">
+                        <graphic>
+                            <HBox spacing="8" alignment="CENTER">
+                                <SVGPath content="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" styleClass="submit-icon"/>
+                                <Label text="Save Event" styleClass="submit-text"/>
+                            </HBox>
+                        </graphic>
+                    </Button>
+                </HBox>
+
+                <!-- Bottom spacing -->
+                <Region prefHeight="30"/>
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>

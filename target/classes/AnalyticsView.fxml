@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.chart.ScatterChart?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.image.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.esprit.controllers.AnalyticsController"
+      stylesheets="@/styles/analytics-view.css"
+      styleClass="root"
+      VBox.vgrow="ALWAYS" HBox.hgrow="ALWAYS">
+    <ScrollPane fitToWidth="true" styleClass="analytics-scroll-pane" VBox.vgrow="ALWAYS">
+        <content>
+            <VBox spacing="20" style="-fx-padding: 20;" VBox.vgrow="ALWAYS" HBox.hgrow="ALWAYS">
+
+                <!-- Dashboard Title -->
+                <HBox alignment="CENTER_LEFT" spacing="10" styleClass="header">
+                    <ImageView fitWidth="80" fitHeight="80">
+                        <Image url="images/logo.png"/>
+                    </ImageView>
+                     <Label text="Renewable Energy Analytics" styleClass="header-title"/>
+                </HBox>
+
+                <!-- Metrics Cards Grid -->
+                <GridPane styleClass="metrics-grid" hgap="30" vgap="30">
+                    <VBox styleClass="card metric-card-success" GridPane.columnIndex="0" GridPane.rowIndex="0" prefWidth="250" prefHeight="180">
+                        <Label text="Total Orders" styleClass="card-title"/>
+                        <Label fx:id="totalOrdersLabel" text="0" styleClass="card-value"/>
+                        <Label text="Completed" styleClass="card-subtitle"/>
+                    </VBox>
+                    
+                    <VBox styleClass="card metric-card-info" GridPane.columnIndex="1" GridPane.rowIndex="0" prefWidth="250" prefHeight="180">
+                        <Label text="Total Customers" styleClass="card-title"/>
+                        <Label fx:id="totalCustomersLabel" text="0" styleClass="card-value"/>
+                        <Label text="Active users" styleClass="card-subtitle"/>
+                    </VBox>
+                    
+                    <VBox styleClass="card metric-card-warning" GridPane.columnIndex="0" GridPane.rowIndex="1" prefWidth="250" prefHeight="180">
+                        <Label text="Avg. Order Value" styleClass="card-title"/>
+                        <Label fx:id="averageOrderValueLabel" text="0.00 DT" styleClass="card-value"/>
+                        <Label text="Per customer" styleClass="card-subtitle"/>
+                    </VBox>
+                    
+                    <VBox styleClass="card metric-card-danger" GridPane.columnIndex="1" GridPane.rowIndex="1" prefWidth="250" prefHeight="180">
+                        <Label text="Recyclable Products" styleClass="card-title"/>
+                        <Label fx:id="recyclableProductsLabel" text="0%" styleClass="card-value"/>
+                        <Label text="Of inventory" styleClass="card-subtitle"/>
+                    </VBox>
+                </GridPane>
+
+                <!-- Pie Charts Section -->
+                <HBox spacing="20" styleClass="chart-container" HBox.hgrow="ALWAYS">
+                    <PieChart fx:id="topCustomersPieChart" title="Top Customers by Purchase Amount" 
+                              legendVisible="true" prefHeight="300" minHeight="300" styleClass="pie-chart" HBox.hgrow="ALWAYS"/>
+                    <PieChart fx:id="categorySalesPieChart" title="Product Category Mix" 
+                              legendVisible="true" prefHeight="300" minHeight="300" styleClass="pie-chart" HBox.hgrow="ALWAYS"/>
+                </HBox>
+                
+                <!-- Wishlisted Products Section -->
+                <HBox spacing="20" styleClass="chart-container" HBox.hgrow="ALWAYS">
+                    <PieChart fx:id="wishlistedProductsPieChart" title="Most Wishlisted Products" 
+                              legendVisible="true" prefHeight="300" minHeight="300" styleClass="pie-chart" HBox.hgrow="ALWAYS"/>
+                </HBox>
+
+                <!-- Bar Charts Section -->
+                <HBox spacing="20" styleClass="chart-container" HBox.hgrow="ALWAYS">
+                    <BarChart fx:id="topProductsBarChart" title="Top Products by Sales" 
+                              legendVisible="true" prefHeight="300" minHeight="300" styleClass="bar-chart" HBox.hgrow="ALWAYS">
+                        <xAxis>
+                            <CategoryAxis label="Product" styleClass="axis"/>
+                        </xAxis>
+                        <yAxis>
+                            <NumberAxis label="Quantity Sold" styleClass="axis"/>
+                        </yAxis>
+                    </BarChart>
+                </HBox>
+
+            </VBox>
+        </content>
+    </ScrollPane>
+</VBox>

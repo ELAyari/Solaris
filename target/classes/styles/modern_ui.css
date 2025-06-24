@@ -1,0 +1,131 @@
+/* Primary Green Theme Colors */
+.primary-green {
+    -fx-background-color: #34a853;
+}
+
+.primary-green-text {
+    -fx-text-fill: #34a853;
+}
+
+/* Search Bar Styling */
+.search-container {
+    -fx-background-color: white;
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-padding: 8px 15px;
+    -fx-spacing: 10;
+    -fx-alignment: center-left;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 8, 0, 0, 1);
+}
+
+.search-container:focused-within {
+    -fx-border-color: #34a853;
+    -fx-effect: dropshadow(gaussian, rgba(52, 168, 83, 0.2), 10, 0, 0, 2);
+}
+
+.search-field {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-border-width: 0;
+    -fx-padding: 0 5px;
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: #888888;
+}
+
+.search-field:focused {
+    -fx-background-color: transparent;
+    -fx-effect: null;
+}
+
+.search-icon {
+    -fx-fill: #888888;
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+
+.clear-search-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 50%;
+    -fx-cursor: hand;
+    -fx-padding: 5px;
+}
+
+.clear-search-button:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.05);
+}
+
+.clear-icon {
+    -fx-fill: #888888;
+    -fx-scale-x: 0.9;
+    -fx-scale-y: 0.9;
+}
+
+/* Modern Button Styling */
+.action-button {
+    -fx-background-color: #34a853;
+    -fx-text-fill: white;
+    -fx-padding: 10px 15px;
+    -fx-background-radius: 4px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 2, 0, 0, 1);
+    -fx-graphic-text-gap: 8;
+}
+
+.action-button:hover {
+    -fx-background-color: #2d9147;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 4, 0, 0, 2);
+}
+
+.action-button .button-icon, .action-button .button-text {
+    -fx-fill: white;
+    -fx-text-fill: white;
+}
+
+/* Table Styling */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-min-height: 450px; /* Ensure minimum height */
+    -fx-pref-height: 600px; /* Preferred height */
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #34a853;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding: 15px 10px;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+}
+
+.table-view .table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent #f1f1f1 transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 5px 0;
+    -fx-min-height: 40px; /* Ensure rows have minimum height */
+}
+
+/* Section Title Styling */
+.content-title {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #34a853;
+}
+
+/* Placeholder styling */
+.table-view .placeholder .label {
+    -fx-text-fill: #888;
+    -fx-font-style: italic;
+}

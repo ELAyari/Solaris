@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<VBox spacing="30" styleClass="main-content"
+      xmlns:fx="http://javafx.com/fxml/1"
+      xmlns="http://javafx.com/javafx/17.0.12"
+      fx:controller="com.esprit.controllers.ReportsController">
+
+    <stylesheets>
+        <URL value="@styles/common.css" />
+        <URL value="@styles/admin_dashboard_fixed.css" />
+        <URL value="@styles/manage_users.css" />
+        <URL value="@styles/table.css" />
+        <URL value="@styles/modern_ui.css" />
+    </stylesheets>
+
+    <padding>
+        <Insets bottom="30" left="40" right="40" top="30" />
+    </padding>
+
+    <!-- Title -->
+    <HBox alignment="CENTER">
+        <Label styleClass="content-title" text="Reports - Non Confirmed and Banned Users" />
+    </HBox>
+
+    <!-- Users Table -->
+    <VBox styleClass="table-container" VBox.vgrow="ALWAYS">
+        <TableView fx:id="userTable" styleClass="table-view" VBox.vgrow="ALWAYS" prefHeight="500">
+            <columns>
+                <TableColumn fx:id="colNom" prefWidth="120" text="Nom">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="nom" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colPrenom" prefWidth="120" text="Prénom">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="prenom" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colEmail" prefWidth="155" text="Email">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="email" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colRole" prefWidth="125" text="Role">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="role" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colAddress" prefWidth="150" text="Address">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="address" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colPhoneNumber" prefWidth="104" text="Phone">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="phoneNumber" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colStatus" prefWidth="116" text="Status">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="status" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+            <placeholder>
+                <Label styleClass="placeholder" text="No non-confirmed users found" />
+            </placeholder>
+        </TableView>
+    </VBox>
+
+    <!-- Action Buttons -->
+    <HBox alignment="CENTER" spacing="15">
+        <Button fx:id="btnConfirmUser" onAction="#handleConfirmUser" styleClass="action-button, confirm-button" text="Confirm User" />
+        <Button fx:id="btnBanUser" onAction="#handleBanUser" styleClass="action-button, ban-button" text="Ban User" />
+    </HBox>
+</VBox>

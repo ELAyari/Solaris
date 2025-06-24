@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600" prefWidth="900" styleClass="root" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.controllers.EmailVerificationController">
+    <stylesheets>
+        <URL value="@styles/energy.css" />
+    </stylesheets>
+
+    <GridPane AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+        <columnConstraints>
+            <ColumnConstraints percentWidth="60" />
+            <ColumnConstraints percentWidth="40" />
+        </columnConstraints>
+
+        <!-- Left Panel -->
+        <VBox alignment="CENTER" prefHeight="800.0" prefWidth="1200.0" spacing="30" styleClass="welcome-panel" GridPane.columnIndex="0">
+            <padding>
+                <Insets bottom="50" left="50" right="50" top="50" />
+            </padding>
+
+            <ImageView fitHeight="150" fitWidth="150" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@logo/logo.jpg" />
+                </image>
+            </ImageView>
+
+            <Text styleClass="app-title" text="Solaris App" />
+            <Text styleClass="welcome-text" text="Bienvenue dans votre espace énergie" />
+            <Text styleClass="slogan-text" text="Gérez votre énergie intelligemment" />
+        </VBox>
+
+        <!-- Right Panel - Email Verification Form -->
+        <VBox alignment="CENTER" spacing="25" styleClass="login-panel" GridPane.columnIndex="1">
+            <padding>
+                <Insets bottom="50" left="40" right="40" top="50" />
+            </padding>
+
+            <Text styleClass="login-title" text="Vérification Email" />
+
+            <VBox maxWidth="300" spacing="20">
+                <VBox spacing="8">
+                    <Label styleClass="input-label" text="Code de vérification (6 chiffres)" />
+                    <TextField fx:id="tfVerificationCode" promptText="123456" styleClass="modern-input" />
+                </VBox>
+
+                <CheckBox fx:id="cbRememberDevice" text="Remember this device" />
+
+                <Button maxWidth="Infinity" onAction="#handleVerify" styleClass="login-button" text="VÉRIFIER" />
+                
+                <HBox spacing="10">
+                    <Button fx:id="btnBack" maxWidth="Infinity" onAction="#handleBack" styleClass="secondary-button" text="RETOUR" HBox.hgrow="ALWAYS" />
+                    <Button maxWidth="Infinity" onAction="#handleResendCode" styleClass="secondary-button" text="RENVOYER CODE" HBox.hgrow="ALWAYS" />
+                </HBox>
+
+                <Label fx:id="lblMessage" styleClass="error-text" />
+            </VBox>
+
+            <VBox alignment="CENTER" spacing="5">
+                <Label styleClass="footer-text" text="powered by solaris.org" />
+                <Label styleClass="version-text" text="Version 0.5" />
+            </VBox>
+        </VBox>
+      <rowConstraints>
+         <RowConstraints />
+      </rowConstraints>
+    </GridPane>
+</AnchorPane>

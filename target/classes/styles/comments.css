@@ -1,0 +1,136 @@
+/* Comment List Styles */
+.comment-list {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 5px;
+}
+
+.comment-list .list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 5px 0;
+}
+
+.comment-list .list-cell:filled:selected {
+    -fx-background-color: rgba(0, 123, 255, 0.1);
+}
+
+/* Comment Item Styles */
+.comment-item {
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: #e9ecef;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0, 0, 1);
+    -fx-padding: 12px;
+    -fx-margin: 0 0 10px 0;
+}
+
+.comment-author {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: #343a40;
+}
+
+.comment-date {
+    -fx-font-size: 12px;
+    -fx-text-fill: #6c757d;
+}
+
+.comment-content {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-size: 14px;
+    -fx-text-fill: #495057;
+}
+
+.btn-reply, .btn-like, .btn-submit {
+    -fx-background-color: #f1f3f5;
+    -fx-text-fill: #495057;
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-cursor: hand;
+    -fx-padding: 5px 10px;
+    -fx-font-size: 12px;
+}
+
+.btn-reply:hover, .btn-like:hover, .btn-submit:hover {
+    -fx-background-color: #e9ecef;
+}
+
+.btn-submit {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-border-color: #007bff;
+}
+
+.btn-submit:hover {
+    -fx-background-color: #0069d9;
+    -fx-border-color: #0062cc;
+}
+
+.like-count {
+    -fx-text-fill: #6c757d;
+    -fx-font-size: 12px;
+}
+
+.replies-container {
+    -fx-padding: 0 0 0 20px; /* Indent replies */
+}
+
+.reply-box {
+    -fx-background-color: #e9ecef;
+    -fx-background-radius: 6px;
+    -fx-padding: 8px;
+    -fx-margin: 5px 0;
+}
+
+.reply-author {
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-text-fill: #343a40;
+}
+
+.reply-date {
+    -fx-font-size: 11px;
+    -fx-text-fill: #6c757d;
+}
+
+.reply-content {
+    -fx-font-size: 13px;
+    -fx-text-fill: #495057;
+    -fx-wrap-text: true;
+}
+
+.btn-delete {
+    -fx-background-color: #e74c3c !important;
+    -fx-text-fill: white !important;
+    -fx-border-color: #e74c3c !important;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-cursor: hand;
+    -fx-padding: 5px 10px;
+    -fx-font-size: 12px;
+}
+
+.btn-delete:hover {
+    -fx-background-color: #c0392b !important;
+    -fx-border-color: #c0392b !important;
+}
+
+.btn-edit {
+    -fx-background-color: #007bff !important;
+    -fx-text-fill: white !important;
+    -fx-border-color: #007bff !important;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-cursor: hand;
+    -fx-padding: 5px 10px;
+    -fx-font-size: 12px;
+}
+
+.btn-edit:hover {
+    -fx-background-color: #0056b3 !important;
+    -fx-border-color: #0056b3 !important;
+}

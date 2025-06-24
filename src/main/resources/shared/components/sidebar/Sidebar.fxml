@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+
+<VBox alignment="TOP_CENTER" spacing="20" styleClass="sidebar" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12">
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="30" />
+    </padding>
+    <Label styleClass="sidebar-title" text="Menu" />
+    <Circle fx:id="sidebarAvatar" radius="40" styleClass="sidebar-avatar" />
+    <VBox spacing="10">
+        <Button fx:id="btnDashboard" styleClass="sidebar-button" text="🏠 Dashboard" />
+        <Button fx:id="btnManageUsers" styleClass="sidebar-button" text="👥 Manage Users" />
+        <Button fx:id="btnProducts" styleClass="sidebar-button" text="📦 Products" />
+        <Button fx:id="btnEvents" styleClass="sidebar-button" text="🎉 Events" />
+        <Button fx:id="btnBlog" styleClass="sidebar-button" text="📝 Blog" />
+        <Button fx:id="btnBinTrucks"
+                styleClass="sidebar-button"
+                text="🚛 Bin Trucks"/>
+        <Button fx:id="btnReports" styleClass="sidebar-button" text="📊 Reports" />
+        <Button fx:id="btnClaims" styleClass="sidebar-button" text="📢 Claims" />
+        <Button fx:id="btnSettings" styleClass="sidebar-button" text="⚙️ Settings" />
+        <Button fx:id="btnProfile" styleClass="sidebar-button" text="👤 Profile" />
+    </VBox>
+    <Region VBox.vgrow="ALWAYS" />
+    <Button fx:id="btnLogout" styleClass="sidebar-button" text="🚪 Logout" />
+</VBox>

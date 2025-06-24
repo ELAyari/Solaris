@@ -1,0 +1,90 @@
+/* Orders View Styles */
+
+.orders-root {
+    -fx-padding: 20;
+    -fx-background-color: #f5fff5;
+    -fx-spacing: 15;
+}
+
+.orders-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #00695c;
+}
+
+.orders-list-view {
+    -fx-background-color: white;
+    -fx-border-color: #a5d6a7;
+    -fx-border-width: 2px;
+    -fx-padding: 10;
+}
+
+.orders-list-view .list-cell {
+    -fx-background-color: white;
+    -fx-padding: 10;
+    -fx-border-color: transparent;
+}
+
+.orders-list-view .list-cell:odd {
+    -fx-background-color: #f1f8e9;
+}
+
+.orders-list-view .list-cell:hover {
+    -fx-background-color: #dcedc8;
+}
+
+.orders-list-view .list-cell:selected {
+    -fx-background-color: #c8e6c9;
+}
+
+.view-details-button {
+    -fx-pref-width: 150px;
+    -fx-pref-height: 40px;
+    -fx-background-radius: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: #4CAF50;
+    -fx-cursor: hand;
+}
+
+.view-details-button:hover {
+    -fx-background-color: #388E3C;
+}
+
+/* New styles for order status backgrounds */
+
+.orders-list-view .list-cell.order-complete {
+    -fx-background-color: linear-gradient(to right, #a8d5a3, #66bb6a); /* vibrant green gradient */
+    -fx-background-radius: 15;
+    -fx-padding: 15;
+    -fx-border-color: #388e3c;
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow(gaussian, rgba(56,142,60,0.6), 8, 0, 0, 2);
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+    -fx-cursor: default;
+    -fx-transition: background-color 0.3s ease;
+}
+
+.orders-list-view .list-cell.order-complete:hover {
+    -fx-background-color: linear-gradient(to right, #66bb6a, #4caf50);
+}
+
+.orders-list-view .list-cell.order-canceled {
+    -fx-background-radius: 15;
+    -fx-padding: 15;
+    -fx-border-color: #d32f2f;
+    -fx-border-width: 2px;
+    -fx-background-color: linear-gradient(to right, #f28b89, #d32f2f); /* softened red gradient */
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(211,47,47,0.6), 8, 0, 0, 2);
+    -fx-font-weight: bold;
+    -fx-alignment: center-left;
+    -fx-cursor: default;
+    -fx-transition: background-color 0.3s ease;
+}
+
+.orders-list-view .list-cell.order-canceled:hover {
+    -fx-background-color: linear-gradient(to right, #d32f2f, #f28b89);
+}

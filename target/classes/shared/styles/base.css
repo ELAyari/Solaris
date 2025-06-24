@@ -1,0 +1,72 @@
+/* Base Colors */
+* {
+    /* Primary Colors */
+    -primary: #27ae60;
+    -primary-light: #2ecc71;
+    -primary-dark: #219a52;
+    
+    /* Secondary Colors */
+    -secondary: #3498db;
+    -secondary-light: #5dade2;
+    -secondary-dark: #2980b9;
+    
+    /* Background Colors */
+    -background-light: #f5f6fa;
+    -background-dark: #2c3e50;
+    
+    /* Text Colors */
+    -text-dark: #2c3e50;
+    -text-light: #ecf0f1;
+    -text-muted: #95a5a6;
+    
+    /* Status Colors */
+    -success: #27ae60;
+    -warning: #f1c40f;
+    -error: #e74c3c;
+}
+
+/* Base Styles */
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: -background-light;
+}
+
+/* Button Base */
+.button {
+    -fx-cursor: hand;
+    -fx-background-radius: 5;
+    -fx-padding: 8 15;
+}
+
+/* Text Field Base */
+.text-field, .password-field {
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-padding: 8 12;
+    -fx-border-color: #dcdde1;
+    -fx-border-width: 1;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: -primary;
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.2), 5, 0, 0, 0);
+}
+
+/* Label Base */
+.label {
+    -fx-text-fill: -text-dark;
+}
+
+/* Error Label */
+.error-label {
+    -fx-text-fill: #dc3545;
+    -fx-font-size: 12px;
+    -fx-padding: 5px 0 0 0;
+}
+
+/* Form Label */
+.form-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: -text-dark;
+}

@@ -1,0 +1,402 @@
+[2025-06-17 19:14:36] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-17 19:14:36] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-17 19:14:36] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-17 19:14:36] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-17 19:14:36] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshed user from session: ID=92
+[2025-06-17 19:14:36] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshing profile with photo URL: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-17 19:14:36] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Successfully refreshed profile photo
+[2025-06-18 11:37:14] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-18 11:37:14] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-18 11:37:14] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-18 11:37:14] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-18 11:37:14] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshed user from session: ID=92
+[2025-06-18 11:37:14] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshing profile with photo URL: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-18 11:37:14] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Successfully refreshed profile photo
+[2025-06-18 11:37:22] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Updating user data for ID: 92
+[2025-06-18 11:37:22] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Updated existing profile for user ID: 92
+[2025-06-18 12:36:39] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-18 12:36:39] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-18 12:36:39] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-18 12:36:39] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-19 06:51:48] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-19 06:51:48] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-19 06:51:48] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-19 06:51:48] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-19 07:41:58] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-19 07:41:58] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-19 07:41:58] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-19 07:41:58] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-19 07:42:42] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-19 07:42:42] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-19 07:42:42] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-19 07:42:42] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-20 08:50:17] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-20 08:50:17] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-20 08:50:17] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-20 08:50:17] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-20 08:50:17] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshed user from session: ID=92
+[2025-06-20 08:50:17] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshing profile with photo URL: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-20 08:50:17] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Successfully refreshed profile photo
+[2025-06-20 08:52:08] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-20 08:52:08] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-20 08:52:08] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-20 08:52:08] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-20 08:52:11] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-20 08:52:11] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-20 08:52:11] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-20 08:52:11] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-20 08:52:24] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-20 08:52:24] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-20 08:52:24] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-20 08:52:24] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-21 21:31:54] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-21 21:31:54] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-21 21:31:54] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-21 21:31:54] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-21 21:31:59] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-21 21:31:59] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-21 21:31:59] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-21 21:31:59] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-21 21:32:12] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-21 21:32:12] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-21 21:32:12] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-21 21:32:12] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-21 21:32:18] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-21 21:32:18] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-21 21:32:18] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-21 21:32:18] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-21 21:32:23] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Saving profile photo: file:/C:/Users/wael/Pictures/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png
+[2025-06-21 21:32:23] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Updated profile photo for existing profile
+[2025-06-21 21:32:23] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshed all avatars after profile photo update
+[2025-06-21 21:32:28] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Saving profile photo: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-21 21:32:28] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Updated profile photo for existing profile
+[2025-06-21 21:32:28] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshed all avatars after profile photo update
+[2025-06-21 21:34:13] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-21 21:34:13] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-21 21:34:13] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-21 21:34:13] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-21 21:34:15] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-21 21:34:15] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-21 21:34:15] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-21 21:34:15] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-21 21:34:19] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-21 21:34:19] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-21 21:34:19] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-21 21:34:19] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-21 21:52:59] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-21 21:52:59] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-21 21:52:59] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-21 21:52:59] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-21 21:53:34] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-21 21:53:34] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-21 21:53:34] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-21 21:53:34] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-22 00:09:02] [INFO] com.esprit.utils.ActivityLogger: [UserService] User banned: ID=58
+[2025-06-22 00:09:15] [INFO] com.esprit.utils.ActivityLogger: [UserService] User banned: ID=59
+[2025-06-22 02:27:35] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 02:27:35] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-22 02:27:35] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-22 02:27:35] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-22 02:27:35] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshed user from session: ID=92
+[2025-06-22 02:27:35] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshing profile with photo URL: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-22 02:27:35] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Successfully refreshed profile photo
+[2025-06-22 02:44:26] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 02:44:26] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-22 02:44:26] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-22 02:44:26] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-22 02:44:26] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshed user from session: ID=92
+[2025-06-22 02:44:26] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshing profile with photo URL: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-22 02:44:26] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Successfully refreshed profile photo
+[2025-06-22 02:44:32] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Saving profile photo: file:/C:/Users/wael/Pictures/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png
+[2025-06-22 02:44:32] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Updated profile photo for existing profile
+[2025-06-22 02:44:32] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshed all avatars after profile photo update
+[2025-06-22 02:48:35] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Saving profile photo: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-22 02:48:35] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Updated profile photo for existing profile
+[2025-06-22 02:48:35] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshed all avatars after profile photo update
+[2025-06-22 02:50:19] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 02:50:19] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-22 02:50:19] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-22 02:50:19] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-22 02:50:19] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshed user from session: ID=92
+[2025-06-22 02:50:19] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshing profile with photo URL: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-22 02:50:19] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Successfully refreshed profile photo
+[2025-06-22 02:50:24] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Saving profile photo: file:/C:/Users/wael/Pictures/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png
+[2025-06-22 02:50:24] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Updated profile photo for existing profile
+[2025-06-22 02:50:24] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshed all avatars after profile photo update
+[2025-06-22 02:55:07] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 02:55:07] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-22 02:55:07] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-22 02:55:07] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Pictures/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png
+[2025-06-22 02:55:07] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshed user from session: ID=92
+[2025-06-22 02:55:07] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshing profile with photo URL: file:/C:/Users/wael/Pictures/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png
+[2025-06-22 02:55:07] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Successfully refreshed profile photo
+[2025-06-22 02:55:12] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Saving profile photo: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-22 02:55:12] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Updated profile photo for existing profile
+[2025-06-22 02:55:12] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshed all avatars after profile photo update
+[2025-06-22 02:56:31] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Saving profile photo: file:/C:/Users/wael/Downloads/1679486012431.jpeg
+[2025-06-22 02:56:31] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Updated profile photo for existing profile
+[2025-06-22 02:56:31] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshed all avatars after profile photo update
+[2025-06-22 02:56:50] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Saving profile photo: file:/C:/Users/wael/Downloads/sheakspear.jpeg
+[2025-06-22 02:56:50] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Updated profile photo for existing profile
+[2025-06-22 02:56:50] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshed all avatars after profile photo update
+[2025-06-22 02:56:56] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 02:56:56] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-22 02:56:56] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-22 02:56:56] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Downloads/sheakspear.jpeg
+[2025-06-22 02:56:56] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshed user from session: ID=92
+[2025-06-22 02:56:56] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshing profile with photo URL: file:/C:/Users/wael/Downloads/sheakspear.jpeg
+[2025-06-22 02:56:56] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Successfully refreshed profile photo
+[2025-06-22 03:01:43] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 03:01:43] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-22 03:01:43] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-22 03:01:43] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Downloads/sheakspear.jpeg
+[2025-06-22 03:01:43] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshed user from session: ID=92
+[2025-06-22 03:01:43] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshing profile with photo URL: file:/C:/Users/wael/Downloads/sheakspear.jpeg
+[2025-06-22 03:01:43] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Successfully refreshed profile photo
+[2025-06-22 03:01:48] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Saving profile photo: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-22 03:01:48] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Updated profile photo for existing profile
+[2025-06-22 03:01:48] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshed all avatars after profile photo update
+[2025-06-22 03:10:16] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 03:10:16] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-22 03:10:16] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-22 03:10:16] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-22 03:10:16] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshed user from session: ID=92
+[2025-06-22 03:10:16] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshing profile with photo URL: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-22 03:10:16] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Successfully refreshed profile photo
+[2025-06-22 03:10:29] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Saving profile photo: file:/C:/Users/wael/Downloads/hugo.jpeg
+[2025-06-22 03:10:29] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Updated profile photo for existing profile
+[2025-06-22 03:10:29] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshed all avatars after profile photo update
+[2025-06-22 03:15:58] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 03:15:58] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-22 03:15:58] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-22 03:15:58] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Downloads/hugo.jpeg
+[2025-06-22 03:15:58] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshed user from session: ID=92
+[2025-06-22 03:15:58] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshing profile with photo URL: file:/C:/Users/wael/Downloads/hugo.jpeg
+[2025-06-22 03:15:58] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Successfully refreshed profile photo
+[2025-06-22 03:16:09] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Saving profile photo: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-22 03:16:09] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Updated profile photo for existing profile
+[2025-06-22 03:16:09] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshed all avatars after profile photo update
+[2025-06-22 03:37:55] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 03:37:55] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-22 03:37:55] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-22 03:37:55] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-22 03:37:55] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshed user from session: ID=92
+[2025-06-22 03:37:55] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshing profile with photo URL: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-22 03:37:55] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Successfully refreshed profile photo
+[2025-06-22 03:38:23] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Copying file from: C:\Users\wael\Downloads\hugo.jpeg to: C:\Users\wael\Desktop\final\final\pi-java\src\main\resources\images\profile_photo\houdadalar123_gmail.com.jpeg
+[2025-06-22 03:38:23] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] File copied successfully, size: 4894 bytes
+[2025-06-22 03:38:23] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Image URL: file:/C:/Users/wael/Desktop/final/final/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpeg
+[2025-06-22 03:38:23] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Updated profile photo for existing profile
+[2025-06-22 04:02:39] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Loading profile photo from URL: file:/C:/Users/wael/Desktop/final/final/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpeg
+[2025-06-22 04:02:39] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Image loaded immediately: file:/C:/Users/wael/Desktop/final/final/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpeg
+[2025-06-22 04:02:39] [INFO] com.esprit.utils.ActivityLogger: [MainprogGUI] Stored AdminLayoutController in scene userData
+[2025-06-22 04:02:40] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Loading profile photo from URL: file:/C:/Users/wael/Desktop/final/final/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpeg
+[2025-06-22 04:02:40] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Image loaded immediately: file:/C:/Users/wael/Desktop/final/final/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpeg
+[2025-06-22 04:02:43] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 04:02:43] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-22 04:02:43] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-22 04:02:43] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Desktop/final/final/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpeg
+[2025-06-22 04:02:43] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshed user from session: ID=92
+[2025-06-22 04:02:43] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshing profile with photo URL: file:/C:/Users/wael/Desktop/final/final/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpeg
+[2025-06-22 04:02:43] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Successfully refreshed profile photo
+[2025-06-22 04:02:50] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Copying file from: C:\Users\wael\Pictures\wael.jpeg to: C:\Users\wael\Desktop\final\final\pi-java\src\main\resources\images\profile_photo\houdadalar123_gmail.com.jpeg
+[2025-06-22 04:02:50] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] File copied successfully, size: 79815 bytes
+[2025-06-22 04:02:50] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Image URL: file:/C:/Users/wael/Desktop/final/final/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpeg
+[2025-06-22 04:02:50] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Updated profile photo for existing profile
+[2025-06-22 04:02:50] [INFO] com.esprit.utils.ActivityLogger: [AvatarHelper] Refreshed all avatars across the application
+[2025-06-22 04:02:50] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Loading profile photo from URL: file:/C:/Users/wael/Desktop/final/final/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpeg
+[2025-06-22 04:02:50] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Image loaded immediately: file:/C:/Users/wael/Desktop/final/final/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpeg
+[2025-06-22 04:02:50] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Successfully refreshed sidebar avatar
+[2025-06-22 04:02:50] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshed all avatars after profile photo update
+[2025-06-22 04:02:58] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 04:02:58] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-22 04:02:58] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-22 04:02:58] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Desktop/final/final/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpeg
+[2025-06-22 04:02:58] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshed user from session: ID=92
+[2025-06-22 04:02:58] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshing profile with photo URL: file:/C:/Users/wael/Desktop/final/final/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpeg
+[2025-06-22 04:02:58] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Successfully refreshed profile photo
+[2025-06-22 13:27:12] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Loading profile photo from URL: file:/C:/Users/wael/Desktop/final/final/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpeg
+[2025-06-22 13:27:12] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Image loaded immediately: file:/C:/Users/wael/Desktop/final/final/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpeg
+[2025-06-22 13:27:12] [INFO] com.esprit.utils.ActivityLogger: [MainprogGUI] Stored AdminLayoutController in scene userData
+[2025-06-22 13:27:13] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Loading profile photo from URL: file:/C:/Users/wael/Desktop/final/final/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpeg
+[2025-06-22 13:27:13] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Image loaded immediately: file:/C:/Users/wael/Desktop/final/final/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpeg
+[2025-06-22 13:27:16] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 13:27:16] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-22 13:27:16] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-22 13:27:17] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Desktop/final/final/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpeg
+[2025-06-22 13:27:17] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshed user from session: ID=92
+[2025-06-22 13:27:17] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshing profile with photo URL: file:/C:/Users/wael/Desktop/final/final/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpeg
+[2025-06-22 13:27:17] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Successfully refreshed profile photo
+[2025-06-22 13:41:38] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Loading profile photo from URL: file:/C:/Users/wael/Desktop/final/final/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpeg
+[2025-06-22 13:41:38] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Image loaded immediately: file:/C:/Users/wael/Desktop/final/final/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpeg
+[2025-06-22 13:41:38] [INFO] com.esprit.utils.ActivityLogger: [MainprogGUI] Stored AdminLayoutController in scene userData
+[2025-06-22 13:41:39] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Loading profile photo from URL: file:/C:/Users/wael/Desktop/final/final/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpeg
+[2025-06-22 13:41:39] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Image loaded immediately: file:/C:/Users/wael/Desktop/final/final/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpeg
+[2025-06-22 13:43:23] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Loading profile photo from URL: file:/C:/Users/wael/Desktop/final/final/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpeg
+[2025-06-22 13:43:23] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Image loaded immediately: file:/C:/Users/wael/Desktop/final/final/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpeg
+[2025-06-22 13:43:23] [INFO] com.esprit.utils.ActivityLogger: [MainprogGUI] Stored AdminLayoutController in scene userData
+[2025-06-22 13:43:24] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Loading profile photo from URL: file:/C:/Users/wael/Desktop/final/final/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpeg
+[2025-06-22 13:43:24] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Image loaded immediately: file:/C:/Users/wael/Desktop/final/final/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpeg
+[2025-06-22 22:16:45] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 22:16:45] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-22 22:16:45] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-22 22:16:45] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-22 22:20:11] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 22:20:11] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-22 22:20:11] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-22 22:20:11] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-22 22:27:34] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 22:27:34] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-22 22:27:34] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-22 22:27:34] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-22 22:31:54] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 22:31:54] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-22 22:31:54] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 4
+[2025-06-22 22:31:54] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/wael/Pictures/wael.jpeg
+[2025-06-22 22:35:31] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 22:35:31] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Created new user profile for ID: 92
+[2025-06-22 22:35:31] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 8
+[2025-06-22 22:35:31] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] No profile photo URL found or it's empty
+[2025-06-22 22:35:49] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Copying file from: C:\Users\Nasri\Desktop\Desktop\CIN\AyariNasrEddine.jpg to: C:\Users\Nasri\Desktop\HELLO\Final\pi-java\pi-java\src\main\resources\images\profile_photo\houdadalar123_gmail.com.jpg
+[2025-06-22 22:35:49] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] File copied successfully, size: 256698 bytes
+[2025-06-22 22:35:49] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Image URL: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-22 22:35:49] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Updated profile photo for existing profile
+[2025-06-22 22:35:49] [INFO] com.esprit.utils.ActivityLogger: [AvatarHelper] Refreshed all avatars across the application
+[2025-06-22 22:35:49] [SEVERE] com.esprit.utils.ActivityLogger: [UserProfileController] Error refreshing sidebar avatar - Exception: class com.esprit.controllers.ClientDashboardController cannot be cast to class com.esprit.controllers.AdminLayoutController (com.esprit.controllers.ClientDashboardController and com.esprit.controllers.AdminLayoutController are in unnamed module of loader 'app')
+[2025-06-22 22:35:49] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshed all avatars after profile photo update
+[2025-06-22 22:36:01] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Updating user data for ID: 92
+[2025-06-22 22:36:01] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Updated existing profile for user ID: 92
+[2025-06-22 22:36:26] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 22:36:26] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-22 22:36:26] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 8
+[2025-06-22 22:36:26] [WARNING] com.esprit.utils.ActivityLogger: [UserProfileController] Rejected hardcoded path: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg. Using default avatar.
+[2025-06-22 22:36:26] [WARNING] com.esprit.utils.ActivityLogger: [UserProfileController] Invalid image URL during reload: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg. Using default avatar.
+[2025-06-22 22:36:26] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Created default avatar for user: houdadalar123@gmail.com
+[2025-06-22 22:36:56] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 22:36:56] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-22 22:36:56] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 8
+[2025-06-22 22:36:56] [WARNING] com.esprit.utils.ActivityLogger: [UserProfileController] Rejected hardcoded path: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg. Using default avatar.
+[2025-06-22 22:36:56] [WARNING] com.esprit.utils.ActivityLogger: [UserProfileController] Invalid image URL during reload: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg. Using default avatar.
+[2025-06-22 22:36:56] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Created default avatar for user: houdadalar123@gmail.com
+[2025-06-22 22:37:20] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Copying file from: C:\Users\Nasri\Desktop\Desktop\CIN\AyariNasrEddine.jpg to: C:\Users\Nasri\Desktop\HELLO\Final\pi-java\pi-java\src\main\resources\images\profile_photo\houdadalar123_gmail.com.jpg
+[2025-06-22 22:37:20] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] File copied successfully, size: 256698 bytes
+[2025-06-22 22:37:20] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Image URL: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-22 22:37:20] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Updated profile photo for existing profile
+[2025-06-22 22:37:20] [INFO] com.esprit.utils.ActivityLogger: [AvatarHelper] Refreshed all avatars across the application
+[2025-06-22 22:37:20] [SEVERE] com.esprit.utils.ActivityLogger: [UserProfileController] Error refreshing sidebar avatar - Exception: class com.esprit.controllers.ClientDashboardController cannot be cast to class com.esprit.controllers.AdminLayoutController (com.esprit.controllers.ClientDashboardController and com.esprit.controllers.AdminLayoutController are in unnamed module of loader 'app')
+[2025-06-22 22:37:20] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshed all avatars after profile photo update
+[2025-06-22 22:40:30] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 22:40:30] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-22 22:40:30] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 8
+[2025-06-22 22:40:30] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-22 22:47:35] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 22:47:35] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-22 22:47:35] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 8
+[2025-06-22 22:47:35] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-22 22:57:57] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 22:57:57] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-22 22:57:57] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 8
+[2025-06-22 22:57:57] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-22 22:59:04] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Loading profile photo from URL: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-22 22:59:04] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Image loaded immediately: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-22 22:59:04] [INFO] com.esprit.utils.ActivityLogger: [MainprogGUI] Stored AdminLayoutController in scene userData
+[2025-06-22 22:59:04] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Loading profile photo from URL: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-22 22:59:04] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Image loaded immediately: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-22 23:31:04] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 23:31:04] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-22 23:31:04] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 8
+[2025-06-22 23:31:04] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-22 23:31:10] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 23:31:10] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-22 23:31:10] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 8
+[2025-06-22 23:31:10] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-22 23:31:12] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 23:31:12] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-22 23:31:12] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 8
+[2025-06-22 23:31:12] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-22 23:33:44] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 23:33:44] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-22 23:33:44] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 8
+[2025-06-22 23:33:44] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-22 23:33:47] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 23:33:47] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-22 23:33:47] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 8
+[2025-06-22 23:33:47] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-22 23:33:48] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 23:33:48] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-22 23:33:48] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 8
+[2025-06-22 23:33:48] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-22 23:33:51] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 23:33:51] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-22 23:33:51] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 8
+[2025-06-22 23:33:51] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-22 23:54:17] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 23:54:17] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-22 23:54:17] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 8
+[2025-06-22 23:54:17] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-22 23:56:51] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 23:56:51] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-22 23:56:51] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 8
+[2025-06-22 23:56:51] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-22 23:57:07] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-22 23:57:07] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-22 23:57:07] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 8
+[2025-06-22 23:57:07] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-23 00:03:55] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-23 00:03:55] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-23 00:03:55] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 8
+[2025-06-23 00:03:55] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-23 00:04:13] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Updating user data for ID: 92
+[2025-06-23 00:04:13] [SEVERE] com.esprit.utils.ActivityLogger: [UserService] Database error updating user 92 - Exception: Duplicate entry 'nasri213a@gmail.com' for key 'email'
+[2025-06-23 00:04:20] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Updating user data for ID: 92
+[2025-06-23 00:04:20] [SEVERE] com.esprit.utils.ActivityLogger: [UserService] Database error updating user 92 - Exception: Duplicate entry 'nasri213a@gmail.com' for key 'email'
+[2025-06-23 00:04:33] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Updating user data for ID: 92
+[2025-06-23 00:04:33] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Updated existing profile for user ID: 92
+[2025-06-23 00:04:47] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-23 00:04:47] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-23 00:04:47] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 8
+[2025-06-23 00:04:47] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-23 00:06:19] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-23 00:06:19] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-23 00:06:19] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 8
+[2025-06-23 00:06:19] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-23 00:12:24] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-23 00:12:24] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-23 00:12:24] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 8
+[2025-06-23 00:12:24] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-23 00:13:14] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Loading profile photo from URL: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-23 00:13:14] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Image loaded immediately: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-23 00:13:14] [INFO] com.esprit.utils.ActivityLogger: [MainprogGUI] Stored AdminLayoutController in scene userData
+[2025-06-23 00:13:14] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Loading profile photo from URL: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-23 00:13:14] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Image loaded immediately: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-23 00:13:32] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-23 00:13:32] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-23 00:13:32] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 8
+[2025-06-23 00:13:32] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-23 00:13:32] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshed user from session: ID=92
+[2025-06-23 00:13:32] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Refreshing profile with photo URL: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-23 00:13:32] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Successfully refreshed profile photo
+[2025-06-23 00:15:25] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Loading profile photo from URL: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-23 00:15:25] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Image loaded immediately: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-23 00:15:25] [INFO] com.esprit.utils.ActivityLogger: [MainprogGUI] Stored AdminLayoutController in scene userData
+[2025-06-23 00:15:26] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Loading profile photo from URL: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-23 00:15:26] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Image loaded immediately: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-23 00:17:09] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Loading profile photo from URL: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-23 00:17:09] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Image loaded immediately: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-23 00:17:09] [INFO] com.esprit.utils.ActivityLogger: [MainprogGUI] Stored AdminLayoutController in scene userData
+[2025-06-23 00:17:10] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Loading profile photo from URL: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-23 00:17:10] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Image loaded immediately: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-23 00:23:43] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded user from session: ID=92, Email=houdadalar123@gmail.com
+[2025-06-23 00:23:43] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loading existing profile for user ID: 92
+[2025-06-23 00:23:43] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Loaded profile for user ID: 92, profile ID: 8
+[2025-06-23 00:23:43] [INFO] com.esprit.utils.ActivityLogger: [UserProfileController] Directly loaded profile image: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-23 14:50:24] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Loading profile photo from URL: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-23 14:50:24] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Image loaded immediately: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-23 14:50:24] [INFO] com.esprit.utils.ActivityLogger: [MainprogGUI] Stored AdminLayoutController in scene userData
+[2025-06-23 14:50:25] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Loading profile photo from URL: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-23 14:50:25] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Image loaded immediately: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-23 18:34:36] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Loading profile photo from URL: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-23 18:34:36] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Image loaded immediately: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-23 18:34:36] [INFO] com.esprit.utils.ActivityLogger: [MainprogGUI] Stored AdminLayoutController in scene userData
+[2025-06-23 18:34:37] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Loading profile photo from URL: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg
+[2025-06-23 18:34:37] [INFO] com.esprit.utils.ActivityLogger: [ProfilePhotoUtils] Image loaded immediately: file:/C:/Users/Nasri/Desktop/HELLO/Final/pi-java/pi-java/src/main/resources/images/profile_photo/houdadalar123_gmail.com.jpg

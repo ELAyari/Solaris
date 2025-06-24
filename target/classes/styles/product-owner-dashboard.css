@@ -1,0 +1,500 @@
+/* Main Container Styles */
+.dashboard-container {
+    -fx-background-color: #a5d6a7;
+    background-color: #a5d6a7;
+}
+
+/* Filter Container Styles */
+.filter-container {
+    -fx-background-color: white;
+    background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #a5d6a7;
+    border-color: #a5d6a7;
+    -fx-border-width: 1;
+    border-width: 1;
+    -fx-padding: 15;
+    padding: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 10, 0, 0, 2);
+}
+
+.filter-label {
+    -fx-font-size: 14px;
+    font-size: 14px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-text-fill: #2e7d32;
+    color: #2e7d32;
+}
+
+.date-picker {
+    -fx-background-color: transparent;
+    background-color: transparent;
+    -fx-border-color: #ced4da;
+    border-color: #ced4da;
+    -fx-border-radius: 5;
+    border-radius: 5;
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: #43a047;
+    background-color: #43a047;
+    -fx-background-radius: 0 5 5 0;
+}
+
+.date-picker .arrow-button .arrow {
+    -fx-background-color: white;
+    background-color: white;
+}
+
+.export-button {
+    -fx-background-color: #2e7d32;
+    background-color: #2e7d32;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-background-radius: 5;
+    background-radius: 5;
+    -fx-padding: 8 15;
+    padding: 8 15;
+    -fx-cursor: hand;
+    cursor: pointer;
+}
+
+.export-button:hover {
+    -fx-background-color: #238b7e;
+    background-color: #238b7e;
+}
+
+.dashboard-scroll-pane {
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+    background: transparent;
+    background-color: transparent;
+    -fx-padding: 0;
+    padding: 0;
+}
+
+.dashboard-scroll-pane > .viewport {
+    -fx-background-color: #f8f9fa;
+    background-color: #f8f9fa;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    -fx-background-color: #2e7d32;
+    background-color: #2e7d32;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 3);
+}
+
+.dashboard-title {
+    -fx-font-size: 24px;
+    font-size: 24px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding: 10 0;
+    padding: 10 0;
+}
+
+.company-name {
+    -fx-font-size: 18px;
+    font-size: 18px;
+    -fx-font-weight: normal;
+    font-weight: normal;
+    -fx-text-fill: rgba(255,255,255,0.9);
+}
+
+/* Section Titles */
+.section-title {
+    -fx-font-size: 18px;
+    font-size: 18px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-text-fill: #2e7d32;
+    color: #2e7d32;
+    -fx-padding: 0 0 10 0;
+    padding: 0 0 10 0;
+}
+
+/* Metric Cards */
+.metrics-grid {
+    -fx-padding: 10;
+    padding: 10;
+}
+
+.metric-card {
+    -fx-padding: 15;
+    padding: 15;
+    -fx-min-height: 120;
+    min-height: 120;
+}
+
+.metric-bg {
+    -fx-fill: white;
+    -fx-arc-width: 15;
+    -fx-arc-height: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+}
+
+.metric-title {
+    -fx-font-size: 14px;
+    font-size: 14px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-text-fill: #2e7d32;
+    color: #2e7d32;
+}
+
+.metric-value {
+    -fx-font-size: 28px;
+    font-size: 28px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-text-fill: #212529;
+}
+
+.metric-subtitle {
+    -fx-font-size: 12px;
+    font-size: 12px;
+    -fx-text-fill: #6c757d;
+}
+
+.metric-trend {
+    -fx-font-size: 14px;
+    font-size: 14px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+}
+
+.metric-trend-up {
+    -fx-text-fill: #43a047;
+    color: #43a047;
+}
+
+.metric-trend-down {
+    -fx-text-fill: #e76f51;
+}
+
+.metric-warning {
+    -fx-font-size: 12px;
+    font-size: 12px;
+    -fx-text-fill: #e76f51;
+}
+
+/* Chart Cards */
+.chart-card {
+    -fx-background-color: white;
+    background-color: white;
+    -fx-background-radius: 10;
+    background-radius: 10;
+    -fx-border-radius: 10;
+    border-radius: 10;
+    -fx-border-color: #a5d6a7;
+    border-color: #a5d6a7;
+    -fx-border-width: 1;
+    border-width: 1;
+    -fx-padding: 20;
+    padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 10, 0, 0, 2);
+}
+
+/* Chart Styles */
+
+/* Pie Chart Styles */
+.chart-pie {
+    -fx-border-color: derive(-fx-pie-color, -30%);
+    -fx-border-width: 2px;
+}
+
+.chart-pie:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-cursor: hand;
+}
+
+.chart-pie-label {
+    -fx-fill: #2e7d32;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.chart-pie-title {
+    -fx-text-fill: #2e7d32;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.chart-legend {
+    -fx-background-color: transparent;
+    -fx-padding: 10px;
+}
+
+.chart-legend-item {
+    -fx-text-fill: #2e7d32;
+    -fx-font-size: 12px;
+}
+
+/* Status Legend Styles */
+.status-legend {
+    -fx-background-color: rgba(248, 249, 250, 0.7);
+    -fx-background-radius: 5;
+    -fx-padding: 10;
+    -fx-spacing: 5;
+    -fx-border-color: #a5d6a7;
+    -fx-border-radius: 5;
+    -fx-border-width: 1;
+}
+
+.color-indicator {
+    -fx-min-width: 15;
+    -fx-min-height: 15;
+    -fx-max-width: 15;
+    -fx-max-height: 15;
+    -fx-background-radius: 3;
+    -fx-border-radius: 3;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1;
+}
+
+.color-box {
+    -fx-opacity: 0;
+}
+
+.legend-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #495057;
+}
+
+.subsection-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2e7d32;
+    -fx-padding: 5 0 2 0;
+}
+
+.chart-instructions {
+    -fx-background-color: rgba(248, 249, 250, 0.7);
+    -fx-background-radius: 5;
+    -fx-padding: 10;
+    -fx-border-color: #a5d6a7;
+    -fx-border-radius: 5;
+    -fx-border-width: 1;
+    -fx-font-size: 12px;
+}
+
+.sales-chart {
+    -fx-background-color: transparent;
+    background-color: transparent;
+}
+
+.sales-chart .chart-series-line {
+    -fx-stroke-width: 3px;
+}
+
+.distribution-chart {
+    -fx-background-color: transparent;
+    background-color: transparent;
+}
+
+.performance-chart {
+    -fx-background-color: transparent;
+    background-color: transparent;
+}
+
+.performance-chart .chart-bar {
+    -fx-bar-fill: #43a047;
+}
+
+.demographics-chart {
+    -fx-background-color: transparent;
+    background-color: transparent;
+}
+
+.forecast-chart {
+    -fx-background-color: transparent;
+    background-color: transparent;
+}
+
+.forecast-chart .chart-series-line {
+    -fx-stroke-width: 2px;
+    -fx-stroke: #43a047;
+}
+
+/* Top Customers List */
+.top-customers-list {
+    -fx-padding: 10;
+    padding: 10;
+}
+
+/* Pagination Styles */
+.customer-pagination {
+    -fx-padding: 10 0 0 0;
+    padding: 10 0 0 0;
+}
+
+.customer-pagination .pagination-control .button {
+    -fx-background-color: #f8f9fa;
+    background-color: #f8f9fa;
+    -fx-border-color: #ced4da;
+    border-color: #ced4da;
+    -fx-background-radius: 5;
+    background-radius: 5;
+    -fx-border-radius: 5;
+    border-radius: 5;
+}
+
+.customer-pagination .pagination-control .button:hover {
+    -fx-background-color: #e9ecef;
+    background-color: #e9ecef;
+}
+
+.customer-pagination .pagination-control .page-information {
+    -fx-font-size: 12px;
+    font-size: 12px;
+}
+
+.customer-pagination .pagination-control .number-button:selected {
+    -fx-background-color: #43a047;
+    background-color: #43a047;
+    -fx-text-fill: white;
+}
+
+.customer-row {
+    -fx-background-color: #f8f9fa;
+    background-color: #f8f9fa;
+    -fx-background-radius: 5;
+    background-radius: 5;
+    -fx-padding: 10 15;
+    padding: 10 15;
+}
+
+.customer-name {
+    -fx-font-size: 14px;
+    font-size: 14px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-text-fill: #2e7d32;
+    color: #2e7d32;
+}
+
+.customer-info {
+    -fx-font-size: 12px;
+    font-size: 12px;
+    -fx-text-fill: #6c757d;
+}
+
+/* Date Picker Styles */
+.date-picker {
+    -fx-background-color: white;
+    background-color: white;
+    -fx-background-radius: 5;
+    background-radius: 5;
+    -fx-border-color: #ced4da;
+    border-color: #ced4da;
+    -fx-border-width: 1;
+    border-width: 1;
+    -fx-padding: 5 10;
+    padding: 5 10;
+}
+
+.date-picker .date-picker-button {
+    -fx-background-color: #f8f9fa;
+    background-color: #f8f9fa;
+    -fx-border-color: #ced4da;
+    border-color: #ced4da;
+    -fx-background-radius: 5;
+    background-radius: 5;
+    -fx-border-radius: 5;
+    border-radius: 5;
+}
+
+.date-picker .date-picker-button:hover {
+    -fx-background-color: #e9ecef;
+    background-color: #e9ecef;
+}
+
+/* Export Button Styles */
+.export-button {
+    -fx-background-color: #2e7d32;
+    background-color: #2e7d32;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    font-size: 14px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-background-radius: 5;
+    background-radius: 5;
+    -fx-border-radius: 5;
+    border-radius: 5;
+    -fx-padding: 10 20;
+    padding: 10 20;
+}
+
+.export-button:hover {
+    -fx-background-color: #1a7f5d;
+    background-color: #1a7f5d;
+}
+
+/* Loading Indicator */
+#loadingOverlay {
+    -fx-background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#loadingLabel {
+    -fx-background-color: white;
+    background-color: white;
+    -fx-padding: 15 25;
+    padding: 15 25;
+    -fx-background-radius: 5;
+    background-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 3);
+    -fx-font-size: 14px;
+    font-size: 14px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+}
+
+/* Scrollbar Styling */
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+    background-color: transparent;
+    -fx-pref-width: 12;
+    -fx-min-width: 12;
+    min-width: 12;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #81c784;
+    background-color: #81c784;
+    -fx-background-radius: 6;
+    background-radius: 6;
+}
+
+.scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+    background-color: transparent;
+}
+
+.scroll-bar:horizontal {
+    -fx-background-color: transparent;
+    background-color: transparent;
+    -fx-pref-height: 12;
+    -fx-min-height: 12;
+    min-height: 12;
+}
+
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: #81c784;
+    background-color: #81c784;
+    -fx-background-radius: 6;
+    background-radius: 6;
+}
+
+.scroll-bar:horizontal .track {
+    -fx-background-color: transparent;
+    background-color: transparent;
+}
