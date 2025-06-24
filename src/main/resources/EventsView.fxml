@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:id="mainContainer"
+            fx:controller="com.esprit.controllers.EventController"
+            styleClass="events-root"
+            stylesheets="/styles/EventsView.css"
+            prefWidth="1200" prefHeight="800">
+
+    <!-- Header with app title and main actions -->
+    <top>
+        <!-- App Header -->
+        <HBox styleClass="app-header" alignment="CENTER">
+            <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                <SVGPath content="M19,1L17.74,3.75L15,5L17.74,6.26L19,9L20.25,6.26L23,5L20.25,3.75L19,1M9,4L6.5,9.5L1,12L6.5,14.5L9,20L11.5,14.5L17,12L11.5,9.5L9,4M5,12V21H19V12H5Z"
+                         styleClass="header-icon"/>
+                <Label text="EventHub" styleClass="app-title"/>
+            </HBox>
+
+
+            <padding>
+                <Insets top="15" right="30" bottom="15" left="30"/>
+            </padding>
+        </HBox>
+    </top>
+
+    <center>
+        <!-- Main content with scroll pane around everything -->
+        <ScrollPane fitToWidth="true" styleClass="main-scroll-pane">
+            <VBox fx:id="dayFilterContainer" spacing="20" styleClass="main-content">
+
+                <!-- Search section moved INSIDE the scrollable content -->
+                <HBox fx:id="searchContainer" styleClass="hero-section" alignment="CENTER">
+                    <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                        <Label text="Discover Amazing Events" styleClass="hero-title"/>
+                        <Label text="Find and join events that match your interests" styleClass="hero-subtitle"/>
+
+                        <!-- Search Container -->
+                        <HBox styleClass="search-container" alignment="CENTER">
+                            <SVGPath content="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"
+                                     styleClass="search-icon"/>
+                            <TextField fx:id="searchField" promptText="Search for events..."
+                                       styleClass="search-field" HBox.hgrow="ALWAYS"/>
+                            <Button fx:id="clearSearchButton" styleClass="clear-search-button">
+                                <graphic>
+                                    <SVGPath content="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+                                             styleClass="clear-icon"/>
+                                </graphic>
+                            </Button>
+                        </HBox>
+                    </VBox>
+                </HBox>
+
+                <!-- Category Filter Pills -->
+                <VBox styleClass="filter-section">
+                    <Label text="Filter by Day" styleClass="section-label"/>
+                    <HBox fx:id="dayFilterBar" spacing="10" styleClass="day-bar"/>
+                </VBox>
+
+                <!-- Event Cards Grid -->
+                <VBox styleClass="events-section" VBox.vgrow="ALWAYS">
+                    <Label text="Upcoming Events" styleClass="section-label"/>
+                    <FlowPane fx:id="eventsFlowPane"
+                              hgap="25" vgap="25"
+                              alignment="TOP_CENTER"
+                              styleClass="grid-container"/>
+                </VBox>
+            </VBox>
+        </ScrollPane>
+    </center>
+
+    <bottom>
+        <AnchorPane styleClass="floating-button-wrapper">
+            <Button fx:id="ajoutEventButton" styleClass="floating-action-button"
+                    AnchorPane.rightAnchor="30.0" AnchorPane.bottomAnchor="30.0">
+                <graphic>
+                    <SVGPath content="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+                             styleClass="floating-button-icon"/>
+                </graphic>
+            </Button>
+        </AnchorPane>
+    </bottom>
+</BorderPane>

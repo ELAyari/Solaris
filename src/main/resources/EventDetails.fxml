@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.shape.SVGPath?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.esprit.controllers.EventDetailsController"
+            stylesheets="@/styles/EventDetails.css"
+            styleClass="event-details-root">
+
+    <!-- Header Bar -->
+    <top>
+        <HBox styleClass="page-header" alignment="CENTER">
+            <Button fx:id="backButton" styleClass="back-button">
+                <graphic>
+                    <HBox spacing="8" alignment="CENTER">
+                        <SVGPath content="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"
+                                 styleClass="back-icon-path"/>
+                        <Label text="Retour" styleClass="back-text"/>
+                    </HBox>
+                </graphic>
+            </Button>
+        </HBox>
+    </top>
+
+    <!-- Main Content -->
+    <center>
+        <ScrollPane fitToWidth="true" styleClass="content-scroll">
+            <VBox styleClass="content-container">
+                <!-- Event Details Section -->
+                <HBox spacing="30" styleClass="event-details-section">
+                    <!-- Left Side: Poster -->
+                    <StackPane styleClass="poster-container">
+                        <ImageView fx:id="posterImage" styleClass="poster-image"
+                                   fitWidth="280" fitHeight="360" preserveRatio="true"/>
+                    </StackPane>
+
+                    <!-- Right Side: Event Information -->
+                    <VBox spacing="15" styleClass="info-column" HBox.hgrow="ALWAYS">
+                        <!-- Title on its own line -->
+                        <Label fx:id="titleLabel" styleClass="event-title"/>
+
+                        <!-- Address on its own line -->
+                        <HBox styleClass="metadata-item">
+                            <SVGPath content="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"
+                                     styleClass="icon-path"/>
+                            <Label fx:id="adresseLabel" styleClass="metadata-text"/>
+                        </HBox>
+
+                        <!-- Date on its own line -->
+                        <HBox styleClass="metadata-item">
+                            <SVGPath content="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"
+                                     styleClass="icon-path"/>
+                            <Label fx:id="dateLabel" styleClass="metadata-text"/>
+                        </HBox>
+
+                        <VBox styleClass="description-container">
+                            <Label text="About this event" styleClass="section-subtitle"/>
+                            <Label fx:id="descriptionLabel" wrapText="true" styleClass="event-description"/>
+                        </VBox>
+
+                        <VBox spacing="15" styleClass="action-section">
+                            <!-- Price on its own line -->
+                            <HBox styleClass="price-item">
+                                <SVGPath content="M11.8,10.9C9.53,10.31 8.8,9.7 8.8,8.75C8.8,7.66 9.81,6.9 11.5,6.9C13.28,6.9 13.94,7.75 14,9H16.21C16.14,7.28 15.09,5.7 13,5.19V3H10V5.16C8.06,5.58 6.5,6.84 6.5,8.77C6.5,11.08 8.41,12.23 11.2,12.9C13.7,13.5 14.2,14.38 14.2,15.31C14.2,16 13.71,17.1 11.5,17.1C9.44,17.1 8.63,16.18 8.5,15H6.32C6.44,17.19 8.08,18.42 10,18.83V21H13V18.85C14.95,18.5 16.5,17.35 16.5,15.3C16.5,12.46 14.07,11.5 11.8,10.9Z"
+                                         styleClass="icon-path"/>
+                                <Label fx:id="priceLabel" styleClass="price-label"/>
+                            </HBox>
+
+                            <!-- Remaining places on its own line -->
+                            <Label fx:id="remainingLabel" styleClass="remaining-label"/>
+
+                            <!-- Action buttons -->
+                            <HBox spacing="15" styleClass="actions-row">
+                                <Button fx:id="actionButton" styleClass="reserve-button"/>
+
+                                <!-- Edit icon button -->
+                                <Button fx:id="editButton" styleClass="icon-button">
+                                    <graphic>
+                                        <SVGPath content="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z"
+                                                 styleClass="edit-icon"/>
+                                    </graphic>
+                                </Button>
+
+                                <!-- Delete icon button -->
+                                <Button fx:id="deleteButton" styleClass="icon-button">
+                                    <graphic>
+                                        <SVGPath content="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z"
+                                                 styleClass="delete-icon"/>
+                                    </graphic>
+                                </Button>
+                            </HBox>
+                        </VBox>
+                    </VBox>
+                </HBox>
+
+                <!-- Feedback Section -->
+                <VBox spacing="20" styleClass="feedback-section">
+                    <Label text="Leave a Review" styleClass="section-title"/>
+
+                    <TextArea fx:id="feedbackCommentField" promptText="Share your experience..."
+                              wrapText="true" styleClass="feedback-input"/>
+
+                    <HBox spacing="10" styleClass="rating-container">
+                        <Label text="Rating:" styleClass="rating-label"/>
+                        <HBox fx:id="starsContainer" spacing="5" styleClass="stars-row"/>
+                    </HBox>
+
+                    <Button fx:id="submitFeedbackButton" text="Submit Review" styleClass="submit-feedback-button"/>
+                </VBox>
+
+                <!-- Feedback List -->
+                <VBox spacing="15" styleClass="reviews-section">
+                    <Label text="User Reviews" styleClass="section-title"/>
+                    <VBox fx:id="feedbackListContainer" spacing="15" styleClass="feedback-list"/>
+                </VBox>
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.esprit.controllers.ProductOwnerDashboardController"
+      stylesheets="@/styles/product-owner-dashboard.css"
+      VBox.vgrow="ALWAYS" HBox.hgrow="ALWAYS">
+    
+    <HBox styleClass="dashboard-header" alignment="CENTER_LEFT" spacing="20">
+        <padding><Insets top="20" right="30" bottom="20" left="30"/></padding>
+        <Label text="Product Owner Dashboard" styleClass="dashboard-title"/>
+        <Label fx:id="companyNameLabel" styleClass="company-name"/>
+        <Region HBox.hgrow="ALWAYS" />
+        <Button text="Export to CSV" onAction="#exportToCSV" styleClass="export-button"/>
+    </HBox>
+    
+    <!-- Loading indicator overlay -->
+    <StackPane VBox.vgrow="ALWAYS">
+        <ScrollPane fitToWidth="true" styleClass="dashboard-scroll-pane" VBox.vgrow="ALWAYS">
+            <content>
+                <VBox spacing="30" styleClass="dashboard-container" VBox.vgrow="ALWAYS" HBox.hgrow="ALWAYS">
+                    <padding><Insets top="20" right="30" bottom="30" left="30"/></padding>
+                    
+                    <!-- Date Range Filter -->
+                    <HBox spacing="15" alignment="CENTER_LEFT" styleClass="filter-container">
+                        <Label text="Filter by Date Range:" styleClass="filter-label"/>
+                        <DatePicker fx:id="startDatePicker" promptText="Start Date" styleClass="date-picker"/>
+                        <Label text="to" styleClass="filter-label"/>
+                        <DatePicker fx:id="endDatePicker" promptText="End Date" styleClass="date-picker"/>
+                    </HBox>
+                
+                <!-- Key Performance Metrics -->
+                <GridPane styleClass="metrics-grid" hgap="20" vgap="20">
+                    <columnConstraints>
+                        <ColumnConstraints percentWidth="25"/>
+                        <ColumnConstraints percentWidth="25"/>
+                        <ColumnConstraints percentWidth="25"/>
+                        <ColumnConstraints percentWidth="25"/>
+                    </columnConstraints>
+                    
+                    <!-- Total Sales -->
+                    <StackPane styleClass="metric-card" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                        <Rectangle styleClass="metric-bg"/>
+                        <VBox alignment="CENTER" spacing="5">
+                            <Label text="Total Sales" styleClass="metric-title"/>
+                            <Label fx:id="totalSalesLabel" text="0.00 DT" styleClass="metric-value"/>
+                            <Label fx:id="salesTrendLabel" text="↑ 0%" styleClass="metric-trend"/>
+                        </VBox>
+                    </StackPane>
+                    
+                    <!-- Total Units Sold -->
+                    <StackPane styleClass="metric-card" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                        <Rectangle styleClass="metric-bg"/>
+                        <VBox alignment="CENTER" spacing="5">
+                            <Label text="Units Sold" styleClass="metric-title"/>
+                            <Label fx:id="unitsSoldLabel" text="0" styleClass="metric-value"/>
+                            <Label fx:id="unitsTrendLabel" text="↑ 0%" styleClass="metric-trend"/>
+                        </VBox>
+                    </StackPane>
+                    
+                    <!-- Average Rating -->
+                    <StackPane styleClass="metric-card" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                        <Rectangle styleClass="metric-bg"/>
+                        <VBox alignment="CENTER" spacing="5">
+                            <Label text="Average Rating" styleClass="metric-title"/>
+                            <Label fx:id="avgRatingLabel" text="0.0 ★" styleClass="metric-value"/>
+                            <Label fx:id="ratingCountLabel" text="0 reviews" styleClass="metric-subtitle"/>
+                        </VBox>
+                    </StackPane>
+                    
+                    <!-- Inventory Status -->
+                    <StackPane styleClass="metric-card" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                        <Rectangle styleClass="metric-bg"/>
+                        <VBox alignment="CENTER" spacing="5">
+                            <Label text="Inventory Status" styleClass="metric-title"/>
+                            <Label fx:id="inventoryStatusLabel" text="0 items" styleClass="metric-value"/>
+                            <Label fx:id="lowStockLabel" text="0 low stock" styleClass="metric-warning"/>
+                        </VBox>
+                    </StackPane>
+                </GridPane>
+                
+                <!-- Sales Charts -->
+                <HBox spacing="20" styleClass="chart-container" HBox.hgrow="ALWAYS">
+                    <!-- Monthly Sales Chart -->
+                    <VBox styleClass="chart-card" HBox.hgrow="ALWAYS">
+                        <Label text="Monthly Sales Performance" styleClass="section-title"/>
+                        <LineChart fx:id="monthlySalesChart" title="" 
+                                  legendVisible="true" animated="true"
+                                  prefHeight="300" minHeight="300" styleClass="sales-chart" HBox.hgrow="ALWAYS">
+                            <xAxis>
+                                <CategoryAxis label="Month"/>
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis label="Sales (DT)"/>
+                            </yAxis>
+                        </LineChart>
+                    </VBox>
+                    
+                    <!-- Product Sales Distribution -->
+                    <VBox styleClass="chart-card" HBox.hgrow="ALWAYS">
+                        <Label text="Product Sales Distribution" styleClass="section-title"/>
+                        <PieChart fx:id="productDistributionChart" title="" 
+                                 legendVisible="true" labelsVisible="true"
+                                 prefHeight="300" minHeight="300" styleClass="distribution-chart" HBox.hgrow="ALWAYS"/>
+                    </VBox>
+                </HBox>
+                
+                <!-- Product Performance -->
+                <VBox spacing="15" styleClass="chart-card">
+                    <Label text="Product Performance" styleClass="section-title"/>
+                    <BarChart fx:id="productPerformanceChart" title="" 
+                             legendVisible="true" animated="true"
+                             prefHeight="350" minHeight="350" styleClass="performance-chart" HBox.hgrow="ALWAYS">
+                        <xAxis>
+                            <CategoryAxis label="Product"/>
+                        </xAxis>
+                        <yAxis>
+                            <NumberAxis label="Units Sold"/>
+                        </yAxis>
+                    </BarChart>
+                </VBox>
+                
+                <!-- Customer Insights -->
+                <HBox spacing="20" styleClass="chart-container" HBox.hgrow="ALWAYS">
+                    <!-- Customer Demographics -->
+                    <VBox styleClass="chart-card" HBox.hgrow="ALWAYS">
+                        <Label text="Customer Demographics" styleClass="section-title"/>
+                        <PieChart fx:id="customerDemographicsChart" title="" 
+                                 legendVisible="true" labelsVisible="true"
+                                 prefHeight="300" minHeight="300" styleClass="demographics-chart" HBox.hgrow="ALWAYS"/>
+                    </VBox>
+                    
+                    <!-- Top Customers -->
+                    <VBox styleClass="chart-card" HBox.hgrow="ALWAYS">
+                        <Label text="Top Customers" styleClass="section-title"/>
+                        <VBox fx:id="topCustomersContainer" spacing="10" styleClass="top-customers-list" VBox.vgrow="ALWAYS"/>
+                        <Pagination fx:id="customerPagination" maxPageIndicatorCount="5" styleClass="customer-pagination"/>
+                    </VBox>
+                </HBox>
+                
+                <!-- Sales Forecast -->
+                <VBox spacing="15" styleClass="chart-card">
+                    <Label text="Sales Forecast (Next 6 Months)" styleClass="section-title"/>
+                    <LineChart fx:id="salesForecastChart" title="" 
+                              legendVisible="true" animated="true"
+                              prefHeight="300" minHeight="300" styleClass="forecast-chart" HBox.hgrow="ALWAYS">
+                        <xAxis>
+                            <CategoryAxis label="Month"/>
+                        </xAxis>
+                        <yAxis>
+                            <NumberAxis label="Projected Sales (DT)"/>
+                        </yAxis>
+                    </LineChart>
+                </VBox>
+            </VBox>
+        </content>
+        </ScrollPane>
+        
+        <!-- Loading indicator -->
+        <StackPane fx:id="loadingOverlay" visible="false" style="-fx-background-color: rgba(0,0,0,0.4);">
+            <Label fx:id="loadingLabel" text="Loading..." style="-fx-background-color: white; -fx-padding: 10 20; -fx-background-radius: 5;"/>
+        </StackPane>
+    </StackPane>
+</VBox>

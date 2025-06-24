@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Waste Management Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    :root {
+      --primary: #4CAF50;
+      --primary-dark: #388E3C;
+      --secondary: #2196F3;
+      --warning: #FFC107;
+      --danger: #F44336;
+      --white: #FFFFFF;
+      --gray-100: #F8F9FA;
+      --gray-200: #E9ECEF;
+      --gray-600: #6C757D;
+      --gray-800: #343A40;
+    }
+
+    body, html, #map {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    }
+
+    .marker-icon {
+      background: var(--white);
+      border-radius: 50%;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      text-align: center;
+      line-height: 40px;
+      font-size: 20px;
+      width: 40px !important;
+      height: 40px !important;
+      margin-left: -20px !important;
+      margin-top: -20px !important;
+      transition: transform 0.2s ease;
+    }
+
+    .marker-icon:hover {
+      transform: scale(1.1);
+    }
+
+    .bin-icon {
+      border: 2px solid var(--primary);
+    }
+
+    .bin-icon i {
+      color: var(--primary);
+    }
+
+    .truck-icon {
+      border: 2px solid var(--secondary);
+    }
+
+    .truck-icon i {
+      color: var(--secondary);
+    }
+
+    .popup-content {
+      padding: 16px;
+      min-width: 200px;
+    }
+
+    .popup-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--gray-800);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--primary);
+    }
+
+    .popup-info {
+      color: var(--gray-600);
+      font-size: 14px;
+      margin: 8px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .popup-destination {
+      background: var(--gray-100);
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 12px;
+      color: var(--secondary);
+      font-weight: 500;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .popup-destination i {
+      color: var(--secondary);
+    }
+
+    .fill-level {
+      width: 100%;
+      height: 8px;
+      background-color: var(--gray-200);
+      border-radius: 4px;
+      margin: 12px 0;
+      overflow: hidden;
+    }
+
+    .fill-level-bar {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.3s ease, background-color 0.3s ease;
+    }
+
+    .fill-level-low {
+      background-color: var(--primary);
+    }
+
+    .fill-level-medium {
+      background-color: var(--warning);
+    }
+
+    .fill-level-high {
+      background-color: var(--danger);
+    }
+
+    .route-line {
+      stroke: var(--secondary);
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-dasharray: 8, 12;
+      animation: dash 20s linear infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes dash {
+      to {
+        stroke-dashoffset: -1000;
+      }
+    }
+
+    .leaflet-popup-content-wrapper {
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .leaflet-popup-tip {
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .leaflet-control-zoom {
+      border-radius: 8px !important;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+    }
+
+    .leaflet-control-zoom a {
+      border-radius: 4px !important;
+    }
+  </style>
+</head>
+<body>
+<div id="map"></div>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script>
+  // Initialize the map centered on Tunisia
+  let map = L.map('map').setView([36.8, 10.2], 12);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+
+  // Variables to store map elements
+  let markers = [];
+  let routeLine;
+
+  // Function to clear all map elements
+  window.clearMapElements = function() {
+    markers.forEach(marker => map.removeLayer(marker));
+    markers = [];
+    if (routeLine) {
+      map.removeLayer(routeLine);
+      routeLine = null;
+    }
+  };
+
+  // Function to add a truck marker
+  window.addTruckMarker = function(lat, lng, title, destination) {
+    const truckIcon = L.divIcon({
+      className: 'marker-icon truck-icon',
+      html: '<i class="fas fa-truck"></i>'
+    });
+
+    const popupContent = `
+      <div class="popup-content">
+        <div class="popup-title">${title}</div>
+        <div class="popup-destination">
+          <i class="fas fa-location-arrow"></i>
+          ${destination || 'No destination set'}
+        </div>
+      </div>
+    `;
+
+    const marker = L.marker([lat, lng], {icon: truckIcon})
+      .bindPopup(popupContent)
+      .addTo(map);
+
+    markers.push(marker);
+    return marker;
+  };
+
+  // Function to add a bin marker
+  window.addBinMarker = function(lat, lng, location, type, fillLevel) {
+    const binIcon = L.divIcon({
+      className: 'marker-icon bin-icon',
+      html: '<i class="fas fa-dumpster"></i>'
+    });
+
+    const fillLevelClass = fillLevel >= 90 ? 'fill-level-high' : 
+                       fillLevel >= 70 ? 'fill-level-medium' : 
+                       'fill-level-low';
+
+    const popupContent = `
+      <div class="popup-content">
+        <div class="popup-title">${location}</div>
+        <div class="popup-info">
+          <i class="fas fa-recycle"></i>
+          ${type}
+        </div>
+        <div class="fill-level">
+          <div class="fill-level-bar ${fillLevelClass}" style="width: ${fillLevel}%"></div>
+        </div>
+        <div class="popup-info">Fill Level: ${fillLevel}%</div>
+      </div>
+    `;
+
+    const marker = L.marker([lat, lng], {icon: binIcon})
+      .bindPopup(popupContent)
+      .addTo(map);
+
+    markers.push(marker);
+    return marker;
+  };
+
+  // Function to show route between two points
+  window.showRoute = function(lat1, lng1, lat2, lng2, fromName, toName) {
+    const routeCoords = [[lat1, lng1], [lat2, lng2]];
+    
+    if (routeLine) {
+      map.removeLayer(routeLine);
+    }
+    
+    routeLine = L.polyline(routeCoords, {
+      color: '#2196F3',
+      weight: 3,
+      opacity: 0.8,
+      className: 'route-line'
+    }).addTo(map);
+
+    // Add route info to popup
+    const distance = calculateDistance(lat1, lng1, lat2, lng2);
+    const popup = L.popup()
+      .setLatLng([(lat1 + lat2) / 2, (lng1 + lng2) / 2])
+      .setContent(`
+        <div class="popup-content">
+          <div class="popup-title">Route Details</div>
+          <div class="popup-info">
+            <i class="fas fa-route"></i>
+            ${fromName} → ${toName}
+          </div>
+          <div class="popup-info">
+            <i class="fas fa-road"></i>
+            Distance: ${distance.toFixed(2)} km
+          </div>
+        </div>
+      `);
+    routeLine.bindPopup(popup);
+  };
+
+  // Function to calculate distance between two points
+  function calculateDistance(lat1, lon1, lat2, lon2) {
+    const R = 6371; // Earth's radius in km
+    const dLat = (lat2 - lat1) * Math.PI / 180;
+    const dLon = (lon2 - lon1) * Math.PI / 180;
+    const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+              Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * 
+              Math.sin(dLon/2) * Math.sin(dLon/2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    return R * c;
+  }
+
+  // Function to center map on a location
+  window.centerMap = function(lat, lng, zoom) {
+    map.setView([lat, lng], zoom || 13);
+  };
+
+  // Function to fit all markers in view
+  window.fitAllMarkers = function() {
+    if (markers.length > 0) {
+      const group = L.featureGroup(markers);
+      if (routeLine) {
+        group.addLayer(routeLine);
+      }
+      map.fitBounds(group.getBounds().pad(0.1));
+    }
+  };
+</script>
+</body>
+</html>

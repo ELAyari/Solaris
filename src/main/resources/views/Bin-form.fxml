@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.web.WebView?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+
+<BorderPane prefHeight="800.0" prefWidth="1200.0"
+            xmlns="http://javafx.com/javafx/17.0.6"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.esprit.controllers.BinFormController"
+            styleClass="dashboard-root">
+            
+    <!-- Link to styles -->
+    <stylesheets>
+        <URL value="@../styles/profile.css" />
+        <URL value="@../styles/styles.css" />
+        <URL value="@../styles/sidebar.css" />
+        <URL value="@../styles/header.css" />
+        <URL value="@../styles/content.css" />
+    </stylesheets>
+
+    <center>
+        <ScrollPane fitToWidth="true" fitToHeight="true" styleClass="content-area">
+            <content>
+                <HBox spacing="30" alignment="TOP_CENTER">
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20"/>
+                    </padding>
+
+                    <!-- Form Container -->
+                    <VBox spacing="20" styleClass="card" maxWidth="500" HBox.hgrow="SOMETIMES">
+                        <padding>
+                            <Insets top="20" right="20" bottom="20" left="20"/>
+                        </padding>
+                        
+                        <Label text="Bin Details" styleClass="section-title"/>
+                        
+                        <!-- Location (simplified - just enter address directly) -->
+                        <VBox spacing="10" styleClass="form-group">
+                            <Label text="Location:" styleClass="form-label"/>
+                            <TextField fx:id="locationField" styleClass="form-input" promptText="Enter exact address (e.g. 'Downtown, Tunis')" HBox.hgrow="ALWAYS"/>
+                        </VBox>
+                        
+                        <!-- Coordinates (hidden by default but used by controller) -->
+                        <VBox spacing="10" styleClass="form-group">
+                            <Label text="Coordinates:" styleClass="form-label"/>
+                            <HBox spacing="10">
+                                <TextField fx:id="latitudeField" styleClass="form-input" promptText="Latitude" prefWidth="150"/>
+                                <TextField fx:id="longitudeField" styleClass="form-input" promptText="Longitude" prefWidth="150"/>
+                            </HBox>
+                        </VBox>
+                        
+<!-- No hidden fields here -->
+
+                        <!-- Type -->
+                        <VBox spacing="10" styleClass="form-group">
+                            <Label text="Waste Type:" styleClass="form-label"/>
+                            <ComboBox fx:id="wasteTypeCombo" styleClass="form-input" prefWidth="200">
+                                <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                        <String fx:value="Organic"/>
+                                        <String fx:value="Plastic"/>
+                                        <String fx:value="Paper"/>
+                                        <String fx:value="Glass"/>
+                                        <String fx:value="Metal"/>
+                                        <String fx:value="Electronic"/>
+                                        <String fx:value="Hazardous"/>
+                                        <String fx:value="Mixed"/>
+                                    </FXCollections>
+                                </items>
+                            </ComboBox>
+                        </VBox>
+
+                        <!-- Fill Level -->
+                        <VBox spacing="10" styleClass="form-group">
+                            <Label text="Fill Level:" styleClass="form-label"/>
+                            <TextField fx:id="fillLevelField" styleClass="form-input" promptText="0-100%"/>
+                        </VBox>
+
+                        <!-- Status -->
+                        <VBox spacing="10" styleClass="form-group">
+                            <Label text="Status:" styleClass="form-label"/>
+                            <ComboBox fx:id="statusCombo" styleClass="form-input" prefWidth="200">
+                                <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                        <String fx:value="Active"/>
+                                        <String fx:value="Inactive"/>
+                                        <String fx:value="Maintenance"/>
+                                    </FXCollections>
+                                </items>
+                            </ComboBox>
+                        </VBox>
+
+                        <!-- Solar Bin Options -->
+                        <VBox spacing="10" styleClass="form-group">
+                            <Label text="Solar Bin Options:" styleClass="form-label"/>
+                            <CheckBox fx:id="solarPoweredCheckbox" text="Make this a solar-powered bin" styleClass="form-checkbox"/>
+                            
+                            <!-- Solar Parameters (only visible when checkbox is selected) -->
+                            <VBox fx:id="solarOptionsBox" spacing="10" visible="false" managed="false" styleClass="sub-form">
+                                <HBox spacing="15">
+                                    <Label text="Initial Battery Level (%)" styleClass="form-label"/>
+                                    <TextField fx:id="batteryLevelField" promptText="0-100" prefWidth="80" styleClass="form-input"/>
+                                </HBox>
+                                <HBox spacing="15">
+                                    <Label text="Solar Panel Output (W)" styleClass="form-label"/>
+                                    <TextField fx:id="solarOutputField" promptText="Watts" prefWidth="80" styleClass="form-input"/>
+                                </HBox>
+                            </VBox>
+                        </VBox>
+                        
+                        <Separator/>
+                        
+                        <!-- Action Buttons -->
+                        <HBox spacing="15" alignment="CENTER_RIGHT">
+                            <Button fx:id="addButton" text="Save" onAction="#handleAddButton" styleClass="primary-button"/>
+                            <Button fx:id="backButton" text="Cancel" onAction="#handleBackButton" styleClass="secondary-button"/>
+                        </HBox>
+                        
+                        <!-- Admin Buttons -->
+                        <VBox spacing="10" styleClass="admin-actions">
+                            <Label text="Admin Actions" styleClass="section-title"/>
+                            <HBox spacing="15">
+                                <Button fx:id="generateSolarBinsButton" text="Generate Sample Solar Bins" onAction="#handleGenerateSolarBinsButton" styleClass="success-button" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+                                <Button fx:id="deleteAllSolarBinsButton" text="Delete All Solar Bins" onAction="#handleDeleteAllSolarBinsButton" styleClass="danger-button" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+                            </HBox>
+                        </VBox>
+                    </VBox>
+
+                    <!-- Map Container -->
+                    <VBox spacing="20" styleClass="card" HBox.hgrow="ALWAYS">
+                        <padding>
+                            <Insets top="20" right="20" bottom="20" left="20"/>
+                        </padding>
+                        <Label text="Location Preview" styleClass="section-title"/>
+                        <WebView fx:id="mapView" prefHeight="500" prefWidth="600" VBox.vgrow="ALWAYS"/>
+                        <HBox alignment="CENTER_LEFT" spacing="10" styleClass="status-bar">
+                            <Label text="Status:" styleClass="form-label"/>
+                            <Label fx:id="mapStatusLabel" styleClass="status-text" text="Ready"/>
+                            <Region HBox.hgrow="ALWAYS"/>
+                            <Button text="Refresh Map" onAction="#refreshMap" styleClass="secondary-button"/>
+                        </HBox>
+                    </VBox>
+                </HBox>
+            </content>
+        </ScrollPane>
+    </center>
+    <!-- Hidden coordinate fields stored outside the main form -->
+    <TextField fx:id="Latitude" visible="false"/>
+    <TextField fx:id="Longitude" visible="false"/>
+    <Label fx:id="coordinateDisplayLabel" visible="false"/>
+</BorderPane>

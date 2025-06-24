@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane fx:id="dashboardHomeScroll" fitToWidth="true" styleClass="main-content-scroll"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.esprit.controllers.AdminHomeController">
+    <content>
+        <VBox spacing="30" styleClass="main-content">
+            <padding>
+                <Insets top="30" bottom="30" left="40" right="40"/>
+            </padding>
+                    <HBox spacing="20">
+                        <VBox styleClass="dashboard-card, total-users-card" HBox.hgrow="ALWAYS">
+                            <Label styleClass="card-title" text="Total Users"/>
+                            <Label fx:id="lblTotalUsers" styleClass="card-value" text="0"/>
+                            <Label styleClass="card-subtitle" text="Registered users"/>
+                        </VBox>
+                        <VBox styleClass="dashboard-card, active-users-card" HBox.hgrow="ALWAYS">
+                            <Label styleClass="card-title" text="Active Users"/>
+                            <Label fx:id="lblActiveUsers" styleClass="card-value" text="0"/>
+                            <Label styleClass="card-subtitle" text="Confirmed users"/>
+                        </VBox>
+                        <VBox styleClass="dashboard-card, new-users-card" HBox.hgrow="ALWAYS">
+                            <Label styleClass="card-title" text="New Users"/>
+                            <Label fx:id="lblNewUsers" styleClass="card-value" text="0"/>
+                            <Label styleClass="card-subtitle" text="Recently added"/>
+                        </VBox>
+                        <VBox styleClass="dashboard-card, banned-users-card" HBox.hgrow="ALWAYS">
+                            <Label styleClass="card-title" text="Banned Users"/>
+                            <Label fx:id="lblBannedUsers" styleClass="card-value" text="0"/>
+                            <Label styleClass="card-subtitle"/>
+                        </VBox>
+                    </HBox>
+
+                    <!-- User Statistics Section -->
+                    <VBox spacing="15" styleClass="content-section">
+                        <Label styleClass="section-title" text="User Statistics Dashboard"/>
+
+                        <GridPane hgap="20" vgap="20">
+                            <columnConstraints>
+                                <ColumnConstraints percentWidth="50" hgrow="SOMETIMES"/>
+                                <ColumnConstraints percentWidth="50" hgrow="SOMETIMES"/>
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="300" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="300" vgrow="SOMETIMES"/>
+                            </rowConstraints>
+
+                            <!-- Pie Chart -->
+                            <VBox spacing="10" styleClass="chart-container" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                                <Label styleClass="chart-title" text="User Status Distribution"/>
+                                <PieChart fx:id="userStatusPieChart"
+                                          prefHeight="250"
+                                          prefWidth="450"
+                                          legendVisible="true"
+                                          labelsVisible="true"
+                                          styleClass="pie-chart"/>
+                            </VBox>
+
+                            <!-- Line Chart -->
+                            <VBox spacing="10" styleClass="chart-container" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                                <Label styleClass="chart-title" text="User Registration Trend"/>
+                                <LineChart fx:id="userRegistrationChart"
+                                           prefHeight="250"
+                                           legendVisible="true"
+                                           animated="true"
+                                           styleClass="line-chart">
+                                    <xAxis>
+                                        <CategoryAxis label="Month" animated="false"/>
+                                    </xAxis>
+                                    <yAxis>
+                                        <NumberAxis label="Number of Users" animated="false"/>
+                                    </yAxis>
+                                </LineChart>
+                            </VBox>
+
+                            <!-- Bar Chart -->
+                            <VBox spacing="10" styleClass="chart-container" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                                <Label styleClass="chart-title" text="User Role Distribution"/>
+                                <BarChart fx:id="userRoleChart"
+                                          prefHeight="250"
+                                          legendVisible="true"
+                                          animated="true"
+                                          styleClass="bar-chart">
+                                    <xAxis>
+                                        <CategoryAxis label="Roles" animated="false"/>
+                                    </xAxis>
+                                    <yAxis>
+                                        <NumberAxis label="Number of Users" animated="false"/>
+                                    </yAxis>
+                                </BarChart>
+                            </VBox>
+
+                            <!-- Area Chart -->
+                            <VBox spacing="10" styleClass="chart-container" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                <Label styleClass="chart-title" text="User Activity Metrics"/>
+                                <AreaChart fx:id="userActivityChart"
+                                           prefHeight="250"
+                                           legendVisible="true"
+                                           animated="true"
+                                           styleClass="area-chart">
+                                    <xAxis>
+                                        <CategoryAxis label="Last 7 Days" animated="false"/>
+                                    </xAxis>
+                                    <yAxis>
+                                        <NumberAxis label="Activity Count" animated="false"/>
+                                    </yAxis>
+                                </AreaChart>
+                            </VBox>
+                        </GridPane>
+
+                        <!-- Key Metrics Summary -->
+                        <HBox spacing="20" styleClass="metrics-summary">
+                            <VBox styleClass="metric-box" HBox.hgrow="ALWAYS">
+                                <Label styleClass="metric-title" text="New Users Today"/>
+                                <Label fx:id="lblNewUsersToday" styleClass="metric-value" text="0"/>
+                            </VBox>
+                            <VBox styleClass="metric-box" HBox.hgrow="ALWAYS">
+                                <Label styleClass="metric-title" text="Active Last Week"/>
+                                <Label fx:id="lblActiveLastWeek" styleClass="metric-value" text="0"/>
+                            </VBox>
+                            <VBox styleClass="metric-box" HBox.hgrow="ALWAYS">
+                                <Label styleClass="metric-title" text="Total Admins"/>
+                                <Label fx:id="lblTotalAdmins" styleClass="metric-value" text="0"/>
+                            </VBox>
+                            <VBox styleClass="metric-box" HBox.hgrow="ALWAYS">
+                                <Label styleClass="metric-title" text="Average Session"/>
+                                <Label fx:id="lblAverageSession" styleClass="metric-value" text="0 min"/>
+                            </VBox>
+                        </HBox>
+                    </VBox>
+
+                    <!-- Quick Actions -->
+                    <VBox styleClass="content-section" VBox.vgrow="ALWAYS">
+                        <Label styleClass="section-title" text="Quick Actions"/>
+                        <HBox spacing="15" styleClass="quick-actions">
+                            <Button onAction="#handleAddUser" styleClass="action-button, add-button" text="Add User"/>
+                            <Button onAction="#handleGenerateReports" styleClass="action-button" text="Generate Report"/>
+                            <Button onAction="#handleSettings" styleClass="action-button" text="System Settings"/>
+                        </HBox>
+                    </VBox>
+
+                    <!-- Recent Activity Table -->
+                    <VBox spacing="15" styleClass="content-section">
+                        <Label text="Recent User Activity" styleClass="section-title"/>
+                        <TableView fx:id="tblRecentActivity" prefHeight="200">
+                            <columns>
+                                <TableColumn fx:id="colUser" text="User" prefWidth="150"/>
+                                <TableColumn fx:id="colAction" text="Action" prefWidth="250"/>
+                                <TableColumn fx:id="colTimestamp" text="Timestamp" prefWidth="150"/>
+                            </columns>
+                        </TableView>
+                    </VBox>
+                </VBox>
+            </content>
+        </ScrollPane>

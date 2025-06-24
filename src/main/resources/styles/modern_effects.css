@@ -1,0 +1,231 @@
+/* Modern Visual Effects for PI_DEV_G5
+ * Enhances UI components with modern visual effects
+ */
+
+/* Modern Gradient Backgrounds */
+.gradient-primary {
+    -fx-background-color: linear-gradient(to right, -primary-light, -primary-dark);
+}
+
+.gradient-secondary {
+    -fx-background-color: linear-gradient(to right, -secondary-light, -secondary-dark);
+}
+
+.gradient-blue {
+    -fx-background-color: linear-gradient(to right, #2980b9, #3498db);
+}
+
+.gradient-green {
+    -fx-background-color: linear-gradient(to right, #27ae60, #2ecc71);
+}
+
+.gradient-orange {
+    -fx-background-color: linear-gradient(to right, #d35400, #e67e22);
+}
+
+.gradient-purple {
+    -fx-background-color: linear-gradient(to right, #8e44ad, #9b59b6);
+}
+
+/* Animated Gradients - subtle movement */
+.gradient-animated {
+    -fx-background-color: linear-gradient(270deg, #2ecc71, #3498db);
+    -fx-background-size: 400% 400%;
+    -fx-animation: gradient-shift 8s ease infinite;
+}
+
+@keyframes gradient-shift {
+    0% { -fx-background-position: 0% 50%; }
+    50% { -fx-background-position: 100% 50%; }
+    100% { -fx-background-position: 0% 50%; }
+}
+
+/* Modern Card Design */
+.modern-card {
+    -fx-background-color: white;
+    -fx-background-radius: 12px;
+    -fx-padding: 16px;
+    -fx-effect: dropshadow(gaussian, derive(black, 90%), 10, 0, 0, 4);
+    -fx-transition: -fx-effect 0.3s, -fx-background-color 0.3s, -fx-translate-y 0.3s;
+}
+
+.modern-card:hover {
+    -fx-effect: dropshadow(gaussian, derive(black, 80%), 15, 0, 0, 7);
+    -fx-background-color: derive(white, 2%);
+    -fx-translate-y: -3px;
+}
+
+/* Glassmorphism Effect */
+.glass-panel {
+    -fx-background-color: derive(white, 30%);
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(gaussian, derive(black, 80%), 10, 0, 0, 0);
+    -fx-border-color: derive(white, 60%);
+    -fx-border-width: 1px;
+    -fx-border-radius: 15px;
+}
+
+/* Modern Button Styles */
+.button-modern {
+    -fx-background-color: -primary;
+    -fx-background-radius: 8px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 12px 20px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, #27ae60, 8, 0, 0, 2);
+    -fx-transition: -fx-background-color 0.2s, -fx-effect 0.2s, -fx-scale-x 0.1s, -fx-scale-y 0.1s;
+}
+
+.button-modern:hover {
+    -fx-background-color: derive(-primary, 10%);
+    -fx-effect: dropshadow(gaussian, #27ae60, 12, 0, 0, 3);
+}
+
+.button-modern:pressed {
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+    -fx-background-color: derive(-primary, -5%);
+}
+
+/* Outlined version */
+.button-modern-outlined {
+    -fx-background-color: transparent;
+    -fx-border-color: -primary;
+    -fx-border-width: 2px;
+    -fx-border-radius: 8px;
+    -fx-text-fill: -primary;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 18px;
+    -fx-cursor: hand;
+    -fx-transition: -fx-background-color 0.2s, -fx-text-fill 0.2s, -fx-scale-x 0.1s, -fx-scale-y 0.1s;
+}
+
+.button-modern-outlined:hover {
+    -fx-background-color: derive(-primary, 90%);
+}
+
+.button-modern-outlined:pressed {
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+    -fx-background-color: derive(-primary, 80%);
+}
+
+/* Rounded Text Fields */
+.text-field-modern {
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 8px;
+    -fx-border-color: #dee2e6;
+    -fx-border-radius: 8px;
+    -fx-padding: 12px 15px;
+    -fx-font-size: 14px;
+    -fx-transition: -fx-border-color 0.2s, -fx-background-color 0.2s, -fx-effect 0.2s;
+}
+
+.text-field-modern:focused {
+    -fx-border-color: -primary;
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, #2ecc71, 8, 0, 0, 0);
+}
+
+/* Neumorphic Style Elements */
+.neumorphic {
+    -fx-background-color: #f0f0f0;
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(gaussian, derive(white, 10%), 15, 0.5, -5, -5),
+                dropshadow(gaussian, derive(black, 90%), 15, 0.5, 5, 5);
+    -fx-padding: 15px;
+}
+
+.neumorphic-inset {
+    -fx-background-color: #f0f0f0;
+    -fx-background-radius: 15px;
+    -fx-effect: innershadow(gaussian, derive(black, 90%), 15, 0.5, 5, 5),
+                innershadow(gaussian, derive(white, 10%), 15, 0.5, -5, -5);
+    -fx-padding: 15px;
+}
+
+/* Modern Table View */
+.table-view-modern {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.table-view-modern .column-header-background {
+    -fx-background-color: linear-gradient(to right, -primary-light, -primary-dark);
+    -fx-background-radius: 8px 8px 0px 0px;
+    -fx-padding: 5px;
+}
+
+.table-view-modern .column-header {
+    -fx-background-color: transparent;
+    -fx-font-weight: bold;
+}
+
+.table-view-modern .column-header .label {
+    -fx-text-fill: white;
+    -fx-padding: 10px;
+}
+
+.table-view-modern .table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: transparent;
+    -fx-table-cell-border-color: transparent;
+    -fx-padding: 5px;
+    -fx-transition: -fx-background-color 0.2s;
+}
+
+.table-view-modern .table-row-cell:odd {
+    -fx-background-color: #f8f9fa;
+}
+
+.table-view-modern .table-row-cell:hover {
+    -fx-background-color: derive(-primary, 80%);
+}
+
+.table-view-modern .table-row-cell:selected {
+    -fx-background-color: derive(-primary, 60%);
+}
+
+/* Progress Bar */
+.progress-bar-modern .track {
+    -fx-background-color: #f0f0f0;
+    -fx-background-radius: 5px;
+}
+
+.progress-bar-modern .bar {
+    -fx-background-color: linear-gradient(to right, -primary-light, -primary-dark);
+    -fx-background-radius: 5px;
+    -fx-padding: 6px;
+}
+
+/* Modern Scrollbar */
+.scroll-pane-modern .scroll-bar:vertical,
+.scroll-pane-modern .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane-modern .scroll-bar:vertical .track,
+.scroll-pane-modern .scroll-bar:horizontal .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-pane-modern .scroll-bar:vertical .thumb,
+.scroll-pane-modern .scroll-bar:horizontal .thumb {
+    -fx-background-color: derive(black, 70%);
+    -fx-background-radius: 5px;
+}
+
+/* Badge Notifications */
+.badge {
+    -fx-background-color: -error;
+    -fx-background-radius: 12px;
+    -fx-text-fill: white;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-padding: 2px 6px;
+    -fx-min-width: 18px;
+    -fx-min-height: 18px;
+    -fx-alignment: center;
+}

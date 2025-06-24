@@ -1,0 +1,57 @@
+/* BlogView and BlogCard CSS to fit project theme */
+
+.root {
+    -fx-background-color: #f9f9f9;
+    -fx-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    -fx-padding: 10;
+}
+
+.label {
+    -fx-text-fill: #333333;
+}
+
+.tile-pane {
+    -fx-background-color: transparent;
+}
+
+.vbox {
+    -fx-background-color: white;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 1);
+    -fx-pref-width: 220;
+    -fx-pref-height: 280;
+}
+
+.image-view {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 1);
+    -fx-fit-width: 220;
+    -fx-fit-height: 150;
+    -fx-preserve-ratio: false;
+}
+
+.label.title-label {
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-text-fill: #222;
+}
+
+.label.summary-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #555;
+    -fx-wrap-text: true;
+    -fx-max-width: 220;
+    -fx-max-height: 80;
+}
+
+.hbox {
+    -fx-spacing: 10;
+    -fx-padding: 5 0 0 0;
+}
+
+.label.stats-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #777;
+}

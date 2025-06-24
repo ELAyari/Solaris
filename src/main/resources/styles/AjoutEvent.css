@@ -1,0 +1,391 @@
+/* Base Styles */
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-background-color: white;
+}
+
+/* Header Styles */
+.page-header {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.header-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #27ae60;
+    -fx-padding: 0 0 0 20;
+}
+
+/* Back Button */
+.back-button {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-padding: 8px 16px;
+}
+
+.back-button:hover {
+    -fx-background-color: rgba(39, 174, 96, 0.1);
+}
+
+.back-icon-path {
+    -fx-fill: #27ae60;
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+
+.back-text {
+    -fx-text-fill: #27ae60;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.back-button:hover .back-icon-path,
+.back-button:hover .back-text {
+    -fx-fill: #219a52;
+    -fx-text-fill: #219a52;
+}
+
+/* Form Header Banner */
+.form-header-banner {
+    -fx-background-color: linear-gradient(to right, #27ae60, #2ecc71);
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 0);
+    -fx-min-width: 100%;
+}
+
+.form-header-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.form-header-subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-opacity: 0.9;
+}
+
+/* Form Container */
+.form-scroll-pane {
+    -fx-background: white;
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.form-scroll-pane > .viewport {
+    -fx-background-color: white;
+}
+
+.form-container {
+    -fx-padding: 40px;
+    -fx-background-color: white;
+}
+
+/* Form Sections */
+.form-section {
+    -fx-padding: 0 0 20 0;
+    -fx-border-color: transparent transparent #f0f0f0 transparent;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #27ae60;
+    -fx-padding: 0 0 10 0;
+}
+
+/* Form Fields */
+.form-field-container {
+    -fx-padding: 5 0;
+}
+
+.field-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #555555;
+    -fx-font-weight: bold;
+}
+
+.input-container {
+    -fx-background-color: #f9f9f9;
+    -fx-background-radius: 5px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 5px;
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+}
+
+.input-container:focused-within {
+    -fx-border-color: #27ae60;
+}
+
+.field-icon {
+    -fx-fill: #7f8c8d;
+    -fx-scale-x: 0.9;
+    -fx-scale-y: 0.9;
+}
+
+.text-input {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: #95a5a6;
+}
+
+.text-input:focused {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/* Time Picker Styling */
+.time-input {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: #95a5a6;
+    -fx-pref-width: 100px;
+}
+
+.time-picker-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+}
+
+.time-picker-icon {
+    -fx-fill: #7f8c8d;
+    -fx-scale-x: 0.9;
+    -fx-scale-y: 0.9;
+}
+
+.time-picker-button:hover .time-picker-icon {
+    -fx-fill: #27ae60;
+}
+
+/* Date Picker */
+.date-picker {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-pref-width: 150px;
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.date-picker .arrow-button .arrow {
+    -fx-background-color: #7f8c8d;
+}
+
+.date-picker .arrow-button:hover .arrow {
+    -fx-background-color: #27ae60;
+}
+
+.date-picker .cell {
+    -fx-background-color: white;
+    -fx-text-fill: #333;
+}
+
+.date-picker .cell:hover {
+    -fx-background-color: #f0f0f0;
+}
+
+.date-picker .cell:focused {
+    -fx-background-color: #e0e0e0;
+}
+
+.date-picker .selected {
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+}
+
+.date-picker .selected:focused {
+    -fx-background-color: #219a52;
+}
+
+/* Spinner */
+.spinner-input {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-pref-width: 120px;
+}
+
+.spinner-input .increment-arrow-button,
+.spinner-input .decrement-arrow-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.spinner-input .increment-arrow-button .increment-arrow,
+.spinner-input .decrement-arrow-button .decrement-arrow {
+    -fx-background-color: #7f8c8d;
+}
+
+.spinner-input .increment-arrow-button:hover .increment-arrow,
+.spinner-input .decrement-arrow-button:hover .decrement-arrow {
+    -fx-background-color: #27ae60;
+}
+
+/* Browse Button */
+.browse-button {
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 4px;
+    -fx-cursor: hand;
+}
+
+.browse-button:hover {
+    -fx-background-color: #219a52;
+}
+
+/* AI Button */
+.ai-container {
+    -fx-padding: 5 0;
+}
+
+.ai-button {
+    -fx-background-color: #3498db;
+    -fx-background-radius: 4px;
+    -fx-padding: 8px 16px;
+    -fx-cursor: hand;
+}
+
+.ai-button:hover {
+    -fx-background-color: #2980b9;
+}
+
+.ai-icon {
+    -fx-fill: white;
+}
+
+.ai-text {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+/* Image Preview */
+.image-preview-container {
+    -fx-padding: 20px 0 0 0;
+    -fx-alignment: center;
+}
+
+.preview-image {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 0);
+    -fx-background-radius: 5px;
+}
+
+/* Submit Button */
+.submit-container {
+    -fx-padding: 20px 0;
+}
+
+.submit-button {
+    -fx-background-color: #27ae60;
+    -fx-background-radius: 30px;
+    -fx-padding: 12px 30px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 0);
+}
+
+.submit-button:hover {
+    -fx-background-color: #219a52;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0, 0, 0);
+    -fx-translate-y: -1px;
+}
+
+.submit-icon {
+    -fx-fill: white;
+}
+
+.submit-text {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+.time-picker-dialog {
+    -fx-background-color: white;
+}
+
+.time-picker-dialog .button {
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 4px;
+}
+
+.time-picker-dialog .button:hover {
+    -fx-background-color: #219a52;
+}
+
+.time-picker-dialog .spinner {
+    -fx-font-size: 14px;
+}
+
+.time-picker-dialog {
+    -fx-background-color: white;
+}
+
+.dialog-header {
+    -fx-background-color: linear-gradient(to right, #27ae60, #2ecc71);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0, 0, 1);
+}
+
+.dialog-header-title {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.dialog-header-icon {
+    -fx-fill: white;
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+
+.time-spinner {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 4px;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.time-spinner:focused {
+    -fx-border-color: #27ae60;
+}
+
+.colon-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.select-time-button {
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 4px;
+}
+
+.select-time-button:hover {
+    -fx-background-color: #219a52;
+}
+
+.cancel-time-button {
+    -fx-background-color: #f0f0f0;
+    -fx-text-fill: #333;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 4px;
+}
+
+.cancel-time-button:hover {
+    -fx-background-color: #e0e0e0;
+}

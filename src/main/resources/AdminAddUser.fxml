@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.SVGPath?>
+
+<?import java.lang.String?>
+<VBox spacing="20" styleClass="content-container"
+      xmlns:fx="http://javafx.com/fxml/1"
+      xmlns="http://javafx.com/javafx/17.0.6"
+      fx:controller="com.esprit.controllers.AdminAddUserController">
+
+    <stylesheets>
+        <String fx:value="@styles/common.css"/>
+        <String fx:value="@styles/admin_dashboard.css"/>
+        <String fx:value="@styles/modern_ui.css"/>
+    </stylesheets>
+
+    <padding>
+        <Insets top="20" right="30" bottom="20" left="30"/>
+    </padding>
+
+    <!-- Form Title -->
+    <VBox spacing="10">
+        <Label styleClass="section-title" text="New User Information"/>
+        <Label styleClass="section-subtitle" text="Enter user details"/>
+    </VBox>
+
+    <!-- Form Content -->
+    <VBox styleClass="card" spacing="25">
+        <padding>
+            <Insets top="30" right="30" bottom="30" left="30"/>
+        </padding>
+
+        <GridPane vgap="20" hgap="30">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="50"/>
+                <ColumnConstraints percentWidth="50"/>
+            </columnConstraints>
+
+            <!-- Nom -->
+            <VBox spacing="8" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                <Label styleClass="form-label" text="Nom"/>
+                <TextField fx:id="tfNom" styleClass="modern-field" promptText="Enter name"/>
+                <Label fx:id="lblNomError" styleClass="error-label" visible="false"/>
+            </VBox>
+
+            <!-- Prénom -->
+            <VBox spacing="8" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                <Label styleClass="form-label" text="Prénom"/>
+                <TextField fx:id="tfPrenom" styleClass="modern-field" promptText="Enter first name"/>
+                <Label fx:id="lblPrenomError" styleClass="error-label" visible="false"/>
+            </VBox>
+
+            <!-- Email -->
+            <VBox spacing="8" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                <Label styleClass="form-label" text="Email"/>
+                <TextField fx:id="tfEmail" styleClass="modern-field" promptText="example@email.com"/>
+                <Label fx:id="lblEmailError" styleClass="error-label" visible="false"/>
+            </VBox>
+
+            <!-- Password -->
+            <VBox spacing="8" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <Label styleClass="form-label" text="Password"/>
+                <PasswordField fx:id="tfPassword" styleClass="modern-field" promptText="Enter password"/>
+                <Label fx:id="lblPasswordError" styleClass="error-label" visible="false"/>
+            </VBox>
+
+            <!-- Role -->
+            <VBox spacing="8" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                <Label styleClass="form-label" text="Role"/>
+                <ComboBox fx:id="cbRole" styleClass="modern-field" promptText="Select role" maxWidth="Infinity"/>
+                <Label fx:id="lblRoleError" styleClass="error-label" visible="false"/>
+            </VBox>
+
+            <!-- Status -->
+            <VBox spacing="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                <Label styleClass="form-label" text="Status"/>
+                <ComboBox fx:id="cbStatus" styleClass="modern-field" promptText="Select status" maxWidth="Infinity"/>
+                <Label fx:id="lblStatusError" styleClass="error-label" visible="false"/>
+            </VBox>
+
+            <!-- Birth Date -->
+            <VBox spacing="8" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                <Label styleClass="form-label" text="Birth Date"/>
+                <DatePicker fx:id="dpBirthDate" styleClass="modern-field"/>
+                <Label fx:id="lblBirthDateError" styleClass="error-label" visible="false"/>
+            </VBox>
+
+            <!-- Address -->
+            <VBox spacing="8" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                <Label styleClass="form-label" text="Address"/>
+                <TextField fx:id="tfAddress" styleClass="modern-field" promptText="Enter address"/>
+                <Label fx:id="lblAddressError" styleClass="error-label" visible="false"/>
+            </VBox>
+
+            <!-- Phone Number -->
+            <VBox spacing="8" GridPane.columnIndex="0" GridPane.rowIndex="4">
+                <Label styleClass="form-label" text="Phone Number"/>
+                <TextField fx:id="tfPhoneNumber" styleClass="modern-field" promptText="Enter phone number"/>
+                <Label fx:id="lblPhoneError" styleClass="error-label" visible="false"/>
+            </VBox>
+        </GridPane>
+
+        <!-- Action Buttons -->
+        <HBox spacing="15" alignment="CENTER_RIGHT">
+            <Button fx:id="btnCancel" text="Cancel" styleClass="button-secondary"/>
+            <Button fx:id="btnSave" text="Save" styleClass="button-primary"/>
+        </HBox>
+    </VBox>
+</VBox>

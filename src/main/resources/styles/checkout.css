@@ -1,0 +1,109 @@
+/* Inherits .root from styles.css for background and font */
+
+/* Main container for checkout form elements */
+.checkout-grid-pane { /* Assuming the main layout is a GridPane or similar */
+    -fx-background-color: #ffffff; /* White surface for the form */
+    -fx-padding: 25px;
+    -fx-hgap: 15px;
+    -fx-vgap: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 3);
+    -fx-background-radius: 8px;
+}
+
+/* General labels will inherit from styles.css */
+/* TextFields and TextAreas will inherit from styles.css */
+
+/* RadioButton styling */
+.radio-button {
+    -fx-font-size: 14px;
+    -fx-text-fill: #343a40; /* Dark gray text */
+}
+
+.radio-button .radio {
+    -fx-border-color: #ced4da; /* Subtle border */
+    -fx-background-color: white;
+    -fx-border-radius: 50%;
+    -fx-padding: 4px; /* Slightly more padding */
+}
+
+.radio-button:selected .radio {
+    -fx-background-color: #27ae60; /* Primary green accent when selected */
+    -fx-border-color: #27ae60;
+}
+.radio-button:selected .dot {
+    -fx-background-color: white; /* White dot */
+}
+
+/* Buttons will inherit .button style from styles.css */
+/* Specific button IDs if needed for very distinct styling */
+
+#backButton { /* If a specific back button style is needed here, different from navBar's */
+    /* For now, assume it might be part of a nav bar or uses .button-secondary */
+    /* If it's a standalone button on this view, apply .button-secondary or similar */
+}
+
+#paymentButton {
+    /* This will use the primary .button style from styles.css */
+    -fx-font-weight: bold; /* Already in .button, but can be reinforced */
+    -fx-padding: 12px 25px; /* Larger padding for primary CTA */
+}
+
+
+/* Section styling */
+.checkout-section {
+    -fx-background-color: #f8f9fa; /* Very light gray for sections */
+    -fx-padding: 20px;
+    -fx-background-radius: 6px;
+    -fx-border-color: #e9ecef; /* Light border */
+    -fx-border-radius: 6px;
+    -fx-border-width: 1px;
+    -fx-spacing: 10px; /* For VBox sections */
+}
+
+.section-title {
+    -fx-font-size: 18px; /* Larger section titles */
+    -fx-font-weight: bold;
+    -fx-text-fill: #343a40; /* Dark gray */
+    -fx-padding: 0 0 12px 0; /* Bottom padding */
+    -fx-border-color: transparent transparent #dee2e6 transparent; /* Subtle bottom border */
+    -fx-border-width: 1px;
+}
+
+/* ListView for cart items preview */
+.list-view.panier-items-preview {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dee2e6;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.list-view.panier-items-preview .list-cell {
+    -fx-background-color: transparent; /* Cells are transparent, item graphics provide background */
+    -fx-padding: 0; /* Padding handled by the item graphic's GridPane */
+    -fx-border-color: transparent transparent #e9ecef transparent; /* Separator line */
+    -fx-border-width: 1px;
+}
+.list-view.panier-items-preview .list-cell:empty {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/* Summary text (Total Amount, Shipment Address) */
+.summary-text {
+    -fx-font-size: 15px;
+    -fx-font-weight: normal;
+    -fx-text-fill: #343a40;
+}
+.summary-text .label-strong { /* For the "Total Amount:" part or similar */
+    -fx-font-weight: bold;
+}
+#totalAmountText { /* Specific ID for total amount if more emphasis is needed */
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #27ae60; /* Primary green for total */
+}
+
+
+/* Disabled fields will inherit from styles.css */
+/* Error/Success states for fields will inherit from styles.css */
+/* .text-field:error, .text-field:invalid, etc. are in styles.css */

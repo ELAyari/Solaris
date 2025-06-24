@@ -1,0 +1,310 @@
+/* Main container styling */
+.product-card-scrollpane {
+    -fx-background-color: #f8f9fa; /* Light neutral background */
+    -fx-padding: 0;
+}
+
+.product-card-scrollpane > .viewport {
+    -fx-background-color: #f8f9fa; /* Match scrollpane background */
+}
+
+/* Scrollbar styling for light theme */
+.product-card-scrollpane .scroll-bar:vertical,
+.product-card-scrollpane .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+.product-card-scrollpane .scroll-bar:vertical .thumb,
+.product-card-scrollpane .scroll-bar:horizontal .thumb {
+    -fx-background-color: #27ae60; /* Primary green accent */
+    -fx-background-radius: 5em;
+}
+
+.product-card-scrollpane .scroll-bar:vertical .track,
+.product-card-scrollpane .scroll-bar:horizontal .track {
+    -fx-background-color: rgba(0, 0, 0, 0.1); /* Lighter track for light theme */
+    -fx-background-radius: 5em;
+}
+
+.product-card-scrollpane .scroll-bar .increment-button,
+.product-card-scrollpane .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0 5 0 5;
+}
+
+.product-card-scrollpane .scroll-bar .increment-arrow,
+.product-card-scrollpane .scroll-bar .decrement-arrow {
+    -fx-background-color: #27ae60; /* Primary green accent */
+}
+
+/* Navigation bar styling */
+.nav-bar {
+    -fx-padding: 15;
+    -fx-background-color: #ffffff; /* White background */
+    -fx-border-color: #27ae60; /* Primary green accent border */
+    -fx-border-width: 0 0 2px 0; /* Thicker bottom border */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2); /* Subtle shadow */
+}
+
+/* Category combo box styling */
+.category-combo {
+    -fx-background-color: #ffffff; /* White background */
+    -fx-text-fill: #343a40; /* Dark gray text */
+    -fx-font-size: 14px;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-border-color: #27ae60; /* Primary green accent border */
+    -fx-border-width: 1;
+}
+
+.category-combo .list-cell {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #343a40;
+}
+
+.category-combo .list-cell:hover {
+    -fx-background-color: #e6f2f0; /* Light blue-green hover */
+}
+
+.category-combo .list-view {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #27ae60;
+}
+
+.category-combo .arrow-button {
+    -fx-background-color: #27ae60; /* Primary green accent */
+}
+
+.category-combo .arrow {
+    -fx-background-color: #ffffff; /* White arrow */
+}
+
+/* Search field styling */
+.search-field {
+    -fx-background-color: #ffffff; /* White background */
+    -fx-text-fill: #343a40; /* Dark gray text */
+    -fx-font-size: 14px;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-border-color: #27ae60; /* Primary green accent border */
+    -fx-border-width: 1;
+    -fx-prompt-text-fill: #6c757d; /* Medium gray prompt text */
+}
+
+/* Back button in Nav Bar */
+.btn-back {
+    -fx-background-color: #6c757d; /* Medium gray for secondary action */
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-padding: 8 15;
+    -fx-cursor: hand;
+}
+
+.btn-back:hover {
+    -fx-background-color: #5a6268; /* Darker gray on hover */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 1);
+}
+
+/* Button styling in Nav Bar */
+.btn-clear, .btn-panier, .btn-wishlist { /* Combined common styles for nav buttons */
+    -fx-background-color: #27ae60; /* Primary green accent */
+    -fx-text-fill: #ffffff; /* White text */
+    -fx-font-weight: bold;
+    -fx-background-radius: 5; /* Standard radius for nav buttons */
+    -fx-border-radius: 5;
+    -fx-padding: 8 15;
+    -fx-cursor: hand;
+}
+
+.btn-clear:hover, .btn-panier:hover, .btn-wishlist:hover {
+    -fx-background-color: #229954; /* Darker green on hover */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 1);
+}
+
+/* Product flow pane styling */
+.product-flow-pane {
+    -fx-background-color: #f8f9fa; /* Light neutral background */
+    -fx-padding: 25;
+    -fx-hgap: 25;
+    -fx-vgap: 25;
+}
+
+.product-card {
+    -fx-background-color: #ffffff; /* White card background */
+    -fx-border-color: transparent; /* No visible border */
+    -fx-border-width: 0;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 12, 0, 0, 4); /* Subtle shadow */
+    -fx-padding: 18;
+    -fx-alignment: top-center;
+    -fx-spacing: 12;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    -fx-effect: dropshadow(gaussian, rgba(39,174,96,0.2), 18, 0, 0, 6); /* Enhanced shadow on hover */
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+    -fx-background-color: #fafffe; /* Very subtle green tint on hover */
+}
+
+.product-image-container {
+    -fx-background-color: #f8f9fa; /* Very light gray for image background */
+    -fx-background-radius: 10;
+    -fx-padding: 12;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 5, 0, 0, 2); /* Subtle inner shadow */
+}
+
+.product-name {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #212529; /* Darker text for better contrast */
+    -fx-padding: 5 0 0 0;
+}
+
+.product-description {
+    -fx-font-size: 13px;
+    -fx-text-fill: #6c757d; /* Medium gray text */
+    -fx-wrap-text: true;
+    -fx-line-spacing: 1.2;
+}
+
+.product-price {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #27ae60; /* Primary green accent for price */
+    -fx-padding: 5 0;
+}
+
+.product-actions {
+    -fx-spacing: 10;
+    -fx-alignment: center;
+    -fx-opacity: 0; /* Keep hidden by default, shown on hover */
+}
+
+.product-card:hover .product-actions {
+    -fx-opacity: 1;
+}
+
+.btn-buy { /* Product card buy button */
+    -fx-background-color: #27ae60; /* Primary green accent */
+    -fx-text-fill: #ffffff; /* White text */
+    -fx-font-weight: bold;
+    -fx-background-radius: 30; /* More rounded for modern look */
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(39,174,96,0.3), 8, 0, 0, 2); /* Button shadow */
+}
+
+.btn-buy:hover {
+    -fx-background-color: #229954; /* Darker green on hover */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0, 0, 3);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.btn-heart { /* Product card heart button */
+    -fx-background-color: transparent;
+    /* Text fill color is set dynamically in ProductCardController for filled/empty states */
+    -fx-font-size: 20px; /* Slightly larger heart */
+    -fx-padding: 5;
+    -fx-cursor: hand;
+}
+
+.btn-heart:hover {
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+
+.out-of-stock {
+    -fx-text-fill: #dc3545; /* Standard error/warning red */
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+/* Stock status styling */
+.product-stock-status {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 2px 0;
+}
+
+.stock-in {
+    -fx-text-fill: #28a745; /* Positive green for in stock */
+}
+
+.stock-low {
+    -fx-text-fill: #ffc107; /* Amber/warning yellow for low stock */
+}
+
+/* Recyclable indicator styling */
+.recyclable-indicator {
+    -fx-font-size: 11px;
+    -fx-text-fill: #56c5cc; /* Teal/cyan for tech/eco feel */
+    -fx-font-style: italic;
+}
+
+/* ===== STRONG OVERRIDE FOR PANIER TABLEVIEW (client cart) ===== */
+.panier-table, #panierTable {
+    -fx-background-color: white !important;
+    -fx-border-color: transparent !important;
+    -fx-border-radius: 8 !important;
+    -fx-background-radius: 8 !important;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.10), 8, 0, 0, 2) !important;
+    -fx-padding: 0 !important;
+}
+.panier-table .column-header-background, #panierTable .column-header-background {
+    -fx-background-color: #f8f9fa !important;
+    -fx-background-radius: 8 8 0 0 !important;
+    -fx-background-insets: 0 !important;
+    -fx-padding: 0 !important;
+}
+.panier-table .column-header, .panier-table .filler, #panierTable .column-header, #panierTable .filler {
+    -fx-background-color: transparent !important;
+    -fx-border-width: 0 !important;
+    -fx-text-fill: #343a40 !important;
+    -fx-font-weight: bold !important;
+    -fx-font-size: 14px !important;
+    -fx-padding: 10 8 !important;
+    -fx-alignment: center !important;
+    vertical-align: middle !important;
+}
+.panier-table .column-header .label, #panierTable .column-header .label {
+    -fx-text-fill: #343a40 !important;
+    -fx-font-weight: bold !important;
+    -fx-font-size: 14px !important;
+    -fx-alignment: center !important;
+    vertical-align: middle !important;
+}
+.panier-table .table-cell, #panierTable .table-cell {
+    -fx-alignment: center !important;
+    vertical-align: middle !important;
+    -fx-padding: 10 12 !important;
+    -fx-border-color: transparent !important;
+    -fx-font-size: 13px !important;
+    -fx-text-fill: #222 !important;
+}
+.panier-table .table-row-cell, #panierTable .table-row-cell {
+    -fx-background-color: white !important;
+    -fx-background-insets: 0 !important;
+    -fx-border-color: transparent transparent #f0f0f0 transparent !important;
+    -fx-table-cell-border-color: transparent !important;
+    -fx-padding: 0 !important;
+    -fx-cell-size: 48px !important;
+}
+.panier-table .table-row-cell:odd, #panierTable .table-row-cell:odd {
+    -fx-background-color: #f9fcf9 !important;
+}
+.panier-table .table-row-cell:selected, #panierTable .table-row-cell:selected {
+    -fx-background-color: #e8f5e9 !important;
+    -fx-border-color: #81c784 !important;
+    -fx-border-width: 0 0 1 0 !important;
+    -fx-text-background-color: #2c3e50 !important;
+}
+.panier-table .table-row-cell:hover, #panierTable .table-row-cell:hover {
+    -fx-background-color: #f1f8e9 !important;
+}
